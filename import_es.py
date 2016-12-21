@@ -55,7 +55,8 @@ def modification(titre, PageHS):
 
 		# Si la page contient deja une section en espagnol, alors on la traitera manuellement
 		if PageTemp.find('{{langue|es}}') != -1:
-			fout.write(PageHS.encode('utf8'))
+			fout.write(u'>>>' + titre + u'<<<')
+			fout.write(PageHS)
 			return
 
 
@@ -98,13 +99,14 @@ def crawlerXML(source):
 # Lecture du fichier es_conj.xml
 def crawlerFile(source):
 	if source:
-		PagesHS = open(source, 'r')
+		PagesHS = codecs.open(source,"r","utf-8")
+		## PagesHS = open(source, 'r')
 		PageHS = u''
 		titre = u''
-		#PagesHS = codecs.open(source,"r","utf-8")
+		ligne = u''
 		while True:
 			ligne = PagesHS.readline()
-			ligne = ligne.decode('utf8')
+			## ligne = ligne.decode('utf8')
 			if ligne.find(u'xxxx') != -1:
 				titre = PagesHS.readline()
 				titre = titre[3:-4]
@@ -183,7 +185,9 @@ def sauvegarde(PageCourante, Contenu, summary):
 			return
 			
 # Lancement
-fout = open(u'aTraiterManuellement.txt', "a")
+## fout = open(u'aTraiterManuellement.txt', "a")
+fout = codecs.open(u'aTraiterManuellement.txt',"a","utf-8")
+
 TraitementFichier = crawlerFile(u'es_conj.xml')
 fout.close()
 
