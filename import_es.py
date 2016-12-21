@@ -118,10 +118,10 @@ def crawlerFile(source):
 				## print titre
 				## print PageHS
 				## print u'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'
+				modification(titre, PageHS)
 				titre  = u''
 				PageHS = u''
 				##break
-				modification(titre, PageHS)
 				
 			
 		PagesHS.close()
