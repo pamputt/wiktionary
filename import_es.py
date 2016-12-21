@@ -18,6 +18,8 @@ def modification(titre, PageHS):
 	summary = u'Ajout de la forme conjuguée en espagnol'
 	#if debogage == True: print u'------------------------------------'
 	#print(PageHS.encode(config.console_encoding, 'replace'))
+
+	print u'Traitement de ' + titre + u'!'
 	
 	# On retire les diacritiques et ignore la casse
 	# le flag re.UNICODE est utilisé pour que \w matche toute lettre de tout alphabet
@@ -31,7 +33,7 @@ def modification(titre, PageHS):
 		except UnicodeDecodeError: 
 			print "UnicodeDecodeError l 30"
 			return
-			
+	
 		if page.exists() and page.namespace() == 0:
 			try:
 				PageBegin = page.get()
@@ -50,12 +52,12 @@ def modification(titre, PageHS):
 		PageTemp = PageBegin
 		print PageTemp
 		PageEnd = u''
-		
-		# Si la page contient deja une section en espagnol, alors on le traitera manuellement
+
+		# Si la page contient deja une section en espagnol, alors on la traitera manuellement
 		if PageTemp.find('{{langue|es}}') != -1:
-			fout.write(PageHS)
+			fout.write(PageHS.encode('utf8'))
 			return
-		
+
 
 		## # Pour chaque langue, recherche de la catégorie des palindromes
 		## while PageTemp.find('{{langue|es}}') != -1:
@@ -76,13 +78,13 @@ def modification(titre, PageHS):
 		## 				# On retire les lignes vides entre les catégories
 		## 				PageTemp = re.sub(ur'(\[\[Catégorie:[^\]]*?\]\])\n{2,}\[\[Catégorie', ur'\1\n[[Catégorie', PageTemp)
 		## 				PageTemp = PageTemp.replace('\n\n\n==', '\n\n==')
-			
+
 		## PageEnd = PageEnd + PageTemp		
 		## #if debogage == True: print (u'--------------------------------------------------------------------------------------------')
 		## if PageEnd != PageBegin:
 		## 	sauvegarde(page,PageEnd, summary)
 		## elif debogage == True:
-		## 	print "Aucun changement"
+			## 	print "Aucun changement"
 		
 		
 def trim(s):
@@ -111,7 +113,7 @@ def crawlerFile(source):
 			if ligne.find(u'yyyy') == -1 and ligne.find(u'xxxx') == -1:	
 				PageHS += ligne
 			
-			if  (ligne.find(u'yyyy') != -1 and titre != u''):
+			if  (ligne.find(u'yyyy') != -1 and titre):
 				## print u'////////////////////'
 				## print titre
 				## print PageHS
