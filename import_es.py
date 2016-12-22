@@ -14,12 +14,12 @@ site = getSite(language,family)
 debogage = False
 
 # Modification du wiki
-def modification(titre, PageHS):
+def modification(titre, PageEspagnol):
 	summary = u'Ajout de la forme conjuguée en espagnol'
 	#if debogage == True: print u'------------------------------------'
-	#print(PageHS.encode(config.console_encoding, 'replace'))
+	#print(PageEspagnol.encode(config.console_encoding, 'replace'))
 
-	print u'Traitement de ' + titre + u'!'
+	# print u'Traitement de ' + titre + u'!'
 	
 	# On retire les diacritiques et ignore la casse
 	# le flag re.UNICODE est utilisé pour que \w matche toute lettre de tout alphabet
@@ -50,15 +50,41 @@ def modification(titre, PageHS):
 			print "NoPage l 46"
 			return
 		PageTemp = PageBegin
-		print PageTemp
+		# print PageTemp
 		PageEnd = u''
 
 		# Si la page contient deja une section en espagnol, alors on la traitera manuellement
 		if PageTemp.find('{{langue|es}}') != -1:
-			fout.write(u'>>>' + titre + u'<<<')
-			fout.write(PageHS)
+			fout.write(u'>>>' + titre + u'<<<\n')
+			fout.write(PageEspagnol)
 			return
 
+		# on cherche où placer la section espagnole
+
+		ligne = u''
+		codelang = u''
+		ajoute = False
+		## print PageTemp
+		for ligne in PageTemp.splitlines():
+			## print u'>>>>   ' + ligne
+			pos1 = ligne.find(u'{{langue|')
+			if ( pos1 != -1):
+				pos2 = ligne.find(u'}}')
+				codelang = ligne[pos1+9:pos2]
+			## print codelang
+
+			## si c'est un code langue avant l'espagnol (parmi ceux identifie)
+			## alors on ajoute juste le texte de la page actuelle
+			if ordreLang(codelang) or ajoute:
+				PageEnd = PageEnd + ligne + u'\n'
+			## on ajoute le code pour l'espagnol
+			else:
+				PageEnd = PageEnd + PageEspagnol + u'\n'
+				PageEnd = PageEnd + ligne + u'\n'
+				ajoute = True
+		print u'>>>>>>>>>>>>>>>>>>>>'
+		print PageEnd
+		print u'<<<<<<<<<<<<<<<<<<<<'
 
 		## # Pour chaque langue, recherche de la catégorie des palindromes
 		## while PageTemp.find('{{langue|es}}') != -1:
@@ -87,9 +113,37 @@ def modification(titre, PageHS):
 		## elif debogage == True:
 			## 	print "Aucun changement"
 		
+def ordreLang(code):
+	if(code == u'cs'):
+		return False
+	if(code == u'eo'):
+		return False
+	if(code == u'fi'):
+		return False
+	if(code == u'fon'):
+		return False
+	if(code == u'it'):
+		return False
+	if(code == u'la'):
+		return False
+	if(code == u'oc'):
+		return False
+	if(code == u'pap'):
+		return False
+	if(code == u'pt'):
+		return False
+	if(code == u'sl'):
+		return False
+	if(code == u'snc'):
+		return False
+	if(code == u'tl'):
+		return False
+	if(code == u'tpw'):
+		return False
+	return True
 		
 def trim(s):
-    return s.strip(" \t\n\r\0\x0B")
+	return s.strip(" \t\n\r\0\x0B")
 
 def crawlerXML(source):
 	pages = [r for r in xmlreader.XmlDump(source, allrevisions=False).parse()]
@@ -101,7 +155,7 @@ def crawlerFile(source):
 	if source:
 		PagesHS = codecs.open(source,"r","utf-8")
 		## PagesHS = open(source, 'r')
-		PageHS = u''
+		PageEspagnol = u''
 		titre = u''
 		ligne = u''
 		while True:
@@ -113,19 +167,18 @@ def crawlerFile(source):
 				## print titre
 			
 			if ligne.find(u'yyyy') == -1 and ligne.find(u'xxxx') == -1:	
-				PageHS += ligne
+				PageEspagnol += ligne
 			
 			if  (ligne.find(u'yyyy') != -1 and titre):
 				## print u'////////////////////'
 				## print titre
-				## print PageHS
+				## print PageEspagnol
 				## print u'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'
-				modification(titre, PageHS)
+				modification(titre, PageEspagnol)
 				titre  = u''
-				PageHS = u''
+				PageEspagnol = u''
 				##break
 				
-			
 		PagesHS.close()
 		
 
