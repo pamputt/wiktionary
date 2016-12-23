@@ -65,7 +65,7 @@ solve_captcha = True
 authenticate = {}
 
 #    Secure Connection to all Wikimedia Projects
-SSL_connection = False
+SSL_connection = True
 
 # password_file = ".passwd"
 # A password file with default passwords. For more information, please
