@@ -4,6 +4,7 @@
 
 # Importation des modules
 import catlib, pagegenerators, os, langues
+import re
 from wikipedia import *
 
 # Déclaration
@@ -19,17 +20,17 @@ def modification(titre, PageEspagnol):
 	#if debogage == True: print u'------------------------------------'
 	#print(PageEspagnol.encode(config.console_encoding, 'replace'))
 
-	# print u'Traitement de ' + titre + u'!'
+	print u'Traitement de ' + titre + u'!'
 	
 	# On retire les diacritiques et ignore la casse
 	# le flag re.UNICODE est utilisé pour que \w matche toute lettre de tout alphabet
 	titre_denude = unicodedata.normalize('NFKD', titre).lower()
 	titre_denude = re.sub(ur'[^\w]', u'', titre_denude, flags=re.UNICODE)
-	if len(titre_denude) > 1 and titre_denude == titre_denude[::-1]:
+	if len(titre_denude) > 0:
 		try:
-			print u'page = Page(site,titre)'
+			## print u'page = Page(site,titre)'
 			page = Page(site,titre)
-			print page
+			## print page
 		except UnicodeDecodeError: 
 			print "UnicodeDecodeError l 30"
 			return
@@ -50,11 +51,12 @@ def modification(titre, PageEspagnol):
 			print "NoPage l 46"
 			return
 		PageTemp = PageBegin
-		# print PageTemp
+		## print PageTemp
 		PageEnd = u''
 
-		# Si la page contient deja une section en espagnol, alors on la traitera manuellement
-		if PageTemp.find('{{langue|es}}') != -1:
+		## Si la page contient deja une section en espagnol, et qu'il ne contient pas {{vérifier création automatique||es}}
+		## alors on la traitera manuellement
+		if PageTemp.find('{{langue|es}}') != -1 and PageTemp.find(u'{{vérifier création automatique||es}}') == -1:
 			fout.write(u'>>>' + titre + u'<<<\n')
 			fout.write(PageEspagnol)
 			return
@@ -64,6 +66,7 @@ def modification(titre, PageEspagnol):
 		ligne = u''
 		codelang = u''
 		ajoute = False
+		## cmpt = 0
 		## print PageTemp
 		for ligne in PageTemp.splitlines():
 			## print u'>>>>   ' + ligne
@@ -71,76 +74,189 @@ def modification(titre, PageEspagnol):
 			if ( pos1 != -1):
 				pos2 = ligne.find(u'}}')
 				codelang = ligne[pos1+9:pos2]
-			## print codelang
 
-			## si c'est un code langue avant l'espagnol (parmi ceux identifie)
-			## alors on ajoute juste le texte de la page actuelle
-			if ordreLang(codelang) or ajoute:
-				PageEnd = PageEnd + ligne + u'\n'
-			## on ajoute le code pour l'espagnol
-			else:
+			if len(codelang)==0: return
+			
+			result = ordreLang(codelang);
+			## cmpt = cmpt+1
+			## print u'code lang: ' + codelang + u', ' + str(result)
+
+			## le code de langue n'a pas encore ete repertorie
+			if result==0 and codelang!=u'es' and len(codelang)>0:
+				print u'>> Code inconnu: ' + codelang + u'\n'
+				fcodeout.write(codelang + u'\n')
+				return
+			
+
+			## s'il n'y a qu'une seule langue qui se place avant l'espagnol
+			## alors on vérifie s'il y a des catégories ou des liens interwikis
+			## si c'est le cas, on place l'espagnol avant
+			##catégorie
+			if ligne.find(u'[[Catégorie:')!=-1 and not ajoute:
 				PageEnd = PageEnd + PageEspagnol + u'\n'
 				PageEnd = PageEnd + ligne + u'\n'
 				ajoute = True
-		print u'>>>>>>>>>>>>>>>>>>>>'
-		print PageEnd
-		print u'<<<<<<<<<<<<<<<<<<<<'
+			## interwiki
+			if re.search(u'\[\[(.)+:' + titre + u']]',ligne) and not ajoute:
+				PageEnd = PageEnd + PageEspagnol + u'\n'
+				PageEnd = PageEnd + ligne + u'\n'
+				ajoute = True
 
-		## # Pour chaque langue, recherche de la catégorie des palindromes
-		## while PageTemp.find('{{langue|es}}') != -1:
-		## 	PageEnd = PageEnd + PageTemp[:PageTemp.find('{{langue|')+len('{{langue|')]
-		## 	PageTemp = PageTemp[PageTemp.find('{{langue|')+len('{{langue|'):]
-		## 	codelangue = PageTemp[:PageTemp.find('}}')]
-		## 	if len(codelangue) < 4:
-		## 		NomLangue = langues.langues[codelangue].decode("utf8")
-		## 		if NomLangue != u'':
-		## 			#if debogage == True: print NomLangue.encode(config.console_encoding, 'replace')
-		## 			if PageTemp.find(u'[[Catégorie:Palindromes en ' + NomLangue + ']]') == -1:
-		## 				# Modification de la page
-		## 				if PageTemp.find('{{langue|') != -1:
-		## 					PageTemp2 = PageTemp[:PageTemp.find('{{langue|')]
-		## 					PageTemp = PageTemp[:PageTemp2.rfind(u'\n')] + u'\n[[Catégorie:Palindromes en '+NomLangue+']]\n\n' + PageTemp[PageTemp2.rfind(u'\n'):]
-		## 				else:
-		## 					PageTemp = PageTemp + u'\n\n[[Catégorie:Palindromes en '+NomLangue+']]'
-		## 				# On retire les lignes vides entre les catégories
-		## 				PageTemp = re.sub(ur'(\[\[Catégorie:[^\]]*?\]\])\n{2,}\[\[Catégorie', ur'\1\n[[Catégorie', PageTemp)
-		## 				PageTemp = PageTemp.replace('\n\n\n==', '\n\n==')
+				
+			## si c'est un code langue avant l'espagnol (parmi ceux identifies)
+			## alors on ajoute juste le texte de la page actuelle
+			if result>0 or ajoute:
 
-		## PageEnd = PageEnd + PageTemp		
-		## #if debogage == True: print (u'--------------------------------------------------------------------------------------------')
-		## if PageEnd != PageBegin:
-		## 	sauvegarde(page,PageEnd, summary)
-		## elif debogage == True:
-			## 	print "Aucun changement"
+
+				## pour le cas où l'espagnol et la premiere section
+				## sinon c'est deja traite par la variable ajoute
+				## if cmpt==1:
+				## 	PageEnd = PageEnd + PageEspagnol + u'\n'
+			        ## print u'---> ' + ligne + u', ' + codelang + u', ' + str(result) + u', ' + str(result<0) + u', ' + str(ajoute) + u' <---' 
+				## print u'1//// ' + PageEnd + u'\\\\\\\\1'
+
+				PageEnd = PageEnd + ligne + u'\n'
+				## print u'2//// ' + PageEnd + u'\\\\\\\\2'
+			## on ajoute le texte pour l'espagnol
+			else:
+				## print u'<1> ' + PageEnd + u'</1>'
+				PageEnd = PageEnd + PageEspagnol + u'\n'
+				PageEnd = PageEnd + ligne + u'\n'
+				ajoute = True
+				## print u'<2> ' + PageEnd + u'</2>'
+				
+##abandera, fr
+	        if PageEnd != PageBegin:
+			## print u'>>>>>>>>>>>>>>>>>>>>'
+			## print PageEnd
+			## print u'<<<<<<<<<<<<<<<<<<<<'
+			sauvegarde(page, PageEnd, summary)
 		
 def ordreLang(code):
+	if(code == u'conv'):
+		return 1
+	if(code == u'fr'):
+		return 1
+	if(code == u'fro'):
+		return 1
+	if(code == u'frm'):
+		return 1
+	if(code == u'aa'):
+		return 1
+	if(code == u'af'):
+		return 1
+	if(code == u'bm'):
+		return 1
+	if(code == u'br'):
+		return 1
+	if(code == u'ca'):
+		return 1
+	if(code == u'ch'):
+		return 1
+	if(code == u'co'):
+		return 1
+	if(code == u'eu'):
+		return 1
+	if(code == u'pro'):
+		return 1
+	#####################################
+	## Ordre alphabétique après espagnol
+	#####################################
 	if(code == u'cs'):
-		return False
+		return -1
 	if(code == u'eo'):
-		return False
+		return -1
 	if(code == u'fi'):
-		return False
+		return -1
 	if(code == u'fon'):
-		return False
+		return -1
+	if(code == u'fy'):
+		return -1
+	if(code == u'gaul'):
+		return -1
+	if(code == u'gd'):
+		return -1
+	if(code == u'ht'):
+		return -1
+	if(code == u'id'):
+		return -1
+	if(code == u'io'):
+		return -1
 	if(code == u'it'):
-		return False
+		return -1
+	if(code == u'jbn'):
+		return -1
+	if(code == u'kab'):
+		return -1
+	if(code == u'kay'):
+		return -1
 	if(code == u'la'):
-		return False
+		return -1
+	if(code == u'lre'):
+		return -1
+	if(code == u'mls'):
+		return -1
+	if(code == u'mpi'):
+		return -1
+	if(code == u'ms'):
+		return -1
+	if(code == u'msk'):
+		return -1
+	if(code == u'nia'):
+		return -1
+	if(code == u'nl'):
+		return -1
 	if(code == u'oc'):
-		return False
+		return -1
+	if(code == u'oua'):
+		return -1
 	if(code == u'pap'):
-		return False
+		return -1
+	if(code == u'pcd'):
+		return -1
+	if(code == u'pl'):
+		return -1
+	if(code == u'pqm'):
+		return -1
 	if(code == u'pt'):
-		return False
+		return -1
+	if(code == u'rif'):
+		return -1
+	if(code == u'ro'):
+		return -1
+	if(code == u'se'):
+		return -1
+	if(code == u'ses'):
+		return -1
+	if(code == u'shp'):
+		return -1
 	if(code == u'sl'):
-		return False
+		return -1
 	if(code == u'snc'):
-		return False
+		return -1
+	if(code == u'sv'):
+		return -1
+	if(code == u'taq'):
+		return -1
+	if(code == u'tet'):
+		return -1
 	if(code == u'tl'):
-		return False
+		return -1
 	if(code == u'tpw'):
-		return False
-	return True
+		return -1
+	if(code == u'tr'):
+		return -1
+	if(code == u'une'):
+		return -1
+	if(code == u'urb'):
+		return -1
+	if(code == u'wae'):
+		return -1
+	if(code == u'zen'):
+		return -1
+	if(code == u'zrn'):
+		return -1
+	return 0
 		
 def trim(s):
 	return s.strip(" \t\n\r\0\x0B")
@@ -154,30 +270,28 @@ def crawlerXML(source):
 def crawlerFile(source):
 	if source:
 		PagesHS = codecs.open(source,"r","utf-8")
-		## PagesHS = open(source, 'r')
 		PageEspagnol = u''
 		titre = u''
 		ligne = u''
 		while True:
 			ligne = PagesHS.readline()
-			## ligne = ligne.decode('utf8')
 			if ligne.find(u'xxxx') != -1:
 				titre = PagesHS.readline()
 				titre = titre[3:-4]
 				## print titre
 			
-			if ligne.find(u'yyyy') == -1 and ligne.find(u'xxxx') == -1:	
+			if ligne.find(u'yyyy') == -1 and ligne.find(u'xxxx') == -1 and  ligne.find(u'{{clé de tri|') == -1:	
 				PageEspagnol += ligne
 			
 			if  (ligne.find(u'yyyy') != -1 and titre):
 				## print u'////////////////////'
 				## print titre
-				## print PageEspagnol
+			        ## print PageEspagnol
 				## print u'\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'
 				modification(titre, PageEspagnol)
 				titre  = u''
 				PageEspagnol = u''
-				##break
+				## break
 				
 		PagesHS.close()
 		
@@ -211,8 +325,8 @@ def sauvegarde(PageCourante, Contenu, summary):
 			print(Contenu[len(Contenu)-taille:].encode(config.console_encoding, 'replace'))
 		result = raw_input("Sauvegarder ? (o/n) ")
 	if result != "n" and result != "no" and result != "non":
-		if PageCourante.title().find(u'Utilisateur:JackBot/') == -1: ArretDUrgence()
-		if not summary: summary = u'[[Wiktionnaire:Structure des articles|Autoformatage]]'
+		if PageCourante.title().find(u'Utilisateur:PamputtBot/') == -1: ArretDUrgence()
+		if not summary: summary = u'Ajout de la forme conjuguée en espagnol'
 		try:
 			PageCourante.put(Contenu, summary)
 		except wikipedia.NoPage: 
@@ -238,9 +352,12 @@ def sauvegarde(PageCourante, Contenu, summary):
 			return
 			
 # Lancement
-## fout = open(u'aTraiterManuellement.txt', "a")
 fout = codecs.open(u'aTraiterManuellement.txt',"a","utf-8")
 
+fcodeout = codecs.open(u'codeLangue.txt',"w","utf-8")
+
 TraitementFichier = crawlerFile(u'es_conj.xml')
+## modification(u'abandera', u'>>>  test  <<<')
+## modification(u'abandonas', u'>>>  test  <<<')
 fout.close()
 
