@@ -1,4 +1,4 @@
-JackBot
+PamputtBot
 =======
 
-Wiki bot https://fr.wiktionary.org/wiki/Utilisateur:JackBot
+Wiki bot https://fr.wiktionary.org/wiki/Utilisateur:PamputtBot
