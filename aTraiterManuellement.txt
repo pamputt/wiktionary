@@ -1,0 +1,1803 @@
+>>>abajo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abajar|ind.p.1s=oui}}
+'''abajo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abajar#es|abajar]]''.''
+>>>abalanzando<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ppr=oui}}
+'''abalanzando''' {{pron||es}}
+#''Gérondif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ppa=oui}}
+'''abalanzado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.1s=oui}}
+'''abalanzo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzas<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.2s=oui}}
+'''abalanzas''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzás<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.2s2=oui}}
+'''abalanzás''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanza<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abalanza''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''abalanzamos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzáis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.2p=oui}}
+'''abalanzáis''' {{pron||es}}
+# ''Deuxième personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzan<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.3p=oui}}
+'''abalanzan''' {{pron||es}}
+# ''Troisième personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaba<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.1s=oui|ind.i.3s=oui}}
+'''abalanzaba''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzabas<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.2s=oui}}
+'''abalanzabas''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaba<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.1s=oui|ind.i.3s=oui}}
+'''abalanzaba''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzábamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.1p=oui}}
+'''abalanzábamos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzabais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.2p=oui}}
+'''abalanzabais''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaban<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.3p=oui}}
+'''abalanzaban''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.1s=oui}}
+'''abalancé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaste<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.2s=oui}}
+'''abalanzaste''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzó<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.3s=oui}}
+'''abalanzó''' {{pron||es}}
+# ''Troisième personne du singulier du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''abalanzamos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzasteis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.2p=oui}}
+'''abalanzasteis''' {{pron||es}}
+# ''Deuxième personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaron<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.3p=oui}}
+'''abalanzaron''' {{pron||es}}
+# ''Troisième personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaré<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.1s=oui}}
+'''abalanzaré''' {{pron||es}}
+# ''Première personne du singulier du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarás<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.2s=oui}}
+'''abalanzarás''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzará<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.3s=oui}}
+'''abalanzará''' {{pron||es}}
+# ''Troisième personne du singulier du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaremos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.1p=oui}}
+'''abalanzaremos''' {{pron||es}}
+# ''Première personne du pluriel du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaréis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.2p=oui}}
+'''abalanzaréis''' {{pron||es}}
+# ''Deuxième personne du pluriel du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarán<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.3p=oui}}
+'''abalanzarán''' {{pron||es}}
+# ''Troisième personne du pluriel du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaría<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.1s=oui|cond.p.3s=oui}}
+'''abalanzaría''' {{pron||es}}
+# ''Première personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarías<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.2s=oui}}
+'''abalanzarías''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'')  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaría<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.1s=oui|cond.p.3s=oui}}
+'''abalanzaría''' {{pron||es}}
+# ''Première personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaríamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.1p=oui}}
+'''abalanzaríamos''' {{pron||es}}
+# ''Première personne du pluriel  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaríais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.2p=oui}}
+'''abalanzaríais''' {{pron||es}}
+# ''Deuxième personne du pluriel  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarían<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.3p=oui}}
+'''abalanzarían''' {{pron||es}}
+# ''Troisième personne du pluriel  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalance<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abalance''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalances<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.2s=oui}}
+'''abalances''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancés<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.2s2=oui}}
+'''abalancés''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalance<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abalance''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1p=oui|imp.p.1p=oui}}
+'''abalancemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancéis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.2p=oui}}
+'''abalancéis''' {{pron||es}}
+# ''Deuxième personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalancen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.3p=oui|imp.p.3p=oui}}
+'''abalancen''' {{pron||es}}
+# ''Troisième personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzara<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.1s=oui|sub.i1.3s=oui}}
+'''abalanzara''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaras<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.2s=oui}}
+'''abalanzaras''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzara<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.1s=oui|sub.i1.3s=oui}}
+'''abalanzara''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzáramos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.1p=oui}}
+'''abalanzáramos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaran<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.3p=oui}}
+'''abalanzaran''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''abalanzase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzases<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.2s=oui}}
+'''abalanzases''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''abalanzase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzásemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.1p=oui}}
+'''abalanzásemos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaseis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.2p=oui}}
+'''abalanzaseis''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzasen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.3p=oui}}
+'''abalanzasen''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.1s=oui|sub.f.3s=oui}}
+'''abalanzare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzares<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.2s=oui}}
+'''abalanzares''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.1s=oui|sub.f.3s=oui}}
+'''abalanzare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzáremos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.1p=oui}}
+'''abalanzáremos''' {{pron||es}}
+# ''Première personne du pluriel du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzareis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.2p=oui}}
+'''abalanzareis''' {{pron||es}}
+# ''Deuxième personne du pluriel du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaren<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.3p=oui}}
+'''abalanzaren''' {{pron||es}}
+# ''Troisième personne du pluriel du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanza<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abalanza''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzá<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|imp.p.2s2=oui}}
+'''abalanzá''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalance<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abalance''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1p=oui|imp.p.1p=oui}}
+'''abalancemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzad<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|imp.p.2p=oui}}
+'''abalanzad''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.3p=oui|imp.p.3p=oui}}
+'''abalancen''' {{pron||es}}
+# ''Troisième personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abandonado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abandonar|ppa=oui}}
+'''abandonado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[abandonar#es|abandonar]]''.''
+>>>abandono<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abandonar|ind.p.1s=oui}}
+'''abandono''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abandonar#es|abandonar]]''.''
+>>>abajo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abajar|ind.p.1s=oui}}
+'''abajo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abajar#es|abajar]]''.''
+>>>abalanzando<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ppr=oui}}
+'''abalanzando''' {{pron||es}}
+#''Gérondif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ppa=oui}}
+'''abalanzado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.1s=oui}}
+'''abalanzo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzas<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.2s=oui}}
+'''abalanzas''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzás<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.2s2=oui}}
+'''abalanzás''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanza<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abalanza''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''abalanzamos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzáis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.2p=oui}}
+'''abalanzáis''' {{pron||es}}
+# ''Deuxième personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzan<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.3p=oui}}
+'''abalanzan''' {{pron||es}}
+# ''Troisième personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaba<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.1s=oui|ind.i.3s=oui}}
+'''abalanzaba''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzabas<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.2s=oui}}
+'''abalanzabas''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaba<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.1s=oui|ind.i.3s=oui}}
+'''abalanzaba''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzábamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.1p=oui}}
+'''abalanzábamos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzabais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.2p=oui}}
+'''abalanzabais''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaban<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.i.3p=oui}}
+'''abalanzaban''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.1s=oui}}
+'''abalancé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaste<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.2s=oui}}
+'''abalanzaste''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzó<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.3s=oui}}
+'''abalanzó''' {{pron||es}}
+# ''Troisième personne du singulier du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''abalanzamos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzasteis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.2p=oui}}
+'''abalanzasteis''' {{pron||es}}
+# ''Deuxième personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaron<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.ps.3p=oui}}
+'''abalanzaron''' {{pron||es}}
+# ''Troisième personne du pluriel du passé simple de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaré<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.1s=oui}}
+'''abalanzaré''' {{pron||es}}
+# ''Première personne du singulier du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarás<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.2s=oui}}
+'''abalanzarás''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzará<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.3s=oui}}
+'''abalanzará''' {{pron||es}}
+# ''Troisième personne du singulier du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaremos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.1p=oui}}
+'''abalanzaremos''' {{pron||es}}
+# ''Première personne du pluriel du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaréis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.2p=oui}}
+'''abalanzaréis''' {{pron||es}}
+# ''Deuxième personne du pluriel du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarán<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.f.3p=oui}}
+'''abalanzarán''' {{pron||es}}
+# ''Troisième personne du pluriel du futur de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaría<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.1s=oui|cond.p.3s=oui}}
+'''abalanzaría''' {{pron||es}}
+# ''Première personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarías<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.2s=oui}}
+'''abalanzarías''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'')  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaría<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.1s=oui|cond.p.3s=oui}}
+'''abalanzaría''' {{pron||es}}
+# ''Première personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaríamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.1p=oui}}
+'''abalanzaríamos''' {{pron||es}}
+# ''Première personne du pluriel  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaríais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.2p=oui}}
+'''abalanzaríais''' {{pron||es}}
+# ''Deuxième personne du pluriel  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzarían<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|cond.p.3p=oui}}
+'''abalanzarían''' {{pron||es}}
+# ''Troisième personne du pluriel  de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalance<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abalance''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalances<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.2s=oui}}
+'''abalances''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancés<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.2s2=oui}}
+'''abalancés''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalance<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abalance''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1p=oui|imp.p.1p=oui}}
+'''abalancemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancéis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.2p=oui}}
+'''abalancéis''' {{pron||es}}
+# ''Deuxième personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalancen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.3p=oui|imp.p.3p=oui}}
+'''abalancen''' {{pron||es}}
+# ''Troisième personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzara<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.1s=oui|sub.i1.3s=oui}}
+'''abalanzara''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaras<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.2s=oui}}
+'''abalanzaras''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzara<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.1s=oui|sub.i1.3s=oui}}
+'''abalanzara''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzáramos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.1p=oui}}
+'''abalanzáramos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaran<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i1.3p=oui}}
+'''abalanzaran''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''abalanzase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzases<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.2s=oui}}
+'''abalanzases''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''abalanzase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzásemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.1p=oui}}
+'''abalanzásemos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzaseis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.2p=oui}}
+'''abalanzaseis''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzasen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.i2.3p=oui}}
+'''abalanzasen''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.1s=oui|sub.f.3s=oui}}
+'''abalanzare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzares<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.2s=oui}}
+'''abalanzares''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.1s=oui|sub.f.3s=oui}}
+'''abalanzare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzáremos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.1p=oui}}
+'''abalanzáremos''' {{pron||es}}
+# ''Première personne du pluriel du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalanzareis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.2p=oui}}
+'''abalanzareis''' {{pron||es}}
+# ''Deuxième personne du pluriel du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzaren<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.f.3p=oui}}
+'''abalanzaren''' {{pron||es}}
+# ''Troisième personne du pluriel du futur du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanza<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abalanza''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzá<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|imp.p.2s2=oui}}
+'''abalanzá''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+
+>>>abalance<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abalance''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.1p=oui|imp.p.1p=oui}}
+'''abalancemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalanzad<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|imp.p.2p=oui}}
+'''abalanzad''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abalancen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abalanzar|sub.p.3p=oui|imp.p.3p=oui}}
+'''abalancen''' {{pron||es}}
+# ''Troisième personne du pluriel du présent du subjonctif de ''[[abalanzar#es|abalanzar]]''.''
+# ''Troisième personne du pluriel de l’impératif de ''[[abalanzar#es|abalanzar]]''.''
+>>>abandonado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abandonar|ppa=oui}}
+'''abandonado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[abandonar#es|abandonar]]''.''
+>>>abandono<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abandonar|ind.p.1s=oui}}
+'''abandono''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abandonar#es|abandonar]]''.''
+>>>abdique<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abdicar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abdique''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abdicar#es|abdicar]]''.''
+>>>abdique<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abdicar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abdique''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abdicar#es|abdicar]]''.''
+>>>abdiquemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abdicar|sub.p.1p=oui|imp.p.1p=oui}}
+'''abdiquemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[abdicar#es|abdicar]]''.''
+>>>abdique<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abdicar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''abdique''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[abdicar#es|abdicar]]''.''
+>>>abdiquemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abdicar|sub.p.1p=oui|imp.p.1p=oui}}
+'''abdiquemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[abdicar#es|abdicar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[abdicar#es|abdicar]]''.''
+>>>abjurando<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ppr=oui}}
+'''abjurando''' {{pron||es}}
+#''Gérondif de ''[[abjurar#es|abjurar]]''.''
+>>>abjurado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ppa=oui}}
+'''abjurado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[abjurar#es|abjurar]]''.''
+>>>abjuro<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.p.1s=oui}}
+'''abjuro''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+>>>abjuras<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.p.2s=oui}}
+'''abjuras''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+>>>abjura<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abjura''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abjurar#es|abjurar]]''.''
+>>>abjuramos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''abjuramos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+>>>abjuré<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.ps.1s=oui}}
+'''abjuré''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+
+>>>abjuraste<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.ps.2s=oui}}
+'''abjuraste''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du passé simple de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+>>>abjuramos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''abjuramos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+>>>abjura<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abjurar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abjura''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abjurar#es|abjurar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abjurar#es|abjurar]]''.''
+>>>abogado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abogar|ppa=oui}}
+'''abogado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[abogar#es|abogar]]''.''
+>>>abono<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abonar|ind.p.1s=oui}}
+'''abono''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abonar#es|abonar]]''.''
+>>>aborto<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abortar|ind.p.1s=oui}}
+'''aborto''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abortar#es|abortar]]''.''
+>>>abrazo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrazar|ind.p.1s=oui}}
+'''abrazo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abrazar#es|abrazar]]''.''
+>>>abrigo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrigar|ind.p.1s=oui}}
+'''abrigo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abrigar#es|abrigar]]''.''
+>>>abrogo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|ind.p.1s=oui}}
+'''abrogo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abrogar#es|abrogar]]''.''
+>>>abroga<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abroga''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abrogar#es|abrogar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abrogar#es|abrogar]]''.''
+>>>abrogase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''abrogase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abrogar#es|abrogar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abrogar#es|abrogar]]''.''
+>>>abrogase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''abrogase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abrogar#es|abrogar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[abrogar#es|abrogar]]''.''
+>>>abrogare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|sub.f.1s=oui|sub.f.3s=oui}}
+'''abrogare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[abrogar#es|abrogar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[abrogar#es|abrogar]]''.''
+>>>abrogare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|sub.f.1s=oui|sub.f.3s=oui}}
+'''abrogare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[abrogar#es|abrogar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[abrogar#es|abrogar]]''.''
+>>>abroga<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrogar|ind.p.3s=oui|imp.p.2s=oui}}
+'''abroga''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[abrogar#es|abrogar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[abrogar#es|abrogar]]''.''
+>>>abrumé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abrumar|ind.ps.1s=oui}}
+'''abrumé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[abrumar#es|abrumar]]''.''
+
+>>>abundé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abundar|ind.ps.1s=oui}}
+'''abundé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[abundar#es|abundar]]''.''
+
+>>>abuso<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|abusar|ind.p.1s=oui}}
+'''abuso''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[abusar#es|abusar]]''.''
+>>>acabando<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ppr=oui}}
+'''acabando''' {{pron||es}}
+#''Gérondif de ''[[acabar#es|acabar]]''.''
+>>>acabado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ppa=oui}}
+'''acabado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[acabar#es|acabar]]''.''
+>>>acabo<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.1s=oui}}
+'''acabo''' {{pron||es}}
+# ''Première personne du singulier du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabas<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.2s=oui}}
+'''acabas''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabás<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.2s2=oui}}
+'''acabás''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acaba<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.3s=oui|imp.p.2s=oui}}
+'''acaba''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''acabamos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabáis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.2p=oui}}
+'''acabáis''' {{pron||es}}
+# ''Deuxième personne du pluriel du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acaban<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.3p=oui}}
+'''acaban''' {{pron||es}}
+# ''Troisième personne du pluriel du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acababa<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.i.1s=oui|ind.i.3s=oui}}
+'''acababa''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acababas<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.i.2s=oui}}
+'''acababas''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acababa<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.i.1s=oui|ind.i.3s=oui}}
+'''acababa''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabábamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.i.1p=oui}}
+'''acabábamos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acababais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.i.2p=oui}}
+'''acababais''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acababan<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.i.3p=oui}}
+'''acababan''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.ps.1s=oui}}
+'''acabé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabaste<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.ps.2s=oui}}
+'''acabaste''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabó<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.ps.3s=oui}}
+'''acabó''' {{pron||es}}
+# ''Troisième personne du singulier du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.1p=oui|ind.ps.1p=oui}}
+'''acabamos''' {{pron||es}}
+# ''Première personne du pluriel du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+# ''Première personne du pluriel du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabasteis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.ps.2p=oui}}
+'''acabasteis''' {{pron||es}}
+# ''Deuxième personne du pluriel du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabaron<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.ps.3p=oui}}
+'''acabaron''' {{pron||es}}
+# ''Troisième personne du pluriel du passé simple de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabaré<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.f.1s=oui}}
+'''acabaré''' {{pron||es}}
+# ''Première personne du singulier du futur de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabarás<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.f.2s=oui}}
+'''acabarás''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du futur de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabará<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.f.3s=oui}}
+'''acabará''' {{pron||es}}
+# ''Troisième personne du singulier du futur de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabaremos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.f.1p=oui}}
+'''acabaremos''' {{pron||es}}
+# ''Première personne du pluriel du futur de l’indicatif de ''[[acabar#es|acabar]]''.''
+>>>acabaréis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.f.2p=oui}}
+'''acabaréis''' {{pron||es}}
+# ''Deuxième personne du pluriel du futur de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabarán<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.f.3p=oui}}
+'''acabarán''' {{pron||es}}
+# ''Troisième personne du pluriel du futur de l’indicatif de ''[[acabar#es|acabar]]''.''
+
+>>>acabaría<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|cond.p.1s=oui|cond.p.3s=oui}}
+'''acabaría''' {{pron||es}}
+# ''Première personne du singulier  de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier  de ''[[acabar#es|acabar]]''.''
+
+>>>acabarías<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|cond.p.2s=oui}}
+'''acabarías''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'')  de ''[[acabar#es|acabar]]''.''
+
+>>>acabaría<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|cond.p.1s=oui|cond.p.3s=oui}}
+'''acabaría''' {{pron||es}}
+# ''Première personne du singulier  de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier  de ''[[acabar#es|acabar]]''.''
+
+>>>acabaríamos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|cond.p.1p=oui}}
+'''acabaríamos''' {{pron||es}}
+# ''Première personne du pluriel  de ''[[acabar#es|acabar]]''.''
+
+>>>acabaríais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|cond.p.2p=oui}}
+'''acabaríais''' {{pron||es}}
+# ''Deuxième personne du pluriel  de ''[[acabar#es|acabar]]''.''
+
+>>>acabarían<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|cond.p.3p=oui}}
+'''acabarían''' {{pron||es}}
+# ''Troisième personne du pluriel  de ''[[acabar#es|acabar]]''.''
+
+>>>acabe<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''acabe''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabes<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.2s=oui}}
+'''acabes''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabés<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.2s2=oui}}
+'''acabés''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+
+>>>acabe<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''acabe''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.1p=oui|imp.p.1p=oui}}
+'''acabemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabéis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.2p=oui}}
+'''acabéis''' {{pron||es}}
+# ''Deuxième personne du pluriel du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+
+>>>acaben<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.3p=oui|imp.p.3p=oui}}
+'''acaben''' {{pron||es}}
+# ''Troisième personne du pluriel du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du pluriel de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabara<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i1.1s=oui|sub.i1.3s=oui}}
+'''acabara''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabaras<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i1.2s=oui}}
+'''acabaras''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabara<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i1.1s=oui|sub.i1.3s=oui}}
+'''acabara''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabáramos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i1.1p=oui}}
+'''acabáramos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+
+>>>acabarais<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i1.2p=oui}}
+'''acabarais''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabaran<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i1.3p=oui}}
+'''acabaran''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait (en ''-ra'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''acabase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabases<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i2.2s=oui}}
+'''acabases''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabase<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i2.1s=oui|sub.i2.3s=oui}}
+'''acabase''' {{pron||es}}
+# ''Première personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabásemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i2.1p=oui}}
+'''acabásemos''' {{pron||es}}
+# ''Première personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+
+>>>acabaseis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i2.2p=oui}}
+'''acabaseis''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabasen<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.i2.3p=oui}}
+'''acabasen''' {{pron||es}}
+# ''Troisième personne du pluriel de l’imparfait (en ''-se'') du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.f.1s=oui|sub.f.3s=oui}}
+'''acabare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabares<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.f.2s=oui}}
+'''acabares''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabare<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.f.1s=oui|sub.f.3s=oui}}
+'''acabare''' {{pron||es}}
+# ''Première personne du singulier du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabáremos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.f.1p=oui}}
+'''acabáremos''' {{pron||es}}
+# ''Première personne du pluriel du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+
+>>>acabareis<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.f.2p=oui}}
+'''acabareis''' {{pron||es}}
+# ''Deuxième personne du pluriel du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acabaren<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.f.3p=oui}}
+'''acabaren''' {{pron||es}}
+# ''Troisième personne du pluriel du futur du subjonctif de ''[[acabar#es|acabar]]''.''
+>>>acaba<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|ind.p.3s=oui|imp.p.2s=oui}}
+'''acaba''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[acabar#es|acabar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabá<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|imp.p.2s2=oui}}
+'''acabá''' {{pron||es}}
+# ''Deuxième personne du singulier (''vos'') de l’impératif de ''[[acabar#es|acabar]]''.''
+
+>>>acabe<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.1s=oui|sub.p.3s=oui|imp.p.3s=oui}}
+'''acabe''' {{pron||es}}
+# ''Première personne du singulier du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du singulier de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabemos<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.1p=oui|imp.p.1p=oui}}
+'''acabemos''' {{pron||es}}
+# ''Première personne du pluriel du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Première personne du pluriel de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acabad<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|imp.p.2p=oui}}
+'''acabad''' {{pron||es}}
+# ''Deuxième personne du pluriel de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acaben<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acabar|sub.p.3p=oui|imp.p.3p=oui}}
+'''acaben''' {{pron||es}}
+# ''Troisième personne du pluriel du présent du subjonctif de ''[[acabar#es|acabar]]''.''
+# ''Troisième personne du pluriel de l’impératif de ''[[acabar#es|acabar]]''.''
+>>>acallé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acallar|ind.ps.1s=oui}}
+'''acallé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[acallar#es|acallar]]''.''
+
+>>>acampé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acampar|ind.ps.1s=oui}}
+'''acampé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[acampar#es|acampar]]''.''
+
+>>>acaparé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acaparar|ind.ps.1s=oui}}
+'''acaparé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[acaparar#es|acaparar]]''.''
+
+>>>acarreé<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acarrear|ind.ps.1s=oui}}
+'''acarreé''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[acarrear#es|acarrear]]''.''
+
+>>>acaté<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acatar|ind.ps.1s=oui}}
+'''acaté''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[acatar#es|acatar]]''.''
+
+>>>acaudalado<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|acaudalar|ppa=oui}}
+'''acaudalado''' {{pron||es}}
+#''Participe passé masculin singulier de ''[[acaudalar#es|acaudalar]]''.''
+>>>accioné<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|accionar|ind.ps.1s=oui}}
+'''accioné''' {{pron||es}}
+# ''Première personne du singulier du passé simple de l’indicatif de ''[[accionar#es|accionar]]''.''
+
+>>>acciones<<<
+{{vérifier création automatique||es}}
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|accionar|sub.p.2s=oui}}
+'''acciones''' {{pron||es}}
+# ''Deuxième personne du singulier (''tú'') du présent du subjonctif de ''[[accionar#es|accionar]]''.''
