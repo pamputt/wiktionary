@@ -4,7 +4,7 @@
 
 # Importation des modules
 import catlib, pagegenerators, os, langues
-import re
+import re, sys
 from wikipedia import *
 
 # Déclaration
@@ -56,7 +56,10 @@ def modification(titre, PageEspagnol):
 
 		## Si la page contient deja une section en espagnol, et qu'il ne contient pas {{vérifier création automatique||es}}
 		## alors on la traitera manuellement
-		if PageTemp.find('{{langue|es}}') != -1 and PageTemp.find(u'{{vérifier création automatique||es}}') == -1:
+		if PageTemp.find(u'{{vérifier création automatique||es}}') != -1:
+			return
+		
+		if PageTemp.find('{{langue|es}}') != -1:
 			fout.write(u'>>>' + titre + u'<<<\n')
 			fout.write(PageEspagnol)
 			return
@@ -66,7 +69,7 @@ def modification(titre, PageEspagnol):
 		ligne = u''
 		codelang = u''
 		ajoute = False
-		## cmpt = 0
+		first = True
 		## print PageTemp
 		for ligne in PageTemp.splitlines():
 			## print u'>>>>   ' + ligne
@@ -78,7 +81,6 @@ def modification(titre, PageEspagnol):
 			if len(codelang)==0: return
 			
 			result = ordreLang(codelang);
-			## cmpt = cmpt+1
 			## print u'code lang: ' + codelang + u', ' + str(result)
 
 			## le code de langue n'a pas encore ete repertorie
@@ -89,33 +91,35 @@ def modification(titre, PageEspagnol):
 			
 
 			## s'il n'y a qu'une seule langue qui se place avant l'espagnol
-			## alors on vérifie s'il y a des catégories ou des liens interwikis
+			## alors on vérifie s'il y a des catégories, des liens interwikis ou une clé de tri
 			## si c'est le cas, on place l'espagnol avant
 			##catégorie
 			if ligne.find(u'[[Catégorie:')!=-1 and not ajoute:
 				PageEnd = PageEnd + PageEspagnol + u'\n'
-				PageEnd = PageEnd + ligne + u'\n'
 				ajoute = True
 			## interwiki
 			if re.search(u'\[\[(.)+:' + titre + u']]',ligne) and not ajoute:
 				PageEnd = PageEnd + PageEspagnol + u'\n'
-				PageEnd = PageEnd + ligne + u'\n'
+				ajoute = True
+			## clé de tri
+			if ligne.find(u'{{clé de tri')!=-1 and not ajoute:
+				PageEnd = PageEnd + u'\n' + PageEspagnol + u'\n'
 				ajoute = True
 
+
+			## on ajoute « {{vérifier création automatique||es}} » en haut de l'article
+			if first:
+				PageEnd = u'{{vérifier création automatique||es}}\n' + PageEnd
+				first = False
 				
 			## si c'est un code langue avant l'espagnol (parmi ceux identifies)
 			## alors on ajoute juste le texte de la page actuelle
 			if result>0 or ajoute:
-
-
-				## pour le cas où l'espagnol et la premiere section
-				## sinon c'est deja traite par la variable ajoute
-				## if cmpt==1:
-				## 	PageEnd = PageEnd + PageEspagnol + u'\n'
 			        ## print u'---> ' + ligne + u', ' + codelang + u', ' + str(result) + u', ' + str(result<0) + u', ' + str(ajoute) + u' <---' 
 				## print u'1//// ' + PageEnd + u'\\\\\\\\1'
 
 				PageEnd = PageEnd + ligne + u'\n'
+
 				## print u'2//// ' + PageEnd + u'\\\\\\\\2'
 			## on ajoute le texte pour l'espagnol
 			else:
@@ -124,8 +128,7 @@ def modification(titre, PageEspagnol):
 				PageEnd = PageEnd + ligne + u'\n'
 				ajoute = True
 				## print u'<2> ' + PageEnd + u'</2>'
-				
-##abandera, fr
+		
 	        if PageEnd != PageBegin:
 			## print u'>>>>>>>>>>>>>>>>>>>>'
 			## print PageEnd
@@ -257,30 +260,33 @@ def ordreLang(code):
 	if(code == u'zrn'):
 		return -1
 	return 0
-		
-def trim(s):
-	return s.strip(" \t\n\r\0\x0B")
-
-def crawlerXML(source):
-	pages = [r for r in xmlreader.XmlDump(source, allrevisions=False).parse()]
-	for Page in pages:
-		modification(Page.title())
 	
 # Lecture du fichier es_conj.xml
-def crawlerFile(source):
+def crawlerFile(source, commenceA):
 	if source:
 		PagesHS = codecs.open(source,"r","utf-8")
 		PageEspagnol = u''
 		titre = u''
 		ligne = u''
+		ok = False
 		while True:
 			ligne = PagesHS.readline()
 			if ligne.find(u'xxxx') != -1:
 				titre = PagesHS.readline()
 				titre = titre[3:-4]
 				## print titre
+
+			if len(commenceA)>0:
+				if not ok:
+					if titre != commenceA:
+						continue
+					else:
+						ok = True
 			
-			if ligne.find(u'yyyy') == -1 and ligne.find(u'xxxx') == -1 and  ligne.find(u'{{clé de tri|') == -1:	
+			if ligne.find(u'yyyy') == -1 and \
+			       ligne.find(u'xxxx') == -1 and \
+			       ligne.find(u'{{clé de tri|') == -1 and \
+			       ligne.find(u'{{vérifier création automatique||es}}') == -1:	
 				PageEspagnol += ligne
 			
 			if  (ligne.find(u'yyyy') != -1 and titre):
@@ -294,6 +300,9 @@ def crawlerFile(source):
 				## break
 				
 		PagesHS.close()
+		
+		if len(commenceA)>0 and not ok:
+			print commenceA + u' n\'a pas été trouvé'
 		
 
 # Permet à tout le monde de stopper le bot en lui écrivant
@@ -325,7 +334,10 @@ def sauvegarde(PageCourante, Contenu, summary):
 			print(Contenu[len(Contenu)-taille:].encode(config.console_encoding, 'replace'))
 		result = raw_input("Sauvegarder ? (o/n) ")
 	if result != "n" and result != "no" and result != "non":
-		if PageCourante.title().find(u'Utilisateur:PamputtBot/') == -1: ArretDUrgence()
+		print PageCourante.title()
+		if PageCourante.title().find(u'Utilisateur:PamputtBot/') != -1:
+			print u'On arrête'
+			ArretDUrgence()
 		if not summary: summary = u'Ajout de la forme conjuguée en espagnol'
 		try:
 			PageCourante.put(Contenu, summary)
@@ -352,12 +364,19 @@ def sauvegarde(PageCourante, Contenu, summary):
 			return
 			
 # Lancement
+
 fout = codecs.open(u'aTraiterManuellement.txt',"a","utf-8")
 
 fcodeout = codecs.open(u'codeLangue.txt',"w","utf-8")
 
-TraitementFichier = crawlerFile(u'es_conj.xml')
+TraitementFichier = crawlerFile(u'es_conj.xml', sys.argv[1].decode("utf-8"))
 ## modification(u'abandera', u'>>>  test  <<<')
 ## modification(u'abandonas', u'>>>  test  <<<')
 fout.close()
 
+## corriger les conditionnels
+## 
+# ''Première personne du singulier  de ''[[abandonar#es|abandonar]]''.''
+# devrait se lire
+# ''Première personne du singulier du conditionnel de ''[[abandonar#es|abandonar]]''.''
+# 
