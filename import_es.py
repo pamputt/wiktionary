@@ -151,10 +151,13 @@ def ordreLang(code):
 	code2 = unicodedata.normalize('NFD', code).encode('ascii', 'ignore')
 	
 	for code_lang, nom_lang in langues.langues.items():
-		s1 = unicode(nom_lang,'utf-8')
-		nom_lang2 = unicodedata.normalize('NFD', s1).encode('ascii', 'ignore')
-		if (nom_lang2 < u'espagnol'): return 1
-		else: return -1
+		if(code2 == code_lang):
+			s1 = unicode(nom_lang,'utf-8')
+			nom_lang2 = unicodedata.normalize('NFD', s1).encode('ascii', 'ignore')
+			## print code2 + u' ' + nom_lang2 + '\n'
+			if (nom_lang2 < u'espagnol'): return 1
+			else: return -1
+	return 0
 	
 # Lecture du fichier es_conj.xml
 def crawlerFile(source, commenceA):
