@@ -4,7 +4,6 @@
 
 # Importation des modules
 import catlib, pagegenerators, os, langues
-import re, sys
 from wikipedia import *
 
 # Déclaration
@@ -136,130 +135,26 @@ def modification(titre, PageEspagnol):
 			sauvegarde(page, PageEnd, summary)
 		
 def ordreLang(code):
+
+	# si c'est de l'espagnol, on sort directement
+	if(code == u'es'):
+		return 0
+
+	#cas particulier pour conv et fr qui sont toujours au début
 	if(code == u'conv'):
 		return 1
 	if(code == u'fr'):
 		return 1
-	if(code == u'fro'):
-		return 1
-	if(code == u'frm'):
-		return 1
-	if(code == u'aa'):
-		return 1
-	if(code == u'af'):
-		return 1
-	if(code == u'bm'):
-		return 1
-	if(code == u'br'):
-		return 1
-	if(code == u'ca'):
-		return 1
-	if(code == u'ch'):
-		return 1
-	if(code == u'co'):
-		return 1
-	if(code == u'eu'):
-		return 1
-	if(code == u'pro'):
-		return 1
-	#####################################
-	## Ordre alphabétique après espagnol
-	#####################################
-	if(code == u'cs'):
-		return -1
-	if(code == u'eo'):
-		return -1
-	if(code == u'fi'):
-		return -1
-	if(code == u'fon'):
-		return -1
-	if(code == u'fy'):
-		return -1
-	if(code == u'gaul'):
-		return -1
-	if(code == u'gd'):
-		return -1
-	if(code == u'ht'):
-		return -1
-	if(code == u'id'):
-		return -1
-	if(code == u'io'):
-		return -1
-	if(code == u'it'):
-		return -1
-	if(code == u'jbn'):
-		return -1
-	if(code == u'kab'):
-		return -1
-	if(code == u'kay'):
-		return -1
-	if(code == u'la'):
-		return -1
-	if(code == u'lre'):
-		return -1
-	if(code == u'mls'):
-		return -1
-	if(code == u'mpi'):
-		return -1
-	if(code == u'ms'):
-		return -1
-	if(code == u'msk'):
-		return -1
-	if(code == u'nia'):
-		return -1
-	if(code == u'nl'):
-		return -1
-	if(code == u'oc'):
-		return -1
-	if(code == u'oua'):
-		return -1
-	if(code == u'pap'):
-		return -1
-	if(code == u'pcd'):
-		return -1
-	if(code == u'pl'):
-		return -1
-	if(code == u'pqm'):
-		return -1
-	if(code == u'pt'):
-		return -1
-	if(code == u'rif'):
-		return -1
-	if(code == u'ro'):
-		return -1
-	if(code == u'se'):
-		return -1
-	if(code == u'ses'):
-		return -1
-	if(code == u'shp'):
-		return -1
-	if(code == u'sl'):
-		return -1
-	if(code == u'snc'):
-		return -1
-	if(code == u'sv'):
-		return -1
-	if(code == u'taq'):
-		return -1
-	if(code == u'tet'):
-		return -1
-	if(code == u'tl'):
-		return -1
-	if(code == u'tpw'):
-		return -1
-	if(code == u'tr'):
-		return -1
-	if(code == u'une'):
-		return -1
-	if(code == u'urb'):
-		return -1
-	if(code == u'wae'):
-		return -1
-	if(code == u'zen'):
-		return -1
-	if(code == u'zrn'):
-		return -1
-	return 0
+	
+	# on enlève les caractères spéciaux du nom de la langue
+	## s1    = unicode(code,'utf-8')
+	code2 = unicodedata.normalize('NFD', code).encode('ascii', 'ignore')
+	
+	for code_lang, nom_lang in langues.langues.items():
+		s1 = unicode(nom_lang,'utf-8')
+		nom_lang2 = unicodedata.normalize('NFD', s1).encode('ascii', 'ignore')
+		if (nom_lang2 < u'espagnol'): return 1
+		else: return -1
 	
 # Lecture du fichier es_conj.xml
 def crawlerFile(source, commenceA):
@@ -380,3 +275,4 @@ fout.close()
 # devrait se lire
 # ''Première personne du singulier du conditionnel de ''[[abandonar#es|abandonar]]''.''
 # 
+## reprendre l'ajout manuel a partir de asalariado
