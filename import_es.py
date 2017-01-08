@@ -278,4 +278,4 @@ fout.close()
 # devrait se lire
 # ''Première personne du singulier du conditionnel de ''[[abandonar#es|abandonar]]''.''
 # 
-## reprendre l'ajout manuel a partir de asalariado
+## reprendre l'ajout manuel a partir de incendio
