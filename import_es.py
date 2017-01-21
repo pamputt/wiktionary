@@ -271,11 +271,3 @@ TraitementFichier = crawlerFile(u'es_conj.xml', sys.argv[1].decode("utf-8"))
 ## modification(u'abandera', u'>>>  test  <<<')
 ## modification(u'abandonas', u'>>>  test  <<<')
 fout.close()
-
-## corriger les conditionnels
-## 
-# ''Première personne du singulier  de ''[[abandonar#es|abandonar]]''.''
-# devrait se lire
-# ''Première personne du singulier du conditionnel de ''[[abandonar#es|abandonar]]''.''
-# 
-## reprendre l'ajout manuel a partir de incendio
