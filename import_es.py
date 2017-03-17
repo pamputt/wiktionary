@@ -53,7 +53,7 @@ def modification(titre, PageEspagnol):
 		## print PageTemp
 		PageEnd = u''
 
-		## Si la page contient deja une section en espagnol, et qu'il ne contient pas {{vérifier création automatique||es}}
+		## Si la page contient deja une section en espagnol, et qu'elle ne contient pas {{vérifier création automatique||es}}
 		## alors on la traitera manuellement
 		if PageTemp.find(u'{{vérifier création automatique||es}}') != -1:
 			return
@@ -77,7 +77,9 @@ def modification(titre, PageEspagnol):
 				pos2 = ligne.find(u'}}')
 				codelang = ligne[pos1+9:pos2]
 
-			if len(codelang)==0: return
+			## si ce n'est pas une section de langue ({{voir}} par exemple,
+			## on passe à la ligne suivante
+			if len(codelang)==0: continue
 			
 			result = ordreLang(codelang);
 			## print u'code lang: ' + codelang + u', ' + str(result)
@@ -107,9 +109,9 @@ def modification(titre, PageEspagnol):
 
 
 			## on ajoute « {{vérifier création automatique||es}} » en haut de l'article
-			if first:
-				PageEnd = u'{{vérifier création automatique||es}}\n' + PageEnd
-				first = False
+			##if first:
+			##	PageEnd = u'{{vérifier création automatique||es}}\n' + PageEnd
+			##	first = False
 				
 			## si c'est un code langue avant l'espagnol (parmi ceux identifies)
 			## alors on ajoute juste le texte de la page actuelle
