@@ -90,3 +90,9 @@ ENV/
 
 login-data/*
 logs/*
+apicache-py[2,3]/*
+login-data/*
+*~
+pywikibot.lwp
+throttle.ctrl
+
