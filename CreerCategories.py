@@ -54,11 +54,12 @@ def createCategoryNomsPropresIssus(page,cle):
   language1=page[beg+4:end]
   beg=page.find(" en ", end)
   language2=page[beg+4:]
-  if (not language2 in cle):
+  if (language2 not in cle):
     return
-
+  
   wikitext = "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "]]\n"
   wikitext += "[[Catégorie:Origines étymologiques des noms propres en " + language1 + "|" + cle[language2] + "]]"
+
   return wikitext
 
 def createCategoryMotsIssus(page,cle):
@@ -71,7 +72,7 @@ def createCategoryMotsIssus(page,cle):
   if (language1 not in cle):
     return
 
-  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + language2 + "]]"
+  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + language2 + "]]\n"
   wikitext += "[[Catégorie:Mots issus d’un mot en " + language2 + "|" + cle[language1] + "]]"
   return wikitext
 
@@ -89,19 +90,17 @@ def createCategory(page,cle):
      wikitext = createCategoryGrammaire(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
      wikitext = createCategoryNomsCommuns(page,cle)
-  ## elif ((page.find("Catégorie:Noms propres en") != 1) and
-  ##       (page.find("issus d’un mot en") != -1)):
-  ##   createCategoryNomsPropresIssus(page,cle)
-  ## elif ((page.find("Catégorie:Mots en") != 1) and
-  ##       (page.find("issus d’un mot en") != -1)):
-  ##   createCategoryMotsIssus(page,cle)
+  elif ((page.find("Catégorie:Noms propres en") != 1) and
+        (page.find("issus d’un mot en") != -1)):
+    wikitext = createCategoryNomsPropresIssus(page,cle)
+  elif ((page.find("Catégorie:Mots en") != -1) and
+        (page.find("issus d’un mot en") != -1)):
+    wikitext = createCategoryMotsIssus(page,cle)
   else:
     return
 
   if not wikitext:
     return
-  #TODO : corriger clé de tri
-  # en utilisant celle présente dans Module:langues/data
   
   pwbpage = pywikibot.Page(pywikibot.getSite(), page)
   if not test:
