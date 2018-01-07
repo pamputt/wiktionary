@@ -15255,3 +15255,10 @@
 {{es-verbe-flexion|zurrar|ind.p.1s=oui}}
 '''zurro''' {{pron||es}}
 # ''Première personne du singulier du présent de l’indicatif de ''[[zurrar#es|zurrar]]''.''
+>>>marcha<<<
+== {{langue|es}} ==
+=== {{S|verbe|es|flexion}} ===
+{{es-verbe-flexion|marchar|ind.p.3s=oui|imp.p.2s=oui}}
+'''marcha''' {{pron||es}}
+# ''Troisième personne du singulier du présent de l’indicatif de ''[[marchar#es|marchar]]''.''
+# ''Deuxième personne du singulier (''tú'') de l’impératif de ''[[marchar#es|marchar]]''.''
