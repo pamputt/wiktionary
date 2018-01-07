@@ -54,8 +54,8 @@ def createCategoryNomsPropresIssus(page,cle):
   language1=page[beg+4:end]
   beg=page.find(" en ", end)
   language2=page[beg+4:]
-  if (language1 not in cle or
-      language2 not in cle):
+  if ((language1 not in cle) or
+      (language2 not in cle)):
     return
   
   wikitext = "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "|" + cle[language1] + "]]\n"
@@ -70,8 +70,8 @@ def createCategoryMotsIssus(page,cle):
   language1=page[beg+4:end]
   beg=page.find(" en ", end)
   language2=page[beg+4:]
-  if (language1 not in cle or
-      language2 not in cle):
+  if ((language1 not in cle) or
+      (language2 not in cle)):
     return
 
   wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + cle[language2] + "]]\n"
@@ -92,7 +92,7 @@ def createCategory(page,cle):
      wikitext = createCategoryGrammaire(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
      wikitext = createCategoryNomsCommuns(page,cle)
-  elif ((page.find("Catégorie:Noms propres en") != 1) and
+  elif ((page.find("Catégorie:Noms propres en") != -1) and
         (page.find("issus d’un mot en") != -1)):
     wikitext = createCategoryNomsPropresIssus(page,cle)
   elif ((page.find("Catégorie:Mots en") != -1) and
@@ -141,7 +141,6 @@ def main():
   cle = getSortingKey()
   
   for page in WantedPagesCategoryGenerator(5000):
-    #print("Treating " + str(page))
     createCategory(page,cle)
   
 
