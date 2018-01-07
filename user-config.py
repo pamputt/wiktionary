@@ -111,8 +111,8 @@ splitLongParagraphs = False
 # That can do very ugly results.
 deIndentTables = True
 # table2wiki.py works quite stable, so you might switch to True
-table2wikiAskOnlyWarnings = True
-table2wikiSkipWarnings = False
+#table2wikiAskOnlyWarnings = True
+#table2wikiSkipWarnings = False
 
 
 ############## WEBLINK CHECKER SETTINGS ##############
@@ -140,12 +140,12 @@ db_password = ''
 # --------------------
 # Google web API is obsoleted for long time, now we can use Google AJAX Search API,
 # You can signup an API key from http://code.google.com/apis/ajaxsearch/signup.html.
-google_key = ''
+#google_key = ''
 
 
 # using Google AJAX Search API, it require the refer website, this variable save the refer web address
 # when you sign up the Key.
-google_api_refer = ''
+#google_api_refer = ''
 
 # Some scripts allow using the Yahoo! Search Web Services. To use this feature,
 # you must install the pYsearch module from http://pysearch.sourceforge.net/
@@ -259,11 +259,11 @@ cosmetic_changes_enable = {}
 # cosmetic_changes_disable['wikipedia'] = ('de', 'en', 'fr')
 cosmetic_changes_disable = {}
 # Use the experimental disk cache to prevent huge memory usage
-use_diskcache = False
+#use_diskcache = False
 
 # Retry loading a page on failure (back off 1 minute, 2 minutes, 4 minutes
 # up to 30 minutes)
-retry_on_fail = True
+#retry_on_fail = True
 
 # How many pages should be put to a queue in asynchroneous mode.
 # If maxsize is <= 0, the queue size is infinite.
