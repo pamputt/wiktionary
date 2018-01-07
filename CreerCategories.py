@@ -54,10 +54,11 @@ def createCategoryNomsPropresIssus(page,cle):
   language1=page[beg+4:end]
   beg=page.find(" en ", end)
   language2=page[beg+4:]
-  if (language2 not in cle):
+  if (language1 not in cle or
+      language2 not in cle):
     return
   
-  wikitext = "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "]]\n"
+  wikitext = "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "|" + cle[language1] + "]]\n"
   wikitext += "[[Catégorie:Origines étymologiques des noms propres en " + language1 + "|" + cle[language2] + "]]"
 
   return wikitext
@@ -69,10 +70,11 @@ def createCategoryMotsIssus(page,cle):
   language1=page[beg+4:end]
   beg=page.find(" en ", end)
   language2=page[beg+4:]
-  if (language1 not in cle):
+  if (language1 not in cle or
+      language2 not in cle):
     return
 
-  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + language2 + "]]\n"
+  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + cle[language2] + "]]\n"
   wikitext += "[[Catégorie:Mots issus d’un mot en " + language2 + "|" + cle[language1] + "]]"
   return wikitext
 
