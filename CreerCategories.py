@@ -97,7 +97,7 @@ def createCategoryOriginesEtmylogiquesNomsPropres(page,cle):
     return
 
   wikitext = "[[Catégorie:Origines étymologiques des mots en " + language + "|noms propres]]\n"
-  wiktiext += "[[Catégorie:Noms propres en " + language + "]]\n"
+  wikitext += "[[Catégorie:Noms propres en " + language + "]]\n"
   wikitext += "[[Catégorie:Origines étymologiques des noms propres|" + cle[language] + "]]"
   
   return wikitext
