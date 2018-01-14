@@ -163,6 +163,22 @@ def createCategoryThematiques(page,cle):
 
   return wikitext
 
+def createCategoryTraductions(page,cle):
+  #Catégorie:Thématiques en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "{{CatégorieTDM}}\n"
+  wikitext += "__HIDDENCAT__\n\n"
+
+  wikitext += "[[Catégorie:Traductions|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+
+
+  return wikitext
+
 
 def createCategory(page,cle,country):  
   #Convert Category into string object
@@ -193,6 +209,8 @@ def createCategory(page,cle,country):
     wikitext = createCategoryLocalitesDeEn(page,cle,country)
   elif (page.find("Catégorie:Thématiques en ") != -1):
     wikitext = createCategoryThematiques(page,cle)
+  elif (page.find("Catégorie:Traductions en ") != -1):
+    wikitext = createCategoryTraductions(page,cle)
   else:
     return
 
