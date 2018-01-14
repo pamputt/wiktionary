@@ -41,7 +41,7 @@ def isCategoryExist(language):
   return True
 
 def createCategory(language,code):
-  wikitext = "Cette catégorie réunit les mots et locutions en [[" + language + "]] (code <code>" + code[language] + "</code>)."
+  wikitext = "Cette catégorie réunit les mots et locutions en [[" + language + "]] (code <code>" + code[language] + "</code>). "
   wikitext += "La [[:Catégorie:Grammaire en " + language + "|section grammaire]] contient tous les types de mots comme les [[:Catégorie:Noms communs en " + language + "|noms communs]] ou les [[:Catégorie:Acronymes en " + language + "|acronymes]]. Elle contient en outre des sous-catégories thématiques : [[:Catégorie:Animaux en " + language + "|noms d’animaux]] ou [[:Catégorie:Lexique en " + language + " de la musique|lexique de la musique]], ou encore des catégories d’[[:Catégorie:Expressions en " + language + "|expressions]], ou enfin des registres de langue.\n"
   wikitext += "* '''[[:Catégorie:Grammaire en " + language + "|Grammaire]]'''\n"
   wikitext += "* '''[[:Catégorie:Thématiques en " + language + "|Thématiques]]'''\n"
