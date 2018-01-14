@@ -63,7 +63,7 @@ def createCategoryNomsPropresIssus(page,cle):
 
   return wikitext
 
-def createCategoryMotsIssus(page,cle):
+def createCategoryMotsEnIssusDunMot(page,cle):
   #Mots en français issus d’un mot en catalan
   beg=page.find(" en ")
   end=page.find(" issus")
@@ -78,7 +78,79 @@ def createCategoryMotsIssus(page,cle):
   wikitext += "[[Catégorie:Mots issus d’un mot en " + language2 + "|" + cle[language1] + "]]"
   return wikitext
 
-def createCategory(page,cle):  
+def createCategoryMotsIssusDunMot(page,cle):
+  #Mots issus d’un mot en abouré‏‎
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Origines étymologiques des mots|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+  return wikitext
+
+def createCategoryNombres(page,cle):
+  #Catégorie:Nombres en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Nombres|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " des mathématiques]]"
+
+  return wikitext
+
+def createCategoryLocalitesDeEn(page,cle,countryList):
+  #Catégorie:Localités d’Italie en français
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  particle = ""
+  if(page.find("Localités d’") != -1):
+    particle="d’"
+  elif(page.find("Localités de") != -1):
+    particle="de "
+  elif(page.find("Localités du") != -1):
+    particle="du "
+  elif(page.find("Localités des") != -1):
+    particle="des "
+
+  
+  country = ""
+  if(particle=="de "):
+    beg=page.find(" de ")
+    end=page.find(" en ")
+    country = page[beg+4:end]
+  elif(particle=="d’"):
+    beg=page.find(" d’")
+    end=page.find(" en ")
+    country = page[beg+3:end]
+  elif(particle=="du "):
+    beg=page.find(" du ")
+    end=page.find(" en ")
+    country = page[beg+4:end]
+  elif(particle=="des "):
+    beg=page.find(" des ")
+    end=page.find(" en ")
+    country = page[beg+5:end]
+
+  # If the country in not in the list, then one does not process it
+  if (country not in countryList):
+    print(country + " :/")
+    return
+
+  wikitext = "[[Catégorie:Localités " + particle + country + "|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Localités en " + language + "|" + CleDeTri.CleDeTri(country) + "]]\n"
+  wikitext += "[[Catégorie:" + country + " en " + language + "]]"
+
+  return wikitext
+
+
+def createCategory(page,cle,country):  
   #Convert Category into string object
   page = str(page)
   beg=page.find(":")
@@ -97,7 +169,14 @@ def createCategory(page,cle):
     wikitext = createCategoryNomsPropresIssus(page,cle)
   elif ((page.find("Catégorie:Mots en") != -1) and
         (page.find("issus d’un mot en") != -1)):
-    wikitext = createCategoryMotsIssus(page,cle)
+    wikitext = createCategoryMotsEnIssusDunMot(page,cle)
+  elif (page.find("Catégorie:Mots issus d’un mot en ") != -1):
+    wikitext = createCategoryMotsIssusDunMot(page,cle)
+  elif (page.find("Catégorie:Nombres en ") != -1):
+    wikitext = createCategoryNombres(page,cle)
+  elif (page.find("Catégorie:Localités d") != -1 and
+        (page.find(" en ") != -1)):
+    wikitext = createCategoryLocalitesDeEn(page,cle,country)
   else:
     return
 
@@ -122,6 +201,18 @@ def getSortingKey():
 
   return cledetri
 
+def getCountryList():
+
+  country = []
+  f = open("country.csv",'r')
+  lines  = f.readlines()
+  f.close()
+
+  for line in lines:
+    country.append(line[:len(line)-1])
+
+  return country
+
 def WantedPagesCategoryGenerator(total=100, site=None):
   """
   Wanted category generator.
@@ -139,9 +230,15 @@ def WantedPagesCategoryGenerator(total=100, site=None):
 
 def main():
   cle = getSortingKey()
-  
-  for page in WantedPagesCategoryGenerator(5000):
-    createCategory(page,cle)
+  countryList = getCountryList()
+
+  if test:
+    createCategory("[[:Catégorie:Localités d’Europe en grec]]",cle,countryList)
+    createCategory("[[:Catégorie:Localités de Corée du Sud en tchèque]]",cle,countryList)
+  #UserContributionsGenerator
+  else:
+    for page in WantedPagesCategoryGenerator(5000):
+      createCategory(page,cle,countryList)
   
 
 if __name__ == '__main__':
