@@ -149,6 +149,20 @@ def createCategoryLocalitesDeEn(page,cle,countryList):
 
   return wikitext
 
+def createCategoryThematiques(page,cle):
+  #Catégorie:Thématiques en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext ="Cette catégorie réunit les mots en " + language + " de même sujet : les [[:Catégorie:Animaux en " + language + "|noms d'animaux]], [[:Catégorie:Plantes en " + language + "|de plantes]], etc.\n"
+  wikitext += "Consultez aussi la [[:Catégorie:Lexiques en " + language + "|catégorie des terminologies]] relatives à différents domaines comme la [[:Catégorie:Lexique en " + language + " de la médecine|médecine]] ou la [[:Catégorie:Lexique en " + language + " de la biologie|biologie]].\n\n"
+  wikitext += "[[Catégorie:" + language + "|Thematiques]]\n"
+  wikitext += "[[Catégorie:Thématiques par langue|" + cle[language] + "]]"
+
+  return wikitext
+
 
 def createCategory(page,cle,country):  
   #Convert Category into string object
@@ -177,6 +191,8 @@ def createCategory(page,cle,country):
   elif (page.find("Catégorie:Localités d") != -1 and
         (page.find(" en ") != -1)):
     wikitext = createCategoryLocalitesDeEn(page,cle,country)
+  elif (page.find("Catégorie:Thématiques en ") != -1):
+    wikitext = createCategoryThematiques(page,cle)
   else:
     return
 
@@ -233,8 +249,7 @@ def main():
   countryList = getCountryList()
 
   if test:
-    createCategory("[[:Catégorie:Localités d’Europe en grec]]",cle,countryList)
-    createCategory("[[:Catégorie:Localités de Corée du Sud en tchèque]]",cle,countryList)
+    createCategory("[[:Catégorie:Thématiques en nahuatl de l’Isthme de Mecayapan]]",cle,countryList)
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
