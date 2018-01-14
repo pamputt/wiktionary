@@ -89,6 +89,36 @@ def createCategoryMotsIssusDunMot(page,cle):
   wikitext += "[[Catégorie:" + language + "]]"
   return wikitext
 
+def createCategoryOriginesEtmylogiquesNomsPropres(page,cle):
+  #Origines étymologiques des noms propres en néerlandais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language + "|noms propres]]\n"
+  wiktiext += "[[Catégorie:Noms propres en " + language + "]]\n"
+  wikitext += "[[Catégorie:Origines étymologiques des noms propres|" + cle[language] + "]]"
+  
+  return wikitext
+
+def createCategoryOriginesEtmylogiquesMots(page,cle):
+  #Origines étymologiques des mots en néerlandais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+
+  wikitext = "{{CatégorieTDM}}\n\n"
+  wikitext = "Cette catégorie liste les catégories relatives aux différentes origines [[étymologique]]s des mots (et locutions) en " + language + ".\n\n"
+  wikitext += "==== Note ====\n"
+  wikitext += ": L’[[étymologie]] n’étant pas une [[w:Sciences exactes|science exacte]], il se pourrait que ce référencement retranscrive plusieurs hypothèses étymologiques. Merci de bien vérifier dans la section ''Étymologie'' des articles concernés.\n\n"
+  wikitext += "[[Catégorie:Origines étymologiques des mots|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+  
+  return wikitext
+
 def createCategoryNombres(page,cle):
   #Catégorie:Nombres en anglais
   beg=page.find(" en ")
@@ -202,6 +232,10 @@ def createCategory(page,cle,country):
     wikitext = createCategoryMotsEnIssusDunMot(page,cle)
   elif (page.find("Catégorie:Mots issus d’un mot en ") != -1):
     wikitext = createCategoryMotsIssusDunMot(page,cle)
+  elif (page.find("Catégorie:Origines étymologiques des mots en ") != -1):
+    wikitext = createCategoryOriginesEtmylogiquesMots(page,cle)
+  elif (page.find("Catégorie:Origines étymologiques des noms propres en ") != -1):
+    wikitext = createCategoryOriginesEtmylogiquesNomsPropres(page,cle)
   elif (page.find("Catégorie:Nombres en ") != -1):
     wikitext = createCategoryNombres(page,cle)
   elif (page.find("Catégorie:Localités d") != -1 and
