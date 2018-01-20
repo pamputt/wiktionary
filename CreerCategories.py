@@ -85,6 +85,19 @@ def createCategoryLexiqueEscrime(page,cle):
   wikitext += "[[Catégorie:Escrime|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueGenealogie(page,cle):
+  #Catégorie:Lexique en français de la généalogie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "Cette catégorie recense les mots [[" + language + "]] ayant trait à la [[généalogie]].\n\n"
+  wikitext += "[[Catégorie:Lexiques en " + language + "|genealogie]]\n"
+  wikitext += "[[Catégorie:Généalogie|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiqueGrammaire(page,cle):
   #Catégorie:Lexique en italien de la grammaire
   beg=page.find(" en ")
@@ -392,10 +405,12 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des cris d’animaux") != -1)):
     wikitext = createCategoryLexiqueCrisAnimaux(page,cle)
-    wikitext = createCategoryLexiquePhilosophie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" du temps") != -1)):
     wikitext = createCategoryLexiqueTemps(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la généalogie") != -1)):
+    wikitext = createCategoryLexiqueGenealogie(page,cle)
   else:
     return
 
