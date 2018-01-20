@@ -61,6 +61,18 @@ def createCategoryLexiqueClimatologie(page,cle):
   wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueCrisAnimaux(page,cle):
+  #Catégorie:Lexique en anglais des cris d’animaux
+  beg=page.find(" en ")
+  end=page.find(" des ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|Cris danimaux]]\n"
+  wikitext += "[[Catégorie:Cris d’animaux|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiqueEscrime(page,cle):
   #Catégorie:Lexique en italien de l’escrime
   beg=page.find(" en ")
@@ -107,6 +119,18 @@ def createCategoryLexiqueMotocyclisme(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|motocyclisme]]\n"
   wikitext += "[[Catégorie:Motocyclisme|" + cle[language] + "]]"
+  return wikitext;
+
+def createCategoryLexiquePhilosophie(page,cle):
+  #Catégorie:Lexique en italien de la philosophie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|philosophie]]\n"
+  wikitext += "[[Catégorie:Philosophie|" + cle[language] + "]]"
   return wikitext;
 
 def createCategoryLocalitesDeEn(page,cle,countryList):
@@ -350,6 +374,12 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la charpenterie") != -1)):
     wikitext = createCategoryLexiqueCharpenterie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la philosophie") != -1)):
+    wikitext = createCategoryLexiquePhilosophie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des cris d’animaux") != -1)):
+    wikitext = createCategoryLexiqueCrisAnimaux(page,cle)
   else:
     return
 
