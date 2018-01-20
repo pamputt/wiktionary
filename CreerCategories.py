@@ -85,6 +85,18 @@ def createCategoryLexiqueMathematiques(page,cle):
   wikitext += "[[Catégorie:Mathématiques|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueMotocyclisme(page,cle):
+  #Catégorie:Lexique en italien du motocyclisme
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|motocyclisme]]\n"
+  wikitext += "[[Catégorie:Motocyclisme|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLocalitesDeEn(page,cle,countryList):
   #Catégorie:Localités d’Italie en français
   beg=page.find(" en ")
@@ -320,6 +332,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’escrime") != -1)):
     wikitext = createCategoryLexiqueEscrime(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de du motocyclisme") != -1)):
+    wikitext = createCategoryLexiqueMotocyclisme(page,cle)
   else:
     return
 
