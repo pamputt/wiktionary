@@ -286,7 +286,6 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la grammaire") != -1)):
     wikitext = createCategoryLexiqueGrammaire(page,cle)
-    wikitext = createCategoryLexiqueMathematiques(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la climatologie") != -1)):
     wikitext = createCategoryLexiqueClimatologie(page,cle)
