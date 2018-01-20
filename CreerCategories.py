@@ -345,7 +345,7 @@ def createCategory(page,cle,country):
         (page.find(" de l’escrime") != -1)):
     wikitext = createCategoryLexiqueEscrime(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
-        (page.find(" de du motocyclisme") != -1)):
+        (page.find(" du motocyclisme") != -1)):
     wikitext = createCategoryLexiqueMotocyclisme(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la charpenterie") != -1)):
