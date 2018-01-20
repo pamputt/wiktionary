@@ -162,7 +162,7 @@ def createCategoryLexiqueMotocyclisme(page,cle):
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
   beg=page.find(" en ")
-  end=page.find(" de la ")
+  end=page.find(" du ")
   language=page[beg+4:end]
   if (language not in cle):
     return
