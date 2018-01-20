@@ -24,6 +24,19 @@ def createCategoryGrammaire(page,cle):
   wikitext += "[[Catégorie:Grammaire par langue|" + cle[language] +"]]"
   return wikitext
 
+def createCategoryLexiqueAlchimie(page,cle):
+  #Catégorie:Lexique en français de l’alchimie
+  beg=page.find(" en ")
+  end=page.find(" de l’ ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à l’[[alchimie]].\n\n"
+  wikitext += "[[Catégorie:Lexiques en " + language + "|alchimie]]\n"
+  wikitext += "[[Catégorie:Alchimie|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiqueBotanique(page,cle):
   #Catégorie:Lexique en italien de la botanique
   beg=page.find(" en ")
@@ -427,6 +440,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la préhistoire") != -1)):
     wikitext = createCategoryLexiquePrehistoire(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’alchimie") != -1)):
+    wikitext = createCategoryLexiqueAlchimie(page,cle)
   else:
     return
 
