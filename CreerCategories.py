@@ -49,6 +49,18 @@ def createCategoryLexiqueClimatologie(page,cle):
   wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueEscrime(page,cle):
+  #Catégorie:Lexique en italien de l’escrime
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Lexiques en " + language + " des sports de combat|escrime]]\n"
+  wikitext += "[[Catégorie:Escrime|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiqueGrammaire(page,cle):
   #Catégorie:Lexique en italien de la grammaire
   beg=page.find(" en ")
@@ -305,6 +317,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la botanique") != -1)):
     wikitext = createCategoryLexiqueBotanique(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’escrime") != -1)):
+    wikitext = createCategoryLexiqueEscrime(page,cle)
   else:
     return
 
