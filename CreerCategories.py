@@ -46,7 +46,7 @@ def createCategoryLexiqueBotanique(page,cle):
     return
   
   wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à la [[botanique]].\n\n"
-  wikitext += "[[Catégorie:Lexiques en " + language + " de la biologie|botanique]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la biologie|botanique]]\n"
   wikitext += "[[Catégorie:Botanique|" + cle[language] + "]]"
   return wikitext;
 
@@ -58,7 +58,7 @@ def createCategoryLexiqueCharpenterie(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "[[Catégorie:Lexiques en " + language + " de la construction|charpenterie]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de la construction|charpenterie]]\n"
   wikitext += "[[Catégorie:Charpenterie|" + cle[language] + "]]"
   return wikitext;
 
@@ -94,7 +94,7 @@ def createCategoryLexiqueEscrime(page,cle):
   if (language not in cle):
     return
 
-  wikitext = "[[Catégorie:Lexiques en " + language + " des sports de combat|escrime]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " des sports de combat|escrime]]\n"
   wikitext += "[[Catégorie:Escrime|" + cle[language] + "]]"
   return wikitext;
 
@@ -131,7 +131,7 @@ def createCategoryLexiqueHockey(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "[[Catégorie:Lexiques en " + language + " des sports de glisse|hockey]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " des sports de glisse|hockey]]\n"
   wikitext += "[[Catégorie:Hockey|" + cle[language] + "]]"
   return wikitext;
 
@@ -159,6 +159,18 @@ def createCategoryLexiqueMotocyclisme(page,cle):
   wikitext += "[[Catégorie:Motocyclisme|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiquePatinage(page,cle):
+  #Catégorie:Lexique en français du patinage
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " des sports d’hiver|patinage]]\n"
+  wikitext += "[[Catégorie:Patinage|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiquePhilosophie(page,cle):
   #Catégorie:Lexique en italien de la philosophie
   beg=page.find(" en ")
@@ -179,7 +191,7 @@ def createCategoryLexiquePrehistoire(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "[[Catégorie:Lexiques en " + language + " de l’histoire|prehistoire]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’histoire|prehistoire]]\n"
   wikitext += "[[Catégorie:Lexiques en " + language + "|prehistoire]]\n"
   wikitext += "[[Catégorie:Préhistoire|" + cle[language] + "]]"
   return wikitext;
@@ -458,6 +470,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" du hockey") != -1)):
     wikitext = createCategoryLexiqueHockey(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du patinage") != -1)):
+    wikitext = createCategoryLexiquePatinage(page,cle)
   else:
     return
 
