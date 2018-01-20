@@ -209,6 +209,17 @@ def createCategoryTraductions(page,cle):
 
   return wikitext
 
+def createCategoryMathematiques(page,cle):
+  #Catégorie:Lexique en italien des mathématiques
+  beg=page.find(" en ")
+  end=page.find(" des ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|mathematiques]]\n"
+  wikitext += "[[Catégorie:Mathématiques|" + cle[language] + "]]"
+  return wikitext;
 
 def createCategory(page,cle,country):  
   #Convert Category into string object
@@ -245,6 +256,9 @@ def createCategory(page,cle,country):
     wikitext = createCategoryThematiques(page,cle)
   elif (page.find("Catégorie:Traductions en ") != -1):
     wikitext = createCategoryTraductions(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des mathématiques") != -1)):
+    wikitext = createCategoryMathematiques(page,cle)
   else:
     return
 
