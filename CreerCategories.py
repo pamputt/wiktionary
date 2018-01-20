@@ -468,7 +468,8 @@ def createCategory(page,cle,country):
         (page.find(" de l’alchimie") != -1)):
     wikitext = createCategoryLexiqueAlchimie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
-        (page.find(" du hockey") != -1)):
+        (page.find(" du hockey") != -1) and
+        (page.find(" sur glace") == -1)):
     wikitext = createCategoryLexiqueHockey(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" du patinage") != -1)):
