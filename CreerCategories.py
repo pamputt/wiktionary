@@ -37,6 +37,18 @@ def createCategoryLexiqueBotanique(page,cle):
   wikitext += "[[Catégorie:Botanique|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueCharpenterie(page,cle):
+  #Catégorie:Lexique en italien de la charpenterie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + " de la construction|charpenterie]]\n"
+  wikitext += "[[Catégorie:Charpenterie|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiqueClimatologie(page,cle):
   #Catégorie:Lexique en français de la climatologie
   beg=page.find(" en ")
@@ -335,6 +347,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de du motocyclisme") != -1)):
     wikitext = createCategoryLexiqueMotocyclisme(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la charpenterie") != -1)):
+    wikitext = createCategoryLexiqueCharpenterie(page,cle)
   else:
     return
 
