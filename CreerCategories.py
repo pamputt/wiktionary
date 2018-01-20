@@ -24,6 +24,19 @@ def createCategoryGrammaire(page,cle):
   wikitext += "[[Catégorie:Grammaire par langue|" + cle[language] +"]]"
   return wikitext
 
+def createCategoryLexiqueBotanique(page,cle):
+  #Catégorie:Lexique en italien de la botanique
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à la [[botanique]].\n\n"
+  wikitext += "[[Catégorie:Lexiques en " + language + " de la biologie|botanique]]\n"
+  wikitext += "[[Catégorie:Botanique|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLexiqueClimatologie(page,cle):
   #Catégorie:Lexique en français de la climatologie
   beg=page.find(" en ")
@@ -289,6 +302,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la climatologie") != -1)):
     wikitext = createCategoryLexiqueClimatologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la botanique") != -1)):
+    wikitext = createCategoryLexiqueBotanique(page,cle)
   else:
     return
 
