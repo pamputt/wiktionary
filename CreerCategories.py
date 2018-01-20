@@ -93,7 +93,7 @@ def createCategoryLexiqueGenealogie(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "Cette catégorie recense les mots [[" + language + "]] ayant trait à la [[généalogie]].\n\n"
+  wikitext = "Cette catégorie recense les mots en [[" + language + "]] ayant trait à la [[généalogie]].\n\n"
   wikitext += "[[Catégorie:Lexiques en " + language + "|genealogie]]\n"
   wikitext += "[[Catégorie:Généalogie|" + cle[language] + "]]"
   return wikitext;
@@ -144,6 +144,19 @@ def createCategoryLexiquePhilosophie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|philosophie]]\n"
   wikitext += "[[Catégorie:Philosophie|" + cle[language] + "]]"
+  return wikitext;
+
+def createCategoryLexiquePrehistoire(page,cle):
+  #Catégorie:Lexique en same du Nord de la préhistoire
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + " de l’histoire|prehistoire]]\n"
+  wikitext += "[[Catégorie:Lexiques en " + language + "|prehistoire]]\n"
+  wikitext += "[[Catégorie:Préhistoire|" + cle[language] + "]]"
   return wikitext;
 
 def createCategoryLexiqueTemps(page,cle):
@@ -411,6 +424,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la généalogie") != -1)):
     wikitext = createCategoryLexiqueGenealogie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la préhistoire") != -1)):
+    wikitext = createCategoryLexiquePrehistoire(page,cle)
   else:
     return
 
