@@ -9,17 +9,6 @@ import CleDeTri
 
 test = False # to test the script (without saving the result)
 
-def createCategoryPrononciationAudio(page,cle):
-  #Catégorie:Prononciations audio en biélorusse‏‎
-  beg=page.find(" en ")
-  language = page[beg+4:]
-  if (not language in cle):
-    return
-  
-  wikitext = "__HIDDENCAT__\n"
-  wikitext += "[[Catégorie:Prononciations audio|" + cle[language] + "]]"
-  return wikitext
-
 def createCategoryGrammaire(page,cle):
   #Grammaire en abu’‏‎
   beg=page.find(" en ")
@@ -35,102 +24,41 @@ def createCategoryGrammaire(page,cle):
   wikitext += "[[Catégorie:Grammaire par langue|" + cle[language] +"]]"
   return wikitext
 
-
-def createCategoryNomsCommuns(page,cle):
-  #Catégorie:Noms communs en saho‏‎
+def createCategoryLexiqueClimatologie(page,cle):
+  #Catégorie:Lexique en français de la climatologie
   beg=page.find(" en ")
-  language = page[beg+4:]
-  if (not language in cle):
-    return
-  
-  wikitext = "[[Catégorie:Noms communs|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:Grammaire en " + language + "]]"
-  return wikitext
-
-def createCategoryNomsPropresIssus(page,cle):
-  #Catégorie:Noms propres en français issus d’un mot en catalan
-  beg=page.find(" en ")
-  end=page.find(" issus")
-  language1=page[beg+4:end]
-  beg=page.find(" en ", end)
-  language2=page[beg+4:]
-  if ((language1 not in cle) or
-      (language2 not in cle)):
-    return
-  
-  wikitext = "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "|" + cle[language1] + "]]\n"
-  wikitext += "[[Catégorie:Origines étymologiques des noms propres en " + language1 + "|" + cle[language2] + "]]"
-
-  return wikitext
-
-def createCategoryMotsEnIssusDunMot(page,cle):
-  #Mots en français issus d’un mot en catalan
-  beg=page.find(" en ")
-  end=page.find(" issus")
-  language1=page[beg+4:end]
-  beg=page.find(" en ", end)
-  language2=page[beg+4:]
-  if ((language1 not in cle) or
-      (language2 not in cle)):
-    return
-
-  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + cle[language2] + "]]\n"
-  wikitext += "[[Catégorie:Mots issus d’un mot en " + language2 + "|" + cle[language1] + "]]"
-  return wikitext
-
-def createCategoryMotsIssusDunMot(page,cle):
-  #Mots issus d’un mot en abouré‏‎
-  beg=page.find(" en ")
-  language=page[beg+4:]
+  end=page.find(" de la ")
+  language=page[beg+4:end]
   if (language not in cle):
     return
-
-  wikitext = "[[Catégorie:Origines étymologiques des mots|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:" + language + "]]"
-  return wikitext
-
-def createCategoryOriginesEtmylogiquesNomsPropres(page,cle):
-  #Origines étymologiques des noms propres en néerlandais
-  beg=page.find(" en ")
-  language=page[beg+4:]
-  if (language not in cle):
-    return
-
-  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language + "|noms propres]]\n"
-  wikitext += "[[Catégorie:Noms propres en " + language + "]]\n"
-  wikitext += "[[Catégorie:Origines étymologiques des noms propres|" + cle[language] + "]]"
   
-  return wikitext
+  wikitext = "[[Catégorie:Lexiques en " + language + "|climatologie]]\n"
+  wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
+  return wikitext;
 
-def createCategoryOriginesEtmylogiquesMots(page,cle):
-  #Origines étymologiques des mots en néerlandais
+def createCategoryLexiqueGrammaire(page,cle):
+  #Catégorie:Lexique en italien de la grammaire
   beg=page.find(" en ")
-  language=page[beg+4:]
+  end=page.find(" de la ")
+  language=page[beg+4:end]
   if (language not in cle):
     return
-
-
-  wikitext = "{{CatégorieTDM}}\n\n"
-  wikitext = "Cette catégorie liste les catégories relatives aux différentes origines [[étymologique]]s des mots (et locutions) en " + language + ".\n\n"
-  wikitext += "==== Note ====\n"
-  wikitext += ": L’[[étymologie]] n’étant pas une [[w:Sciences exactes|science exacte]], il se pourrait que ce référencement retranscrive plusieurs hypothèses étymologiques. Merci de bien vérifier dans la section ''Étymologie'' des articles concernés.\n\n"
-  wikitext += "[[Catégorie:Origines étymologiques des mots|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:" + language + "]]"
   
-  return wikitext
+  wikitext = "[[Catégorie:Lexiques en " + language + "|grammaire]]\n"
+  wikitext += "[[Catégorie:Grammaire|" + cle[language] + "]]"
+  return wikitext;
 
-def createCategoryNombres(page,cle):
-  #Catégorie:Nombres en anglais
+def createCategoryLexiqueMathematiques(page,cle):
+  #Catégorie:Lexique en italien des mathématiques
   beg=page.find(" en ")
-  language=page[beg+4:]
+  end=page.find(" des ")
+  language=page[beg+4:end]
   if (language not in cle):
     return
-
-  wikitext = "[[Catégorie:Nombres|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:Thématiques en " + language + "]]\n"
-  wikitext += "[[Catégorie:Lexique en " + language + " des mathématiques]]"
-
-  return wikitext
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|mathematiques]]\n"
+  wikitext += "[[Catégorie:Mathématiques|" + cle[language] + "]]"
+  return wikitext;
 
 def createCategoryLocalitesDeEn(page,cle,countryList):
   #Catégorie:Localités d’Italie en français
@@ -179,6 +107,114 @@ def createCategoryLocalitesDeEn(page,cle,countryList):
 
   return wikitext
 
+def createCategoryMotsEnIssusDunMot(page,cle):
+  #Mots en français issus d’un mot en catalan
+  beg=page.find(" en ")
+  end=page.find(" issus")
+  language1=page[beg+4:end]
+  beg=page.find(" en ", end)
+  language2=page[beg+4:]
+  if ((language1 not in cle) or
+      (language2 not in cle)):
+    return
+
+  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language1 + "|" + cle[language2] + "]]\n"
+  wikitext += "[[Catégorie:Mots issus d’un mot en " + language2 + "|" + cle[language1] + "]]"
+  return wikitext
+
+def createCategoryMotsIssusDunMot(page,cle):
+  #Mots issus d’un mot en abouré‏‎
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Origines étymologiques des mots|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+  return wikitext
+
+def createCategoryNombres(page,cle):
+  #Catégorie:Nombres en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Nombres|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " des mathématiques]]"
+
+  return wikitext
+
+
+def createCategoryNomsCommuns(page,cle):
+  #Catégorie:Noms communs en saho‏‎
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms communs|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "]]"
+  return wikitext
+
+def createCategoryNomsPropresIssus(page,cle):
+  #Catégorie:Noms propres en français issus d’un mot en catalan
+  beg=page.find(" en ")
+  end=page.find(" issus")
+  language1=page[beg+4:end]
+  beg=page.find(" en ", end)
+  language2=page[beg+4:]
+  if ((language1 not in cle) or
+      (language2 not in cle)):
+    return
+  
+  wikitext = "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "|" + cle[language1] + "]]\n"
+  wikitext += "[[Catégorie:Origines étymologiques des noms propres en " + language1 + "|" + cle[language2] + "]]"
+
+  return wikitext
+
+def createCategoryOriginesEtmylogiquesMots(page,cle):
+  #Origines étymologiques des mots en néerlandais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+
+  wikitext = "{{CatégorieTDM}}\n\n"
+  wikitext = "Cette catégorie liste les catégories relatives aux différentes origines [[étymologique]]s des mots (et locutions) en " + language + ".\n\n"
+  wikitext += "==== Note ====\n"
+  wikitext += ": L’[[étymologie]] n’étant pas une [[w:Sciences exactes|science exacte]], il se pourrait que ce référencement retranscrive plusieurs hypothèses étymologiques. Merci de bien vérifier dans la section ''Étymologie'' des articles concernés.\n\n"
+  wikitext += "[[Catégorie:Origines étymologiques des mots|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+  
+  return wikitext
+
+def createCategoryPrononciationAudio(page,cle):
+  #Catégorie:Prononciations audio en biélorusse‏‎
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Prononciations audio|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryOriginesEtmylogiquesNomsPropres(page,cle):
+  #Origines étymologiques des noms propres en néerlandais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Origines étymologiques des mots en " + language + "|noms propres]]\n"
+  wikitext += "[[Catégorie:Noms propres en " + language + "]]\n"
+  wikitext += "[[Catégorie:Origines étymologiques des noms propres|" + cle[language] + "]]"
+  
+  return wikitext
+
 def createCategoryThematiques(page,cle):
   #Catégorie:Thématiques en anglais
   beg=page.find(" en ")
@@ -208,42 +244,6 @@ def createCategoryTraductions(page,cle):
 
 
   return wikitext
-
-def createCategoryLexiqueMathematiques(page,cle):
-  #Catégorie:Lexique en italien des mathématiques
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
-    return
-  
-  wikitext = "[[Catégorie:Lexiques en " + language + "|mathematiques]]\n"
-  wikitext += "[[Catégorie:Mathématiques|" + cle[language] + "]]"
-  return wikitext;
-
-def createCategoryLexiqueGrammaire(page,cle):
-  #Catégorie:Lexique en italien de la grammaire
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
-    return
-  
-  wikitext = "[[Catégorie:Lexiques en " + language + "|grammaire]]\n"
-  wikitext += "[[Catégorie:Grammaire|" + cle[language] + "]]"
-  return wikitext;
-
-def createCategoryLexiqueClimatologie(page,cle):
-  #Catégorie:Lexique en français de la climatologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
-    return
-  
-  wikitext = "[[Catégorie:Lexiques en " + language + "|climatologie]]\n"
-  wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
-  return wikitext;
 
 def createCategory(page,cle,country):  
   #Convert Category into string object
