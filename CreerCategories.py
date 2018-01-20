@@ -233,6 +233,18 @@ def createCategoryLexiqueGrammaire(page,cle):
   wikitext += "[[Catégorie:Grammaire|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueClimatologie(page,cle):
+  #Catégorie:Lexique en français de la climatologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|climatologie]]\n"
+  wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategory(page,cle,country):  
   #Convert Category into string object
   page = str(page)
@@ -274,6 +286,10 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la grammaire") != -1)):
     wikitext = createCategoryLexiqueGrammaire(page,cle)
+    wikitext = createCategoryLexiqueMathematiques(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la climatologie") != -1)):
+    wikitext = createCategoryLexiqueClimatologie(page,cle)
   else:
     return
 
