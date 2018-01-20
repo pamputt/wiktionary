@@ -208,6 +208,18 @@ def createCategoryLexiqueTemps(page,cle):
   wikitext += "[[Catégorie:Temps|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueZoologie(page,cle):
+  #Catégorie:Lexique en bukawa de la zoologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la biologie|zoologie]]\n"
+  wikitext += "[[Catégorie:Zoologie|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLocalitesDeEn(page,cle,countryList):
   #Catégorie:Localités d’Italie en français
   beg=page.find(" en ")
@@ -474,6 +486,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" du patinage") != -1)):
     wikitext = createCategoryLexiquePatinage(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la zoologie") != -1)):
+    wikitext = createCategoryLexiqueZoologie(page,cle)
   else:
     return
 
