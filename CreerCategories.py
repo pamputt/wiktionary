@@ -133,6 +133,18 @@ def createCategoryLexiquePhilosophie(page,cle):
   wikitext += "[[Catégorie:Philosophie|" + cle[language] + "]]"
   return wikitext;
 
+def createCategoryLexiqueTemps(page,cle):
+  #Catégorie:Lexique en same du Nord du temps
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|temps]]\n"
+  wikitext += "[[Catégorie:Temps|" + cle[language] + "]]"
+  return wikitext;
+
 def createCategoryLocalitesDeEn(page,cle,countryList):
   #Catégorie:Localités d’Italie en français
   beg=page.find(" en ")
@@ -380,6 +392,10 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des cris d’animaux") != -1)):
     wikitext = createCategoryLexiqueCrisAnimaux(page,cle)
+    wikitext = createCategoryLexiquePhilosophie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du temps") != -1)):
+    wikitext = createCategoryLexiqueTemps(page,cle)
   else:
     return
 
