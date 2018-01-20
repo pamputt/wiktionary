@@ -27,7 +27,7 @@ def createCategoryGrammaire(page,cle):
 def createCategoryLexiqueAlchimie(page,cle):
   #Catégorie:Lexique en français de l’alchimie
   beg=page.find(" en ")
-  end=page.find(" de l’ ")
+  end=page.find(" de l’")
   language=page[beg+4:end]
   if (language not in cle):
     return
