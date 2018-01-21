@@ -122,6 +122,18 @@ def createCategoryLexiqueCrisAnimaux(page,cle):
   wikitext += "[[Catégorie:Cris d’animaux|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueEconomie(page,cle):
+  #Catégorie:Lexique en italien de l’économie
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Lexiques en " + language + "|economie]]\n"
+  wikitext += "[[Catégorie:Économie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueEscrime(page,cle):
   #Catégorie:Lexique en italien de l’escrime
   beg=page.find(" en ")
@@ -706,6 +718,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’argent") != -1)):
     wikitext = createCategoryLexiqueArgent(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’économie") != -1)):
+    wikitext = createCategoryLexiqueEconomie(page,cle)
   else:
     return
 
