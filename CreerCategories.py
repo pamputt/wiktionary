@@ -274,6 +274,18 @@ def createCategoryLexiquePhytosociologie(page,cle):
   wikitext += "[[Catégorie:Phytosociologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiquePhysiologie(page,cle):
+  #Catégorie:Lexique en italien de la physiologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|physiologie]]\n"
+  wikitext += "[[Catégorie:Physiologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePrehistoire(page,cle):
   #Catégorie:Lexique en same du Nord de la préhistoire
   beg=page.find(" en ")
@@ -616,6 +628,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’ornithologie") != -1)):
     wikitext = createCategoryLexiqueOrnithologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la physiologie") != -1)):
+    wikitext = createCategoryLexiquePhysiologie(page,cle)
   else:
     return
 
