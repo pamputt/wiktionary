@@ -35,7 +35,19 @@ def createCategoryLexiqueAlchimie(page,cle):
   wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à l’[[alchimie]].\n\n"
   wikitext += "[[Catégorie:Lexiques en " + language + "|alchimie]]\n"
   wikitext += "[[Catégorie:Alchimie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
+
+def createCategoryLexiqueBasketBall(page,cle):
+  #Catégorie:Lexique en italien du basket-ball
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du sport|basket ball]]\n"
+  wikitext += "[[Catégorie:Basket-ball|" + cle[language] + "]]"
+  return wikitext
 
 def createCategoryLexiqueBotanique(page,cle):
   #Catégorie:Lexique en italien de la botanique
@@ -48,7 +60,7 @@ def createCategoryLexiqueBotanique(page,cle):
   wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à la [[botanique]].\n\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de la biologie|botanique]]\n"
   wikitext += "[[Catégorie:Botanique|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueCharpenterie(page,cle):
   #Catégorie:Lexique en italien de la charpenterie
@@ -60,7 +72,7 @@ def createCategoryLexiqueCharpenterie(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la construction|charpenterie]]\n"
   wikitext += "[[Catégorie:Charpenterie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueClimatologie(page,cle):
   #Catégorie:Lexique en français de la climatologie
@@ -72,7 +84,7 @@ def createCategoryLexiqueClimatologie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|climatologie]]\n"
   wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueCrisAnimaux(page,cle):
   #Catégorie:Lexique en anglais des cris d’animaux
@@ -84,7 +96,7 @@ def createCategoryLexiqueCrisAnimaux(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|Cris danimaux]]\n"
   wikitext += "[[Catégorie:Cris d’animaux|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueEscrime(page,cle):
   #Catégorie:Lexique en italien de l’escrime
@@ -96,7 +108,7 @@ def createCategoryLexiqueEscrime(page,cle):
 
   wikitext = "[[Catégorie:Lexique en " + language + " des sports de combat|escrime]]\n"
   wikitext += "[[Catégorie:Escrime|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueGenealogie(page,cle):
   #Catégorie:Lexique en français de la généalogie
@@ -109,7 +121,7 @@ def createCategoryLexiqueGenealogie(page,cle):
   wikitext = "Cette catégorie recense les mots en [[" + language + "]] ayant trait à la [[généalogie]].\n\n"
   wikitext += "[[Catégorie:Lexiques en " + language + "|genealogie]]\n"
   wikitext += "[[Catégorie:Généalogie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueGrammaire(page,cle):
   #Catégorie:Lexique en italien de la grammaire
@@ -121,7 +133,7 @@ def createCategoryLexiqueGrammaire(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|grammaire]]\n"
   wikitext += "[[Catégorie:Grammaire|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueHockey(page,cle):
   #Catégorie:Lexique en italien du hockey
@@ -133,7 +145,7 @@ def createCategoryLexiqueHockey(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " des sports de glisse|hockey]]\n"
   wikitext += "[[Catégorie:Hockey|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueMathematiques(page,cle):
   #Catégorie:Lexique en italien des mathématiques
@@ -145,7 +157,7 @@ def createCategoryLexiqueMathematiques(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|mathematiques]]\n"
   wikitext += "[[Catégorie:Mathématiques|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueMotocyclisme(page,cle):
   #Catégorie:Lexique en italien du motocyclisme
@@ -157,7 +169,7 @@ def createCategoryLexiqueMotocyclisme(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|motocyclisme]]\n"
   wikitext += "[[Catégorie:Motocyclisme|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
@@ -169,7 +181,7 @@ def createCategoryLexiquePatinage(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " des sports d’hiver|patinage]]\n"
   wikitext += "[[Catégorie:Patinage|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiquePhilosophie(page,cle):
   #Catégorie:Lexique en italien de la philosophie
@@ -181,7 +193,7 @@ def createCategoryLexiquePhilosophie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|philosophie]]\n"
   wikitext += "[[Catégorie:Philosophie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiquePrehistoire(page,cle):
   #Catégorie:Lexique en same du Nord de la préhistoire
@@ -194,7 +206,7 @@ def createCategoryLexiquePrehistoire(page,cle):
   wikitext = "[[Catégorie:Lexique en " + language + " de l’histoire|prehistoire]]\n"
   wikitext += "[[Catégorie:Lexiques en " + language + "|prehistoire]]\n"
   wikitext += "[[Catégorie:Préhistoire|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueTemps(page,cle):
   #Catégorie:Lexique en same du Nord du temps
@@ -206,7 +218,7 @@ def createCategoryLexiqueTemps(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|temps]]\n"
   wikitext += "[[Catégorie:Temps|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueToponymie(page,cle):
   #Catégorie:Lexique en italien de la toponymie
@@ -218,7 +230,7 @@ def createCategoryLexiqueToponymie(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la géographie|toponymie]]\n"
   wikitext += "[[Catégorie:Toponymie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLexiqueZoologie(page,cle):
   #Catégorie:Lexique en bukawa de la zoologie
@@ -230,7 +242,7 @@ def createCategoryLexiqueZoologie(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la biologie|zoologie]]\n"
   wikitext += "[[Catégorie:Zoologie|" + cle[language] + "]]"
-  return wikitext;
+  return wikitext
 
 def createCategoryLocalitesDeEn(page,cle,countryList):
   #Catégorie:Localités d’Italie en français
@@ -504,6 +516,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la toponymie") != -1)):
     wikitext = createCategoryLexiqueToponymie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du basket-ball") != -1)):
+    wikitext = createCategoryLexiqueBasketBall(page,cle)
   else:
     return
 
