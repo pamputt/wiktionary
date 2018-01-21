@@ -208,6 +208,18 @@ def createCategoryLexiquePatinage(page,cle):
   wikitext += "[[Catégorie:Patinage|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiquePeloteBasque(page,cle):
+  #Catégorie:Lexique en français de la pelote basque
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du sport|pelote basque]]\n"
+  wikitext += "[[Catégorie:Pelote basque|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePhilosophie(page,cle):
   #Catégorie:Lexique en italien de la philosophie
   beg=page.find(" en ")
@@ -550,6 +562,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la navigation") != -1)):
     wikitext = createCategoryLexiqueNavigation(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la pelote basque") != -1)):
+    wikitext = createCategoryLexiquePeloteBasque(page,cle)
   else:
     return
 
