@@ -625,7 +625,7 @@ def getSortingKey():
       cledetri[name] = key
       codeLangue[name] = code
 
-  return cledetri codeLangue
+  return cledetri, codeLangue
 
 def getCountryList():
 
