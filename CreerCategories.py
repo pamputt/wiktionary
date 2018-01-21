@@ -211,6 +211,18 @@ def createCategoryLexiqueOenologie(page,cle,code):
   wikitext += "[[Catégorie:Œnologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueOrnithologie(page,cle):
+  #Catégorie:Lexique en italien de l’ornithologie
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|ornithologie]]\n"
+  wikitext += "[[Catégorie:Ornithologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
   beg=page.find(" en ")
@@ -601,6 +613,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’œnologie") != -1)):
     wikitext = createCategoryLexiqueOenologie(page,cle,code)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’ornithologie") != -1)):
+    wikitext = createCategoryLexiqueOrnithologie(page,cle)
   else:
     return
 
