@@ -183,6 +183,19 @@ def createCategoryLexiqueMotocyclisme(page,cle):
   wikitext += "[[Catégorie:Motocyclisme|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueNavigation(page,cle):
+  #Catégorie:Lexique en italien de la navigation
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "Cette page liste les mots en " + language + " en rapport avec la [[navigation]].\n\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " du transport|navigation]]\n"
+  wikitext += "[[Catégorie:Navigation|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
   beg=page.find(" en ")
@@ -534,6 +547,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la monarchie") != -1)):
     wikitext = createCategoryLexiqueMonarchie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la navigation") != -1)):
+    wikitext = createCategoryLexiqueNavigation(page,cle)
   else:
     return
 
