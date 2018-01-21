@@ -196,6 +196,21 @@ def createCategoryLexiqueNavigation(page,cle):
   wikitext += "[[Catégorie:Navigation|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueOenologie(page,cle,code):
+  #Catégorie:Lexique en italien de l’œnologie
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  if (language not in code):
+    return
+  
+  wikitext = "Pour alimenter cette page, merci d’ajouter aux articles le modèle {{modl|oenologie|" + code[language] + "}}.\n"
+  wikitext += "[[Catégorie:Lexiques en " + language + "|oenologie]]\n"
+  wikitext += "[[Catégorie:Œnologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
   beg=page.find(" en ")
@@ -208,15 +223,18 @@ def createCategoryLexiquePatinage(page,cle):
   wikitext += "[[Catégorie:Patinage|" + cle[language] + "]]"
   return wikitext
 
-def createCategoryLexiquePeloteBasque(page,cle):
+def createCategoryLexiquePeloteBasque(page,cle,code):
   #Catégorie:Lexique en français de la pelote basque
   beg=page.find(" en ")
   end=page.find(" de la ")
   language=page[beg+4:end]
   if (language not in cle):
     return
+  if (language not in code):
+    return
   
-  wikitext = "[[Catégorie:Lexique en " + language + " du sport|pelote basque]]\n"
+  wikitext = "Pour référencer automatiquement un mot dans cette catégorie, il est possible d’ajouter dans la définition le modèle : {{modl|pelote|" + code[language] + "}}.\n\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " du sport|pelote basque]]\n"
   wikitext += "[[Catégorie:Pelote basque|" + cle[language] + "]]"
   return wikitext
 
@@ -576,10 +594,13 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryLexiqueNavigation(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la pelote basque") != -1)):
-    wikitext = createCategoryLexiquePeloteBasque(page,cle)
+    wikitext = createCategoryLexiquePeloteBasque(page,cle,code)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la phytosociologie") != -1)):
     wikitext = createCategoryLexiquePhytosociologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’œnologie") != -1)):
+    wikitext = createCategoryLexiqueOenologie(page,cle,code)
   else:
     return
 
