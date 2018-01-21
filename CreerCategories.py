@@ -159,6 +159,18 @@ def createCategoryLexiqueMathematiques(page,cle):
   wikitext += "[[Catégorie:Mathématiques|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueMonarchie(page,cle):
+  #Catégorie:Lexique en anglais de la monarchie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la politique|monarchie]]\n"
+  wikitext += "[[Catégorie:Monarchie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueMotocyclisme(page,cle):
   #Catégorie:Lexique en italien du motocyclisme
   beg=page.find(" en ")
@@ -519,6 +531,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" du basket-ball") != -1)):
     wikitext = createCategoryLexiqueBasketBall(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la monarchie") != -1)):
+    wikitext = createCategoryLexiqueMonarchie(page,cle)
   else:
     return
 
