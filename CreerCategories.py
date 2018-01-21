@@ -478,7 +478,7 @@ def createCategoryTraductions(page,cle):
 
   return wikitext
 
-def createCategory(page,cle,country):  
+def createCategory(page,cle,code,country):  
   #Convert Category into string object
   page = str(page)
   beg=page.find(":")
@@ -596,13 +596,15 @@ def createCategory(page,cle,country):
 def getSortingKey():
 
   cledetri = {}
+  codeLangue = {}
   with open("liste_langue.dat") as csvfile:
     reader = csv.reader(csvfile, delimiter=';')
     for row in reader:
       name, code, key = row
       cledetri[name] = key
+      codeLangue[name] = code
 
-  return cledetri
+  return cledetri codeLangue
 
 def getCountryList():
 
@@ -632,15 +634,15 @@ def WantedPagesCategoryGenerator(total=100, site=None):
     yield page
 
 def main():
-  cle = getSortingKey()
+  cle, codeLangue = getSortingKey()
   countryList = getCountryList()
 
   if test:
-    createCategory("[[:Catégorie:Thématiques en nahuatl de l’Isthme de Mecayapan]]",cle,countryList)
+    createCategory("[[:Catégorie:Thématiques en nahuatl de l’Isthme de Mecayapan]]",cle, codeLangue, countryList)
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
-      createCategory(page,cle,countryList)
+      createCategory(page,cle,codeLangue,countryList)
   
 
 if __name__ == '__main__':
