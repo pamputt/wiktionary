@@ -232,6 +232,18 @@ def createCategoryLexiquePhilosophie(page,cle):
   wikitext += "[[Catégorie:Philosophie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiquePhytosociologie(page,cle):
+  #Catégorie:Lexique en français de la phytosociologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|phytosociologie]]\n"
+  wikitext += "[[Catégorie:Phytosociologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePrehistoire(page,cle):
   #Catégorie:Lexique en same du Nord de la préhistoire
   beg=page.find(" en ")
@@ -565,6 +577,9 @@ def createCategory(page,cle,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la pelote basque") != -1)):
     wikitext = createCategoryLexiquePeloteBasque(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la phytosociologie") != -1)):
+    wikitext = createCategoryLexiquePhytosociologie(page,cle)
   else:
     return
 
