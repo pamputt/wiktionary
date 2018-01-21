@@ -37,6 +37,18 @@ def createCategoryLexiqueAlchimie(page,cle):
   wikitext += "[[Catégorie:Alchimie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueAviation(page,cle):
+  #Catégorie:Lexique en italien de l’aviation
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext + "[[Catégorie:Lexiques en " + language + "|aviation]]\n"
+  wikitext += "[[Catégorie:Aviation|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueBasketBall(page,cle):
   #Catégorie:Lexique en italien du basket-ball
   beg=page.find(" en ")
@@ -631,6 +643,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la physiologie") != -1)):
     wikitext = createCategoryLexiquePhysiologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’aviation") != -1)):
+    wikitext = createCategoryLexiqueAviation(page,cle)
   else:
     return
 
