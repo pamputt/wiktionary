@@ -335,6 +335,18 @@ def createCategoryLexiqueTemps(page,cle):
   wikitext += "[[Catégorie:Temps|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueReseauxInformatiques(page,cle):
+  #Catégorie:Lexique en italien des réseaux informatiques
+  beg=page.find(" en ")
+  end=page.find(" des ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’informatique|reseau]]\n"
+  wikitext += "[[Catégorie:Réseaux informatiques|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueToponymie(page,cle):
   #Catégorie:Lexique en italien de la toponymie
   beg=page.find(" en ")
@@ -661,6 +673,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des médias") != -1)):
     wikitext = createCategoryLexiqueMedias(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des réseaux informatiques") != -1)):
+    wikitext = createCategoryLexiqueReseauxInformatiques(page,cle)
   else:
     return
 
