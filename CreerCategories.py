@@ -690,7 +690,7 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryLexiqueReseauxInformatiques(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la métrologie") != -1)):
-    wikitext = createcategorylexiqueMetrologie(page,cle)
+    wikitext = createCategoryLexiqueMetrologie(page,cle)
   else:
     return
 
