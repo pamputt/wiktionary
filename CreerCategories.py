@@ -122,6 +122,18 @@ def createCategoryLexiqueCrisAnimaux(page,cle):
   wikitext += "[[Catégorie:Cris d’animaux|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueDermatologie(page,cle):
+  #Catégorie:Lexique en français de la dermatologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Lexique en " + language + " de la médecine|dermatologie]]\n"
+  wikitext += "[[Catégorie:Dermatologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueEconomie(page,cle):
   #Catégorie:Lexique en italien de l’économie
   beg=page.find(" en ")
@@ -291,7 +303,7 @@ def createCategoryLexiquePapeterie(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "[[Catégorie:Lexique en " + language + " du livre|patinage]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " du livre|papeterie]]\n"
   wikitext += "[[Catégorie:Papeterie|" + cle[language] + "]]"
   return wikitext
 
@@ -383,18 +395,6 @@ def createCategoryLexiqueTemps(page,cle):
   wikitext += "[[Catégorie:Temps|" + cle[language] + "]]"
   return wikitext
 
-def createCategoryLexiqueTransport(page,cle):
-  #Catégorie:Lexique en italien du transport
-  beg=page.find(" en ")
-  end=page.find(" du ")
-  language=page[beg+4:end]
-  if (language not in cle):
-    return
-  
-  wikitext = "[[Catégorie:Lexiques en " + language + "|transport]]\n"
-  wikitext += "[[Catégorie:Transport|" + cle[language] + "]]"
-  return wikitext
-
 def createCategoryLexiqueReseauxInformatiques(page,cle):
   #Catégorie:Lexique en italien des réseaux informatiques
   beg=page.find(" en ")
@@ -417,6 +417,18 @@ def createCategoryLexiqueToponymie(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la géographie|toponymie]]\n"
   wikitext += "[[Catégorie:Toponymie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueTransport(page,cle):
+  #Catégorie:Lexique en italien du transport
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|transport]]\n"
+  wikitext += "[[Catégorie:Transport|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueZoologie(page,cle):
@@ -751,6 +763,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" du transport") != -1)):
     wikitext = createCategoryLexiqueTransport(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la dermatologie") != -1)):
+    wikitext = createCategoryLexiqueDermatologie(page,cle)
   else:
     return
 
