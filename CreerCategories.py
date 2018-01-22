@@ -283,6 +283,18 @@ def createCategoryLexiqueOrnithologie(page,cle):
   wikitext += "[[Catégorie:Ornithologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiquePapeterie(page,cle):
+  #Catégorie:Lexique en italien de la papeterie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du livre|patinage]]\n"
+  wikitext += "[[Catégorie:Papeterie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
   beg=page.find(" en ")
@@ -369,6 +381,18 @@ def createCategoryLexiqueTemps(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|temps]]\n"
   wikitext += "[[Catégorie:Temps|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueTransport(page,cle):
+  #Catégorie:Lexique en italien du transport
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|transport]]\n"
+  wikitext += "[[Catégorie:Transport|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueReseauxInformatiques(page,cle):
@@ -721,6 +745,12 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’économie") != -1)):
     wikitext = createCategoryLexiqueEconomie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la papeterie") != -1)):
+    wikitext = createCategoryLexiquePapeterie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du transport") != -1)):
+    wikitext = createCategoryLexiqueTransport(page,cle)
   else:
     return
 
