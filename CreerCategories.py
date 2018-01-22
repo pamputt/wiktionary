@@ -86,6 +86,19 @@ def createCategoryLexiqueBotanique(page,cle):
   wikitext += "[[Catégorie:Botanique|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueCanoeKayak(page,cle):
+  #Catégorie:Lexique en français du canoë-kayak
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du sport|canoe kayak]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la navigation|canoe kayak]]\n"
+  wikitext += "[[Catégorie:Canoë-kayak|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueCharpenterie(page,cle):
   #Catégorie:Lexique en italien de la charpenterie
   beg=page.find(" en ")
@@ -132,6 +145,18 @@ def createCategoryLexiqueDermatologie(page,cle):
 
   wikitext = "[[Catégorie:Lexique en " + language + " de la médecine|dermatologie]]\n"
   wikitext += "[[Catégorie:Dermatologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueEcologie(page,cle):
+  #Catégorie:Lexique en italien de l’écologie
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Lexiques en " + language + "|ecologie]]\n"
+  wikitext += "[[Catégorie:Écologie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueEconomie(page,cle):
@@ -430,6 +455,23 @@ def createCategoryLexiqueReseauxInformatiques(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’informatique|reseau]]\n"
   wikitext += "[[Catégorie:Réseaux informatiques|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueScienceFiction(page,cle,code):
+  #Catégorie:Lexique en italien de la science-fiction
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  if (language not in code):
+    return
+  
+  wikitext = "Les termes peuvent être ajoutés à cette liste avec {{modl|sci-fi|" + code[language] + "}}.\n\n"
+  wikitext += "=== Voir aussi ===\n"
+  wikitext += "* [[:Catégorie:Lexique en " + language + " du fantastique]]\n\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la littérature|science fiction]]\n"
+  wikitext += "[[Catégorie:Science-fiction|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueToponymie(page,cle):
@@ -797,6 +839,15 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’ichtyologie") != -1)):
     wikitext = createCategoryLexiqueIchtyologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du canoë-kayak") != -1)):
+    wikitext = createCategoryLexiqueCanoeKayak(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la science-fiction") != -1)):
+    wikitext = createCategoryLexiqueScienceFiction(page,cle,code)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’écologie") != -1)):
+    wikitext = createCategoryLexiqueEcologie(page,cle)
   else:
     return
 
