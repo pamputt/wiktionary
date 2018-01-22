@@ -195,6 +195,19 @@ def createCategoryLexiqueHockey(page,cle):
   wikitext += "[[Catégorie:Hockey|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueIchtyologie(page,cle):
+  #Catégorie:Lexique en anglais de l’ichtyologie
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|ichtyologie]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de l’élevage|ichtyologie]]\n"
+  wikitext += "[[Catégorie:Ichtyologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueMathematiques(page,cle):
   #Catégorie:Lexique en italien des mathématiques
   beg=page.find(" en ")
@@ -344,6 +357,18 @@ def createCategoryLexiquePhilosophie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|philosophie]]\n"
   wikitext += "[[Catégorie:Philosophie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiquePhonologie(page,cle):
+  #Catégorie:Lexique en anglais de la phonologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la linguistique|phonologie]]\n"
+  wikitext += "[[Catégorie:Phonologie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiquePhytosociologie(page,cle):
@@ -766,6 +791,12 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la dermatologie") != -1)):
     wikitext = createCategoryLexiqueDermatologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la phonologie") != -1)):
+    wikitext = createCategoryLexiquePhonologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’ichtyologie") != -1)):
+    wikitext = createCategoryLexiqueIchtyologie(page,cle)
   else:
     return
 
