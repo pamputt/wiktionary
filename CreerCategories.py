@@ -9,6 +9,18 @@ import CleDeTri
 
 test = False # to test the script (without saving the result)
 
+def createCategoryEtymologiesManquantes(page,cle):
+  #Wiktionnaire:Étymologies manquantes en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "L’étymologie de ces mots en [[" + language + "]] n’a pas été précisée, merci d’y remédier si vous la connaissez.\n\n"
+  wikitext += "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Wiktionnaire:Étymologies manquantes|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryGrammaire(page,cle):
   #Grammaire en abu’‏‎
   beg=page.find(" en ")
@@ -110,6 +122,18 @@ def createCategoryLexiqueBasketBall(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|basket ball]]\n"
   wikitext += "[[Catégorie:Basket-ball|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueBiologie(page,cle):
+  #Catégorie:Lexique en italien de la biologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|biologie]]\n"
+  wikitext += "[[Catégorie:Biologie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueBotanique(page,cle):
@@ -259,6 +283,18 @@ def createCategoryLexiqueGrammaire(page,cle):
   wikitext += "[[Catégorie:Grammaire|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueFamille(page,cle):
+  #Catégorie:Lexique en italien de la famille
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|famille]]\n"
+  wikitext += "[[Catégorie:Famille|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueHippologie(page,cle):
   #Catégorie:Lexique en anglais de l’hippologie
   beg=page.find(" en ")
@@ -306,6 +342,18 @@ def createCategoryLexiqueIchtyologie(page,cle):
   wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|ichtyologie]]\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de l’élevage|ichtyologie]]\n"
   wikitext += "[[Catégorie:Ichtyologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueLivre(page,cle):
+  #Catégorie:Lexique en italien du livre
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’édition|livre]]\n"
+  wikitext += "[[Catégorie:Livre|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueMathematiques(page,cle):
@@ -780,6 +828,21 @@ def createCategoryPrononciationAudio(page,cle):
   wikitext += "[[Catégorie:Prononciations audio|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryPrononciationsManquantes(page,cle):
+  #Catégorie:Wiktionnaire:Prononciations manquantes en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+
+  wikitext = "La prononciation de ces mots en " + language + " n’a pas été précisée, merci d’y remédier :\n"
+  wikitext += "* si vous connaissez l’API ou\n"
+  wikitext += "* si vous avez un dictionnaire indiquant l’API ou\n"
+  wikitext += "* si la prononciation se trouve sur un autre Wiktionnaire.\n\n"
+  wikitext += "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Wiktionnaire:Prononciations manquantes|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryOriginesEtmylogiquesNomsPropres(page,cle):
   #Origines étymologiques des noms propres en néerlandais
   beg=page.find(" en ")
@@ -835,6 +898,10 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryPrononciationAudio(page,cle)
   elif (page.find("Catégorie:Grammaire en") != -1):
      wikitext = createCategoryGrammaire(page,cle)
+  elif (page.find("Catégorie:Wiktionnaire:Étymologies manquantes en ") != -1):
+     wikitext = createCategoryEtymologiesManquantes(page,cle)
+  elif (page.find("Catégorie:Wiktionnaire:Prononciations manquantes en ") != -1):
+     wikitext = createCategoryPrononciationsManquantes(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
      wikitext = createCategoryNomsCommuns(page,cle)
   elif ((page.find("Catégorie:Noms propres en") != -1) and
@@ -1006,6 +1073,15 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la météorologie") != -1)):
     wikitext = createCategoryLexiqueMeteorologie(page,cle,code)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la famille") != -1)):
+    wikitext = createCategoryLexiqueFamille(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du livre") != -1)):
+    wikitext = createCategoryLexiqueLivre(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la biologie") != -1)):
+    wikitext = createCategoryLexiqueBiologie(page,cle)
   else:
     return
 
