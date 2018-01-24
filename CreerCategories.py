@@ -1156,7 +1156,8 @@ def createCategory(page,cle,code,country):
         (page.find(" de la biologie") != -1)):
     wikitext = createCategoryLexiqueBiologie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
-        (page.find(" des jeux") != -1)):
+        (page.find(" des jeux") != -1) and
+        (page.find(" vidéo") == -1)):
     wikitext = createCategoryLexiqueJeux(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la géologie") != -1)):
