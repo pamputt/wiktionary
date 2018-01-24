@@ -174,6 +174,18 @@ def createCategoryLexiqueCharpenterie(page,cle):
   wikitext += "[[Catégorie:Charpenterie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueCheminFer(page,cle):
+  #Catégorie:Lexique en italien du chemin de fer
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du transport|chemin de fer]]\n"
+  wikitext += "[[Catégorie:Chemin de fer|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueClimatologie(page,cle):
   #Catégorie:Lexique en français de la climatologie
   beg=page.find(" en ")
@@ -184,6 +196,18 @@ def createCategoryLexiqueClimatologie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|climatologie]]\n"
   wikitext += "[[Catégorie:Climatologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueCommerce(page,cle):
+  #Catégorie:Lexique en italien du commerce
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|commerce]]\n"
+  wikitext += "[[Catégorie:Commerce|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueCordonnerie(page,cle):
@@ -281,6 +305,19 @@ def createCategoryLexiqueGrammaire(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|grammaire]]\n"
   wikitext += "[[Catégorie:Grammaire|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueGravure(page,cle):
+  #Catégorie:Lexique en français de la gravure
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du livre|gravure]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de l’art|gravure]]\n"
+  wikitext += "[[Catégorie:Gravure|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueFamille(page,cle):
@@ -1127,6 +1164,15 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la métallurgie") != -1)):
     wikitext = createCategoryLexiqueMetallurgie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du chemin de fer") != -1)):
+    wikitext = createCategoryLexiqueCheminFer(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du commerce") != -1)):
+    wikitext = createCategoryLexiqueCommerce(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la gravure") != -1)):
+    wikitext = createCategoryLexiqueGravure(page,cle)
   else:
     return
 
