@@ -295,6 +295,18 @@ def createCategoryLexiqueFamille(page,cle):
   wikitext += "[[Catégorie:Famille|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueGeologie(page,cle):
+  #Catégorie:Lexique en italien de la géologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|geologie]]\n"
+  wikitext += "[[Catégorie:Géologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueHippologie(page,cle):
   #Catégorie:Lexique en anglais de l’hippologie
   beg=page.find(" en ")
@@ -344,6 +356,18 @@ def createCategoryLexiqueIchtyologie(page,cle):
   wikitext += "[[Catégorie:Ichtyologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueJeux(page,cle):
+  #Catégorie:Lexique en italien des jeux
+  beg=page.find(" en ")
+  end=page.find(" des ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " des loisirs|jeux]]\n"
+  wikitext += "[[Catégorie:Jeux|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueLivre(page,cle):
   #Catégorie:Lexique en italien du livre
   beg=page.find(" en ")
@@ -378,6 +402,18 @@ def createCategoryLexiqueMedias(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|medias]]\n"
   wikitext += "[[Catégorie:Médias|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueMetallurgie(page,cle):
+  #Catégorie:Lexique en italien de la métallurgie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|metallurgie]]\n"
+  wikitext += "[[Catégorie:Métallurgie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueMeteorologie(page,cle,code):
@@ -1082,6 +1118,15 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la biologie") != -1)):
     wikitext = createCategoryLexiqueBiologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des jeux") != -1)):
+    wikitext = createCategoryLexiqueJeux(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la géologie") != -1)):
+    wikitext = createCategoryLexiqueGeologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la métallurgie") != -1)):
+    wikitext = createCategoryLexiqueMetallurgie(page,cle)
   else:
     return
 
