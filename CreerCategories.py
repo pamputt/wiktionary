@@ -720,7 +720,7 @@ def createCategoryLexiquePhysique(page,cle):
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|physique]]\n"
-  wikitext = "[[Catégorie:Lexique en " + language + " des sciences|physique]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " des sciences|physique]]\n"
   wikitext += "[[Catégorie:Physique|" + cle[language] + "]]"
   return wikitext
 
