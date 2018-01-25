@@ -36,6 +36,19 @@ def createCategoryGrammaire(page,cle):
   wikitext += "[[Catégorie:Grammaire par langue|" + cle[language] +"]]"
   return wikitext
 
+def createCategoryLexiqueAcoustique(page,cle):
+  #Catégorie:Lexique en français de l’acoustique
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la musique|acoustique]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la physique|acoustique]]\n"
+  wikitext += "[[Catégorie:Acoustique|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueAlchimie(page,cle):
   #Catégorie:Lexique en français de l’alchimie
   beg=page.find(" en ")
@@ -162,6 +175,23 @@ def createCategoryLexiqueCanoeKayak(page,cle):
   wikitext += "[[Catégorie:Canoë-kayak|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueCeramique(page,cle,code):
+  #Catégorie:Lexique en italien de la céramique
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  if (language not in code):
+    return
+  
+  wikitext = "Vocabulaire concernant la [[céramique]] (art de la terre cuite).\n\n"
+  wikitext += "{{modl|céramique|" + code[language] + "}} catégorise ici.\n\n"
+
+  wikitext = "[[Catégorie:Lexiques en " + language + "|ceramique]]\n"
+  wikitext += "[[Catégorie:Céramique|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueCharpenterie(page,cle):
   #Catégorie:Lexique en italien de la charpenterie
   beg=page.find(" en ")
@@ -282,6 +312,19 @@ def createCategoryLexiqueEscrime(page,cle):
   wikitext += "[[Catégorie:Escrime|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueFauconnerie(page,cle):
+  #Catégorie:Lexique en italien de la fauconnerie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’élevage|fauconnerie]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la chasse|fauconnerie]]\n"
+  wikitext += "[[Catégorie:Fauconnerie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueGenealogie(page,cle):
   #Catégorie:Lexique en français de la généalogie
   beg=page.find(" en ")
@@ -344,6 +387,18 @@ def createCategoryLexiqueGeologie(page,cle):
   wikitext += "[[Catégorie:Géologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueGolf(page,cle):
+  #Catégorie:Lexique en italien du golf
+  beg=page.find(" en ")
+  end=page.find(" du ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du sport|golf]]\n"
+  wikitext += "[[Catégorie:Golf|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueHippologie(page,cle):
   #Catégorie:Lexique en anglais de l’hippologie
   beg=page.find(" en ")
@@ -392,6 +447,17 @@ def createCategoryLexiqueIchtyologie(page,cle):
   wikitext += "[[Catégorie:Lexique en " + language + " de l’élevage|ichtyologie]]\n"
   wikitext += "[[Catégorie:Ichtyologie|" + cle[language] + "]]"
   return wikitext
+
+def createCategoryLexiqueImprimerie(page,cle):
+  #Catégorie:Lexique en italien de l’imprimerie
+  beg=page.find(" en ")
+  end=page.find(" de l’")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|imprimerie]]\n"
+  wikitext += "[[Catégorie:Imprimerie|" + cle[language] + "]]"
 
 def createCategoryLexiqueJeux(page,cle):
   #Catégorie:Lexique en italien des jeux
@@ -531,6 +597,18 @@ def createCategoryLexiqueNavigation(page,cle):
   wikitext += "[[Catégorie:Navigation|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueNoblesse(page,cle):
+  #Catégorie:Lexique en italien de la noblesse
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la monarchie|noblesse]]\n"
+  wikitext += "[[Catégorie:Noblesse|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueOenologie(page,cle,code):
   #Catégorie:Lexique en italien de l’œnologie
   beg=page.find(" en ")
@@ -619,6 +697,31 @@ def createCategoryLexiquePhonologie(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la linguistique|phonologie]]\n"
   wikitext += "[[Catégorie:Phonologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiquePlomberie(page,cle):
+  #Catégorie:Lexique en italien de la plomberie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la construction|plomberie]]\n"
+  wikitext += "[[Catégorie:Plomberie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiquePhysique(page,cle):
+  #Catégorie:Lexique en italien de la physique
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|physique]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " des sciences|physique]]\n"
+  wikitext += "[[Catégorie:Physique|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiquePhytosociologie(page,cle):
@@ -721,6 +824,18 @@ def createCategoryLexiqueTextile(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|textile]]\n"
   wikitext += "[[Catégorie:Textile|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueTheologie(page,cle):
+  #Catégorie:Lexique en italien de la théologie
+  beg=page.find(" en ")
+  end=page.find(" de la ")
+  language=page[beg+4:end]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|theologie]]\n"
+  wikitext += "[[Catégorie:Théologie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueToponymie(page,cle):
@@ -1174,6 +1289,33 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la gravure") != -1)):
     wikitext = createCategoryLexiqueGravure(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la théologie") != -1)):
+    wikitext = createCategoryLexiqueTheologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’acoustique") != -1)):
+    wikitext = createCategoryLexiqueAcoustique(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la fauconnerie") != -1)):
+    wikitext = createCategoryLexiqueFauconnerie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la plomberie") != -1)):
+    wikitext = createCategoryLexiquePlomberie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’imprimerie") != -1)):
+    wikitext = createCategoryLexiqueImprimerie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la noblesse") != -1)):
+    wikitext = createCategoryLexiqueNoblesse(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du golf") != -1)):
+    wikitext = createCategoryLexiqueGolf(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la physique") != -1)):
+    wikitext = createCategoryLexiquePhysique(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la céramique") != -1)):
+    wikitext = createCategoryLexiqueCeramique(page,cle,code)
   else:
     return
 
