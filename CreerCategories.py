@@ -458,6 +458,7 @@ def createCategoryLexiqueImprimerie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|imprimerie]]\n"
   wikitext += "[[Catégorie:Imprimerie|" + cle[language] + "]]"
+  return wikitext
 
 def createCategoryLexiqueJeux(page,cle):
   #Catégorie:Lexique en italien des jeux
@@ -1374,7 +1375,7 @@ def main():
   countryList = getCountryList()
 
   if test:
-    createCategory("[[:Catégorie:Thématiques en nahuatl de l’Isthme de Mecayapan]]",cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en slovène de l’imprimerie]]", cle, codeLangue, countryList)
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
