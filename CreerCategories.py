@@ -39,7 +39,14 @@ def createCategoryGrammaire(page,cle):
 def createCategoryLexiqueAcoustique(page,cle):
   #Catégorie:Lexique en français de l’acoustique
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -52,7 +59,14 @@ def createCategoryLexiqueAcoustique(page,cle):
 def createCategoryLexiqueAlchimie(page,cle):
   #Catégorie:Lexique en français de l’alchimie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -65,7 +79,14 @@ def createCategoryLexiqueAlchimie(page,cle):
 def createCategoryLexiqueAnatomie(page,cle):
   #Catégorie:Lexique en anglais de l’anatomie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -77,7 +98,14 @@ def createCategoryLexiqueAnatomie(page,cle):
 def createCategoryLexiqueAnthropologie(page,cle):
   #Catégorie:Lexique en anglais de l’anthropologie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -89,7 +117,14 @@ def createCategoryLexiqueAnthropologie(page,cle):
 def createCategoryLexiqueAntiquite(page,cle):
   #Catégorie:Lexique en anglais de l’Antiquité
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -101,7 +136,14 @@ def createCategoryLexiqueAntiquite(page,cle):
 def createCategoryLexiqueArgent(page,cle):
   #Catégorie:Lexique en italien de l’argent
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -113,7 +155,14 @@ def createCategoryLexiqueArgent(page,cle):
 def createCategoryLexiqueAviation(page,cle):
   #Catégorie:Lexique en italien de l’aviation
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -137,7 +186,14 @@ def createCategoryLexiqueBandeDessinee(page,cle):
 def createCategoryLexiqueBaseball(page,cle):
   #Catégorie:Lexique en italien du baseball
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -164,7 +220,14 @@ def createCategoryLexiqueBasesDonnees(page,cle,code):
 def createCategoryLexiqueBasketBall(page,cle):
   #Catégorie:Lexique en italien du basket-ball
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -201,7 +264,14 @@ def createCategoryLexiqueBotanique(page,cle):
 def createCategoryLexiqueCanoeKayak(page,cle):
   #Catégorie:Lexique en français du canoë-kayak
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -255,7 +325,14 @@ def createCategoryLexiqueChasse(page,cle):
 def createCategoryLexiqueCheminFer(page,cle):
   #Catégorie:Lexique en italien du chemin de fer
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -279,7 +356,14 @@ def createCategoryLexiqueClimatologie(page,cle):
 def createCategoryLexiqueCommerce(page,cle):
   #Catégorie:Lexique en italien du commerce
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -328,7 +412,14 @@ def createCategoryLexiqueCuisine(page,cle):
 def createCategoryLexiqueCyclisme(page,cle):
   #Catégorie:Lexique en italien du cyclisme
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -353,7 +444,14 @@ def createCategoryLexiqueDermatologie(page,cle):
 def createCategoryLexiqueEcologie(page,cle):
   #Catégorie:Lexique en italien de l’écologie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -365,7 +463,14 @@ def createCategoryLexiqueEcologie(page,cle):
 def createCategoryLexiqueEconomie(page,cle):
   #Catégorie:Lexique en italien de l’économie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -377,7 +482,14 @@ def createCategoryLexiqueEconomie(page,cle):
 def createCategoryLexiqueEquitation(page,cle):
   #Catégorie:Lexique en italien de l’équitation
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -389,7 +501,14 @@ def createCategoryLexiqueEquitation(page,cle):
 def createCategoryLexiqueEscrime(page,cle):
   #Catégorie:Lexique en italien de l’escrime
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -501,7 +620,14 @@ def createCategoryLexiqueGeophysique(page,cle):
 def createCategoryLexiqueGolf(page,cle):
   #Catégorie:Lexique en italien du golf
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -513,7 +639,14 @@ def createCategoryLexiqueGolf(page,cle):
 def createCategoryLexiqueHippologie(page,cle):
   #Catégorie:Lexique en anglais de l’hippologie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -525,7 +658,14 @@ def createCategoryLexiqueHippologie(page,cle):
 def createCategoryLexiqueHistoire(page,cle):
   #Catégorie:Lexique en anglais de l’histoire
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -537,7 +677,14 @@ def createCategoryLexiqueHistoire(page,cle):
 def createCategoryLexiqueHockey(page,cle):
   #Catégorie:Lexique en italien du hockey
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -549,7 +696,14 @@ def createCategoryLexiqueHockey(page,cle):
 def createCategoryLexiqueIchtyologie(page,cle):
   #Catégorie:Lexique en anglais de l’ichtyologie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -562,7 +716,14 @@ def createCategoryLexiqueIchtyologie(page,cle):
 def createCategoryLexiqueImprimerie(page,cle):
   #Catégorie:Lexique en italien de l’imprimerie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -610,7 +771,14 @@ def createCategoryLexiqueLitterature(page,cle):
 def createCategoryLexiqueLivre(page,cle):
   #Catégorie:Lexique en italien du livre
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -710,7 +878,14 @@ def createCategoryLexiqueMetrologie(page,cle):
 def createCategoryLexiqueMilitaire(page,cle):
   #Catégorie:Lexique en italien du militaire
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -734,7 +909,14 @@ def createCategoryLexiqueMonarchie(page,cle):
 def createCategoryLexiqueMotocyclisme(page,cle):
   #Catégorie:Lexique en italien du motocyclisme
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -811,7 +993,14 @@ def createCategoryLexiqueNosologie(page,cle,code):
 def createCategoryLexiqueOenologie(page,cle,code):
   #Catégorie:Lexique en italien de l’œnologie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -826,7 +1015,14 @@ def createCategoryLexiqueOenologie(page,cle,code):
 def createCategoryLexiqueOrnithologie(page,cle):
   #Catégorie:Lexique en italien de l’ornithologie
   beg=page.find(" en ")
-  end=page.find(" de l’")
+  est = page.find(" de l’Est ")
+  ouest = page.find(" de l’Ouest ")
+  tmp = -1
+  if(est != -1):
+    tmp = est
+  if(ouest != -1):
+    tmp = ouest
+  end=page.find(" de l’",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -850,7 +1046,14 @@ def createCategoryLexiquePapeterie(page,cle):
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -1049,7 +1252,14 @@ def createCategoryLexiqueSerrurerie(page,cle):
 def createCategoryLexiqueSquelette(page,cle):
   #Catégorie:Lexique en italien du squelette
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -1061,8 +1271,16 @@ def createCategoryLexiqueSquelette(page,cle):
 def createCategoryLexiqueTemps(page,cle):
   #Catégorie:Lexique en same du Nord du temps
   beg=page.find(" en ")
-  end=page.find(" du ")
+  tmp = -1
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
+  print(language)
   if (language not in cle):
     return
   
@@ -1152,7 +1370,14 @@ def createCategoryLexiqueTelephonie(page,cle):
 def createCategoryLexiqueTextile(page,cle):
   #Catégorie:Lexique en italien du textile
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -1188,7 +1413,14 @@ def createCategoryLexiqueToponymie(page,cle):
 def createCategoryLexiqueTransport(page,cle):
   #Catégorie:Lexique en italien du transport
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -1200,7 +1432,14 @@ def createCategoryLexiqueTransport(page,cle):
 def createCategoryLexiqueTravail(page,cle):
   #Catégorie:Lexique en italien du travail
   beg=page.find(" en ")
-  end=page.find(" du ")
+  sud=page.find(" du Sud ")
+  nord=page.find(" du Nord ")
+  tmp = -1
+  if(sud != -1):
+    tmp = sud
+  if(nord != -1):
+    tmp = nord
+  end=page.find(" du ",tmp+1)
   language=page[beg+4:end]
   if (language not in cle):
     return
@@ -1787,6 +2026,11 @@ def getCountryList():
 
   return country
 
+def guessLanguage(begin,end):
+  #TODO prevoir une fonction qui recupere le nom de la langue quel que soit le nom de la catégorie
+  # cela permet de factoriser beaucoup de code provenant de chaque fonction individuelle
+  
+
 def WantedPagesCategoryGenerator(total=100, site=None):
   """
   Wanted category generator.
@@ -1807,7 +2051,7 @@ def main():
   countryList = getCountryList()
 
   if test:
-    createCategory("[[:Catégorie:Lexique en slovène de l’imprimerie]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en altaï du Sud du temps]]", cle, codeLangue, countryList)
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
