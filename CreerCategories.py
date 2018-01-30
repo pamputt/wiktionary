@@ -612,7 +612,7 @@ def createCategoryLexiqueGeophysique(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "[[Catégorie:Lexique en " + language + " de la geologie|geophysique]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de la géologie|geophysique]]\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de la physique|geophysique]]\n"
   wikitext += "[[Catégorie:Géophysique|" + cle[language] + "]]"
   return wikitext
@@ -1859,7 +1859,9 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryLexiqueBiologie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des jeux") != -1) and
-        (page.find(" vidéo") == -1)):
+        (page.find(" vidéo") == -1) and
+        (page.find(" boules") == -1) and
+        (page.find(" rôles") == -1)):
     wikitext = createCategoryLexiqueJeux(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la géologie") != -1)):
@@ -2029,7 +2031,7 @@ def getCountryList():
 def guessLanguage(begin,end):
   #TODO prevoir une fonction qui recupere le nom de la langue quel que soit le nom de la catégorie
   # cela permet de factoriser beaucoup de code provenant de chaque fonction individuelle
-  
+  return
 
 def WantedPagesCategoryGenerator(total=100, site=None):
   """
