@@ -7,13 +7,12 @@ import pywikibot
 
 import CleDeTri
 
-test = False # to test the script (without saving the result)
+test = True # to test the script (without saving the result)
 
 def createCategoryEtymologiesManquantes(page,cle):
   #Wiktionnaire:Étymologies manquantes en italien
-  beg=page.find(" en ")
-  language = page[beg+4:]
-  if (not language in cle):
+  language = guessLanguage(page,"en","",cle)
+  if not language:
     return
   
   wikitext = "L’étymologie de ces mots en [[" + language + "]] n’a pas été précisée, merci d’y remédier si vous la connaissez.\n\n"
@@ -23,9 +22,8 @@ def createCategoryEtymologiesManquantes(page,cle):
 
 def createCategoryGrammaire(page,cle):
   #Grammaire en abu’‏‎
-  beg=page.find(" en ")
-  language = page[beg+4:]
-  if (not language in cle):
+  language = guessLanguage(page,"en","",cle)
+  if not language:
     return
   
   wikitext = "Cette catégorie a pour but de réunir les sous-catégories traitant de la grammaire en " + language + ", notamment :\n"
@@ -38,17 +36,8 @@ def createCategoryGrammaire(page,cle):
 
 def createCategoryLexiqueAcoustique(page,cle):
   #Catégorie:Lexique en français de l’acoustique
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la musique|acoustique]]\n"
@@ -58,17 +47,8 @@ def createCategoryLexiqueAcoustique(page,cle):
 
 def createCategoryLexiqueAlchimie(page,cle):
   #Catégorie:Lexique en français de l’alchimie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à l’[[alchimie]].\n\n"
@@ -78,17 +58,8 @@ def createCategoryLexiqueAlchimie(page,cle):
 
 def createCategoryLexiqueAnatomie(page,cle):
   #Catégorie:Lexique en anglais de l’anatomie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la biologie|anatomie]]\n"
@@ -98,16 +69,8 @@ def createCategoryLexiqueAnatomie(page,cle):
 def createCategoryLexiqueAnthropologie(page,cle):
   #Catégorie:Lexique en anglais de l’anthropologie
   beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|anthropologie]]\n"
@@ -116,17 +79,8 @@ def createCategoryLexiqueAnthropologie(page,cle):
 
 def createCategoryLexiqueAntiquite(page,cle):
   #Catégorie:Lexique en anglais de l’Antiquité
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’histoire|antiquite]]\n"
@@ -135,17 +89,8 @@ def createCategoryLexiqueAntiquite(page,cle):
 
 def createCategoryLexiqueArgent(page,cle):
   #Catégorie:Lexique en italien de l’argent
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|argent]]\n"
@@ -154,17 +99,8 @@ def createCategoryLexiqueArgent(page,cle):
 
 def createCategoryLexiqueAviation(page,cle):
   #Catégorie:Lexique en italien de l’aviation
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|aviation]]\n"
@@ -173,10 +109,8 @@ def createCategoryLexiqueAviation(page,cle):
 
 def createCategoryLexiqueBandeDessinee(page,cle):
   #Catégorie:Lexique en italien de la bande dessinée
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la littérature|bande dessinee]]\n"
@@ -185,17 +119,8 @@ def createCategoryLexiqueBandeDessinee(page,cle):
 
 def createCategoryLexiqueBaseball(page,cle):
   #Catégorie:Lexique en italien du baseball
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|baseball]]\n"
@@ -204,10 +129,8 @@ def createCategoryLexiqueBaseball(page,cle):
 
 def createCategoryLexiqueBasesDonnees(page,cle,code):
   #Catégorie:Lexique en anglais des bases de données
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   if (language not in code):
     return
@@ -219,17 +142,8 @@ def createCategoryLexiqueBasesDonnees(page,cle,code):
 
 def createCategoryLexiqueBasketBall(page,cle):
   #Catégorie:Lexique en italien du basket-ball
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|basket ball]]\n"
@@ -238,10 +152,8 @@ def createCategoryLexiqueBasketBall(page,cle):
 
 def createCategoryLexiqueBiologie(page,cle):
   #Catégorie:Lexique en italien de la biologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|biologie]]\n"
@@ -250,10 +162,8 @@ def createCategoryLexiqueBiologie(page,cle):
 
 def createCategoryLexiqueBotanique(page,cle):
   #Catégorie:Lexique en italien de la botanique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "Cette catégorie recense les mots en " + language + " ayant trait à la [[botanique]].\n\n"
@@ -263,17 +173,8 @@ def createCategoryLexiqueBotanique(page,cle):
 
 def createCategoryLexiqueCanoeKayak(page,cle):
   #Catégorie:Lexique en français du canoë-kayak
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|canoe kayak]]\n"
@@ -283,12 +184,8 @@ def createCategoryLexiqueCanoeKayak(page,cle):
 
 def createCategoryLexiqueCeramique(page,cle,code):
   #Catégorie:Lexique en italien de la céramique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
-    return
-  if (language not in code):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "Vocabulaire concernant la [[céramique]] (art de la terre cuite).\n\n"
@@ -300,10 +197,8 @@ def createCategoryLexiqueCeramique(page,cle,code):
 
 def createCategoryLexiqueCharpenterie(page,cle):
   #Catégorie:Lexique en italien de la charpenterie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la construction|charpenterie]]\n"
@@ -312,10 +207,8 @@ def createCategoryLexiqueCharpenterie(page,cle):
 
 def createCategoryLexiqueChasse(page,cle):
   #Catégorie:Lexique en italien de la chasse
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|chasse]]\n"
@@ -324,17 +217,8 @@ def createCategoryLexiqueChasse(page,cle):
 
 def createCategoryLexiqueCheminFer(page,cle):
   #Catégorie:Lexique en italien du chemin de fer
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du transport|chemin de fer]]\n"
@@ -343,10 +227,8 @@ def createCategoryLexiqueCheminFer(page,cle):
 
 def createCategoryLexiqueClimatologie(page,cle):
   #Catégorie:Lexique en français de la climatologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|climatologie]]\n"
@@ -355,17 +237,8 @@ def createCategoryLexiqueClimatologie(page,cle):
 
 def createCategoryLexiqueCommerce(page,cle):
   #Catégorie:Lexique en italien du commerce
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|commerce]]\n"
@@ -374,10 +247,8 @@ def createCategoryLexiqueCommerce(page,cle):
 
 def createCategoryLexiqueCordonnerie(page,cle):
   #Catégorie:Lexique en français de la cordonnerie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|cordonnerie]]\n"
@@ -386,10 +257,8 @@ def createCategoryLexiqueCordonnerie(page,cle):
 
 def createCategoryLexiqueCrisAnimaux(page,cle):
   #Catégorie:Lexique en anglais des cris d’animaux
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|Cris danimaux]]\n"
@@ -398,10 +267,8 @@ def createCategoryLexiqueCrisAnimaux(page,cle):
 
 def createCategoryLexiqueCuisine(page,cle):
   #Catégorie:Lexique en italien de la cuisine
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|cuisine]]\n"
@@ -411,17 +278,8 @@ def createCategoryLexiqueCuisine(page,cle):
 
 def createCategoryLexiqueCyclisme(page,cle):
   #Catégorie:Lexique en italien du cyclisme
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|cyclisme]]\n"
@@ -431,10 +289,8 @@ def createCategoryLexiqueCyclisme(page,cle):
 
 def createCategoryLexiqueDermatologie(page,cle):
   #Catégorie:Lexique en français de la dermatologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
 
   wikitext = "[[Catégorie:Lexique en " + language + " de la médecine|dermatologie]]\n"
@@ -443,17 +299,8 @@ def createCategoryLexiqueDermatologie(page,cle):
 
 def createCategoryLexiqueEcologie(page,cle):
   #Catégorie:Lexique en italien de l’écologie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
 
   wikitext = "[[Catégorie:Lexiques en " + language + "|ecologie]]\n"
@@ -462,17 +309,8 @@ def createCategoryLexiqueEcologie(page,cle):
 
 def createCategoryLexiqueEconomie(page,cle):
   #Catégorie:Lexique en italien de l’économie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
 
   wikitext = "[[Catégorie:Lexiques en " + language + "|economie]]\n"
@@ -481,17 +319,8 @@ def createCategoryLexiqueEconomie(page,cle):
 
 def createCategoryLexiqueEquitation(page,cle):
   #Catégorie:Lexique en italien de l’équitation
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
 
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|equitation]]\n"
@@ -500,17 +329,8 @@ def createCategoryLexiqueEquitation(page,cle):
 
 def createCategoryLexiqueEscrime(page,cle):
   #Catégorie:Lexique en italien de l’escrime
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
 
   wikitext = "[[Catégorie:Lexique en " + language + " des sports de combat|escrime]]\n"
@@ -519,10 +339,8 @@ def createCategoryLexiqueEscrime(page,cle):
 
 def createCategoryLexiqueFauconnerie(page,cle):
   #Catégorie:Lexique en italien de la fauconnerie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
 
   wikitext = "[[Catégorie:Lexique en " + language + " de l’élevage|fauconnerie]]\n"
@@ -532,10 +350,8 @@ def createCategoryLexiqueFauconnerie(page,cle):
 
 def createCategoryLexiqueGenealogie(page,cle):
   #Catégorie:Lexique en français de la généalogie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "Cette catégorie recense les mots en [[" + language + "]] ayant trait à la [[généalogie]].\n\n"
@@ -545,10 +361,8 @@ def createCategoryLexiqueGenealogie(page,cle):
 
 def createCategoryLexiqueGrammaire(page,cle):
   #Catégorie:Lexique en italien de la grammaire
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|grammaire]]\n"
@@ -557,10 +371,8 @@ def createCategoryLexiqueGrammaire(page,cle):
 
 def createCategoryLexiqueGravure(page,cle):
   #Catégorie:Lexique en français de la gravure
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du livre|gravure]]\n"
@@ -570,10 +382,8 @@ def createCategoryLexiqueGravure(page,cle):
 
 def createCategoryLexiqueFamille(page,cle):
   #Catégorie:Lexique en italien de la famille
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|famille]]\n"
@@ -582,10 +392,8 @@ def createCategoryLexiqueFamille(page,cle):
 
 def createCategoryLexiqueGeographie(page,cle):
   #Catégorie:Lexique en italien de la géographie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|geographie]]\n"
@@ -594,10 +402,8 @@ def createCategoryLexiqueGeographie(page,cle):
 
 def createCategoryLexiqueGeologie(page,cle):
   #Catégorie:Lexique en italien de la géologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|geologie]]\n"
@@ -606,10 +412,8 @@ def createCategoryLexiqueGeologie(page,cle):
 
 def createCategoryLexiqueGeophysique(page,cle):
   #Catégorie:Lexique en italien de la géophysique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la géologie|geophysique]]\n"
@@ -619,17 +423,8 @@ def createCategoryLexiqueGeophysique(page,cle):
 
 def createCategoryLexiqueGolf(page,cle):
   #Catégorie:Lexique en italien du golf
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du sport|golf]]\n"
@@ -638,17 +433,8 @@ def createCategoryLexiqueGolf(page,cle):
 
 def createCategoryLexiqueHippologie(page,cle):
   #Catégorie:Lexique en anglais de l’hippologie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|hippologie]]\n"
@@ -657,17 +443,8 @@ def createCategoryLexiqueHippologie(page,cle):
 
 def createCategoryLexiqueHistoire(page,cle):
   #Catégorie:Lexique en anglais de l’histoire
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|histoire]]\n"
@@ -676,17 +453,8 @@ def createCategoryLexiqueHistoire(page,cle):
 
 def createCategoryLexiqueHockey(page,cle):
   #Catégorie:Lexique en italien du hockey
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " des sports de glisse|hockey]]\n"
@@ -695,17 +463,8 @@ def createCategoryLexiqueHockey(page,cle):
 
 def createCategoryLexiqueIchtyologie(page,cle):
   #Catégorie:Lexique en anglais de l’ichtyologie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|ichtyologie]]\n"
@@ -715,17 +474,8 @@ def createCategoryLexiqueIchtyologie(page,cle):
 
 def createCategoryLexiqueImprimerie(page,cle):
   #Catégorie:Lexique en italien de l’imprimerie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|imprimerie]]\n"
@@ -734,10 +484,8 @@ def createCategoryLexiqueImprimerie(page,cle):
 
 def createCategoryLexiqueJeux(page,cle):
   #Catégorie:Lexique en italien des jeux
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " des loisirs|jeux]]\n"
@@ -746,10 +494,8 @@ def createCategoryLexiqueJeux(page,cle):
 
 def createCategoryLexiqueLinguistique(page,cle):
   #Catégorie:Lexique en italien de la linguistique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|linguistique]]\n"
@@ -758,10 +504,8 @@ def createCategoryLexiqueLinguistique(page,cle):
 
 def createCategoryLexiqueLitterature(page,cle):
   #Catégorie:Lexique en italien de la littérature
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’art|litterature]]\n"
@@ -770,17 +514,8 @@ def createCategoryLexiqueLitterature(page,cle):
 
 def createCategoryLexiqueLivre(page,cle):
   #Catégorie:Lexique en italien du livre
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’édition|livre]]\n"
@@ -789,10 +524,8 @@ def createCategoryLexiqueLivre(page,cle):
 
 def createCategoryLexiqueLoisirs(page,cle):
   #Catégorie:Lexique en italien des loisirs
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|loisirs]]\n"
@@ -801,10 +534,8 @@ def createCategoryLexiqueLoisirs(page,cle):
 
 def createCategoryLexiqueMarine(page,cle):
   #Catégorie:Lexique en italien de la marine
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|marine]]\n"
@@ -813,10 +544,8 @@ def createCategoryLexiqueMarine(page,cle):
 
 def createCategoryLexiqueMathematiques(page,cle):
   #Catégorie:Lexique en italien des mathématiques
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|mathematiques]]\n"
@@ -825,10 +554,8 @@ def createCategoryLexiqueMathematiques(page,cle):
 
 def createCategoryLexiqueMedias(page,cle):
   #Catégorie:Lexique en italien des médias
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|medias]]\n"
@@ -837,10 +564,8 @@ def createCategoryLexiqueMedias(page,cle):
 
 def createCategoryLexiqueMetallurgie(page,cle):
   #Catégorie:Lexique en italien de la métallurgie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|metallurgie]]\n"
@@ -849,10 +574,8 @@ def createCategoryLexiqueMetallurgie(page,cle):
 
 def createCategoryLexiqueMeteorologie(page,cle,code):
   #Catégorie:Lexique en italien de la météorologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   if (language not in code):
     return
@@ -865,10 +588,8 @@ def createCategoryLexiqueMeteorologie(page,cle,code):
 
 def createCategoryLexiqueMetrologie(page,cle):
   #Catégorie:Lexique en italien de la métrologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|metrologie]]\n"
@@ -877,17 +598,8 @@ def createCategoryLexiqueMetrologie(page,cle):
 
 def createCategoryLexiqueMilitaire(page,cle):
   #Catégorie:Lexique en italien du militaire
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|militaire]]\n"
@@ -896,10 +608,8 @@ def createCategoryLexiqueMilitaire(page,cle):
 
 def createCategoryLexiqueMonarchie(page,cle):
   #Catégorie:Lexique en anglais de la monarchie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la politique|monarchie]]\n"
@@ -908,17 +618,8 @@ def createCategoryLexiqueMonarchie(page,cle):
 
 def createCategoryLexiqueMotocyclisme(page,cle):
   #Catégorie:Lexique en italien du motocyclisme
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|motocyclisme]]\n"
@@ -927,10 +628,8 @@ def createCategoryLexiqueMotocyclisme(page,cle):
 
 def createCategoryLexiqueMycologie(page,cle):
   #Catégorie:Lexique en italien de la mycologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la biologie|mycologie]]\n"
@@ -940,10 +639,8 @@ def createCategoryLexiqueMycologie(page,cle):
 
 def createCategoryLexiqueMythologie(page,cle):
   #Catégorie:Lexique en italien de la mythologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|mythologie]]\n"
@@ -952,10 +649,8 @@ def createCategoryLexiqueMythologie(page,cle):
 
 def createCategoryLexiqueNavigation(page,cle):
   #Catégorie:Lexique en italien de la navigation
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "Cette page liste les mots en " + language + " en rapport avec la [[navigation]].\n\n"
@@ -965,10 +660,8 @@ def createCategoryLexiqueNavigation(page,cle):
 
 def createCategoryLexiqueNoblesse(page,cle):
   #Catégorie:Lexique en italien de la noblesse
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la monarchie|noblesse]]\n"
@@ -977,10 +670,8 @@ def createCategoryLexiqueNoblesse(page,cle):
 
 def createCategoryLexiqueNosologie(page,cle,code):
   #Catégorie:Lexique en italien de la nosologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   if (language not in code):
     return
@@ -992,17 +683,8 @@ def createCategoryLexiqueNosologie(page,cle,code):
 
 def createCategoryLexiqueOenologie(page,cle,code):
   #Catégorie:Lexique en italien de l’œnologie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   if (language not in code):
     return
@@ -1014,17 +696,8 @@ def createCategoryLexiqueOenologie(page,cle,code):
 
 def createCategoryLexiqueOrnithologie(page,cle):
   #Catégorie:Lexique en italien de l’ornithologie
-  beg=page.find(" en ")
-  est = page.find(" de l’Est ")
-  ouest = page.find(" de l’Ouest ")
-  tmp = -1
-  if(est != -1):
-    tmp = est
-  if(ouest != -1):
-    tmp = ouest
-  end=page.find(" de l’",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la zoologie|ornithologie]]\n"
@@ -1033,10 +706,8 @@ def createCategoryLexiqueOrnithologie(page,cle):
 
 def createCategoryLexiquePapeterie(page,cle):
   #Catégorie:Lexique en italien de la papeterie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " du livre|papeterie]]\n"
@@ -1045,17 +716,8 @@ def createCategoryLexiquePapeterie(page,cle):
 
 def createCategoryLexiquePatinage(page,cle):
   #Catégorie:Lexique en français du patinage
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " des sports d’hiver|patinage]]\n"
@@ -1064,10 +726,8 @@ def createCategoryLexiquePatinage(page,cle):
 
 def createCategoryLexiquePatisserie(page,cle):
   #Catégorie:Lexique en italien de la pâtisserie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la cuisine|patisserie]]\n"
@@ -1076,10 +736,8 @@ def createCategoryLexiquePatisserie(page,cle):
 
 def createCategoryLexiquePedologie(page,cle):
   #Catégorie:Lexique en anglais de la pédologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|pedologie]]\n"
@@ -1088,10 +746,8 @@ def createCategoryLexiquePedologie(page,cle):
 
 def createCategoryLexiquePeloteBasque(page,cle,code):
   #Catégorie:Lexique en français de la pelote basque
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   if (language not in code):
     return
@@ -1103,10 +759,8 @@ def createCategoryLexiquePeloteBasque(page,cle,code):
 
 def createCategoryLexiquePhilosophie(page,cle):
   #Catégorie:Lexique en italien de la philosophie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|philosophie]]\n"
@@ -1115,10 +769,8 @@ def createCategoryLexiquePhilosophie(page,cle):
 
 def createCategoryLexiquePhonologie(page,cle):
   #Catégorie:Lexique en anglais de la phonologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la linguistique|phonologie]]\n"
@@ -1127,10 +779,8 @@ def createCategoryLexiquePhonologie(page,cle):
 
 def createCategoryLexiquePlomberie(page,cle):
   #Catégorie:Lexique en italien de la plomberie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la construction|plomberie]]\n"
@@ -1139,10 +789,8 @@ def createCategoryLexiquePlomberie(page,cle):
 
 def createCategoryLexiquePhilatelie(page,cle):
   #Catégorie:Lexique en italien de la philatélie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|philatelie]]\n"
@@ -1151,10 +799,8 @@ def createCategoryLexiquePhilatelie(page,cle):
 
 def createCategoryLexiquePhysique(page,cle):
   #Catégorie:Lexique en italien de la physique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|physique]]\n"
@@ -1164,10 +810,8 @@ def createCategoryLexiquePhysique(page,cle):
 
 def createCategoryLexiquePhytosociologie(page,cle):
   #Catégorie:Lexique en français de la phytosociologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|phytosociologie]]\n"
@@ -1176,10 +820,8 @@ def createCategoryLexiquePhytosociologie(page,cle):
 
 def createCategoryLexiquePhysiologie(page,cle):
   #Catégorie:Lexique en italien de la physiologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|physiologie]]\n"
@@ -1188,10 +830,8 @@ def createCategoryLexiquePhysiologie(page,cle):
 
 def createCategoryLexiquePrehistoire(page,cle):
   #Catégorie:Lexique en same du Nord de la préhistoire
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’histoire|prehistoire]]\n"
@@ -1201,10 +841,8 @@ def createCategoryLexiquePrehistoire(page,cle):
 
 def createCategoryLexiqueReligion(page,cle):
   #Catégorie:Lexique en italien de la religion
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "Cette page liste les mots en [[" + language + "]] en rapport avec la [[religion]].\n\n"
@@ -1214,10 +852,8 @@ def createCategoryLexiqueReligion(page,cle):
 
 def createCategoryLexiqueRobotique(page,cle):
   #Catégorie:Lexique en italien de la robotique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|robotique]]\n"
@@ -1227,10 +863,8 @@ def createCategoryLexiqueRobotique(page,cle):
 
 def createCategoryLexiqueSciences(page,cle):
   #Catégorie:Lexique en italien des sciences
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|sciences]]\n"
@@ -1239,10 +873,8 @@ def createCategoryLexiqueSciences(page,cle):
 
 def createCategoryLexiqueSerrurerie(page,cle):
   #Catégorie:Lexique en anglais de la serrurerie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|serrurerie]]\n"
@@ -1251,17 +883,8 @@ def createCategoryLexiqueSerrurerie(page,cle):
 
 def createCategoryLexiqueSquelette(page,cle):
   #Catégorie:Lexique en italien du squelette
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + " de l’anatomie|squelette]]\n"
@@ -1270,18 +893,8 @@ def createCategoryLexiqueSquelette(page,cle):
 
 def createCategoryLexiqueTemps(page,cle):
   #Catégorie:Lexique en same du Nord du temps
-  beg=page.find(" en ")
-  tmp = -1
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  print(language)
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|temps]]\n"
@@ -1290,10 +903,8 @@ def createCategoryLexiqueTemps(page,cle):
 
 def createCategoryLexiqueReseauxInformatiques(page,cle):
   #Catégorie:Lexique en italien des réseaux informatiques
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’informatique|reseau]]\n"
@@ -1302,10 +913,8 @@ def createCategoryLexiqueReseauxInformatiques(page,cle):
 
 def createCategoryLexiqueScienceFiction(page,cle,code):
   #Catégorie:Lexique en italien de la science-fiction
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   if (language not in code):
     return
@@ -1318,11 +927,9 @@ def createCategoryLexiqueScienceFiction(page,cle,code):
   return wikitext
 
 def createCategoryLexiqueStatistiques(page,cle):
-  #Catégorie:Lexique en italien de statistiques
-  beg=page.find(" en ")
-  end=page.find(" des ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  #Catégorie:Lexique en italien des statistiques
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
     return
   
   wikitext = "Cette catégorie recense les mots en " + language + " utilisés en [[statistiques]].\n\n"
@@ -1333,10 +940,8 @@ def createCategoryLexiqueStatistiques(page,cle):
 
 def createCategoryLexiqueTechnique(page,cle):
   #Catégorie:Lexique en italien de la technique
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|technique]]\n"
@@ -1345,10 +950,8 @@ def createCategoryLexiqueTechnique(page,cle):
 
 def createCategoryLexiqueTechnologie(page,cle):
   #Catégorie:Lexique en italien de la technologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|technologie]]\n"
@@ -1357,10 +960,8 @@ def createCategoryLexiqueTechnologie(page,cle):
 
 def createCategoryLexiqueTelephonie(page,cle):
   #Catégorie:Lexique en italien de la téléphonie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + " des télécommunications|telephonie]]\n"
@@ -1369,17 +970,8 @@ def createCategoryLexiqueTelephonie(page,cle):
 
 def createCategoryLexiqueTextile(page,cle):
   #Catégorie:Lexique en italien du textile
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|textile]]\n"
@@ -1388,10 +980,8 @@ def createCategoryLexiqueTextile(page,cle):
 
 def createCategoryLexiqueTheologie(page,cle):
   #Catégorie:Lexique en italien de la théologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|theologie]]\n"
@@ -1400,10 +990,8 @@ def createCategoryLexiqueTheologie(page,cle):
 
 def createCategoryLexiqueToponymie(page,cle):
   #Catégorie:Lexique en italien de la toponymie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la géographie|toponymie]]\n"
@@ -1412,17 +1000,8 @@ def createCategoryLexiqueToponymie(page,cle):
 
 def createCategoryLexiqueTransport(page,cle):
   #Catégorie:Lexique en italien du transport
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|transport]]\n"
@@ -1431,17 +1010,8 @@ def createCategoryLexiqueTransport(page,cle):
 
 def createCategoryLexiqueTravail(page,cle):
   #Catégorie:Lexique en italien du travail
-  beg=page.find(" en ")
-  sud=page.find(" du Sud ")
-  nord=page.find(" du Nord ")
-  tmp = -1
-  if(sud != -1):
-    tmp = sud
-  if(nord != -1):
-    tmp = nord
-  end=page.find(" du ",tmp+1)
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|travail]]\n"
@@ -1451,10 +1021,8 @@ def createCategoryLexiqueTravail(page,cle):
 
 def createCategoryLexiqueZoologie(page,cle):
   #Catégorie:Lexique en bukawa de la zoologie
-  beg=page.find(" en ")
-  end=page.find(" de la ")
-  language=page[beg+4:end]
-  if (language not in cle):
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
     return
   
   wikitext = "[[Catégorie:Lexique en " + language + " de la biologie|zoologie]]\n"
@@ -2028,10 +1596,40 @@ def getCountryList():
 
   return country
 
-def guessLanguage(begin,end):
+def guessLanguage(page,myBegin,myEnd,cle):
   #TODO prevoir une fonction qui recupere le nom de la langue quel que soit le nom de la catégorie
   # cela permet de factoriser beaucoup de code provenant de chaque fonction individuelle
-  return
+  beg=page.find(" " + myBegin + " ")
+
+  tmp = beg
+  est = page.find(" de l’Est ",beg)
+  if(est != -1):
+    tmp = est
+    
+  ouest = page.find(" de l’Ouest ",beg)
+  if(ouest != -1):
+    tmp = ouest
+    
+  sud=page.find(" du Sud ",beg)
+  if(sud != -1):
+    tmp = sud
+    
+  nord=page.find(" du Nord ",beg)
+  if(nord != -1):
+    tmp = nord
+    
+  end=page.find(" " + myEnd,tmp+1)
+  
+  language = ""
+  if len(myEnd)>0:
+    language=page[beg+len(myBegin)+2:end]
+  else:
+    language=page[beg+len(myBegin)+2:]
+    
+  print(language)
+  if (language not in cle):
+    return
+  return language
 
 def WantedPagesCategoryGenerator(total=100, site=None):
   """
@@ -2053,7 +1651,7 @@ def main():
   countryList = getCountryList()
 
   if test:
-    createCategory("[[:Catégorie:Lexique en altaï du Sud du temps]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en italien de la bande dessinée]]", cle, codeLangue, countryList)
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
