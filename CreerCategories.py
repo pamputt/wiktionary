@@ -7,7 +7,7 @@ import pywikibot
 
 import CleDeTri
 
-test = True # to test the script (without saving the result)
+test = False # to test the script (without saving the result)
 
 def createCategoryEtymologiesManquantes(page,cle):
   #Wiktionnaire:Étymologies manquantes en italien
@@ -1744,7 +1744,8 @@ def guessLanguage(page,myBegin,myEnd,cle):
   else:
     language=page[beg+len(myBegin)+2:]
     
-  print(language)
+  if test:
+    print(language)
   if (language not in cle):
     return
   return language
