@@ -582,7 +582,7 @@ def createCategoryLexiqueHockey(page,cle):
   wikitext += "[[Catégorie:Hockey|" + cle[language] + "]]"
   return wikitext
 
-def createCategoryLexiqueHorticulure(page,cle):
+def createCategoryLexiqueHorticulture(page,cle):
   #Catégorie:Lexique en français de l’horticulture
   language = guessLanguage(page,"en","de l’",cle)
   if not language:
