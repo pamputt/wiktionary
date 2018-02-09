@@ -28,7 +28,7 @@ def getListOfCategories():
   return languages
 
 def isCategoryExist(language):
-  
+
   page = pywikibot.Page(pywikibot.getSite(), u'Catégorie:'+language)
 
   try:
@@ -37,10 +37,13 @@ def isCategoryExist(language):
     return False
   except pywikibot.IsRedirectPage:
     return False
-  
+
   return True
 
-def createCategory(language,code):
+def createCategory(language,code):  
+  if (language not in code):
+    return
+  
   wikitext = "Cette catégorie réunit les mots et locutions en [[" + language + "]] (code <code>" + code[language] + "</code>). "
   wikitext += "La [[:Catégorie:Grammaire en " + language + "|section grammaire]] contient tous les types de mots comme les [[:Catégorie:Noms communs en " + language + "|noms communs]] ou les [[:Catégorie:Acronymes en " + language + "|acronymes]]. Elle contient en outre des sous-catégories thématiques : [[:Catégorie:Animaux en " + language + "|noms d’animaux]] ou [[:Catégorie:Lexique en " + language + " de la musique|lexique de la musique]], ou encore des catégories d’[[:Catégorie:Expressions en " + language + "|expressions]], ou enfin des registres de langue.\n"
   wikitext += "* '''[[:Catégorie:Grammaire en " + language + "|Grammaire]]'''\n"
@@ -53,7 +56,7 @@ def createCategory(language,code):
     wikitext += "|" + CleDeTri.CleDeTri(language)
   wikitext += "]]"
 
-  
+
   page = pywikibot.Page(pywikibot.getSite(), "Catégorie:"+language)
   if not test:
     page.put(wikitext)
@@ -70,7 +73,7 @@ def WantedPagesCategoryGenerator(total=100, site=None):
   @param site: Site for generator results.
   @type site: L{pywikibot.site.BaseSite}
   """
-  
+
   if site is None:
     site = pywikibot.Site()
   for page in site.wantedcategories(total=total):
@@ -88,20 +91,32 @@ def getLanguageCodes():
   return language
 
 def main():
-
-#  for page in WantedPagesCategoryGenerator(10000):
-#    print(page)
-   languages = getListOfCategories()
-   codes = getLanguageCodes()
-
-#   createCategory("shall-zwall",codes)
-   for language in languages:
-     print("Treating " + language)
-     exist = isCategoryExist(language)
-     if exist:
-       continue
-     createCategory(language,codes)
+  CategoriesDemandees=True
   
+  codes = getLanguageCodes()
+  
+  if (CategoriesDemandees):
+    for page in WantedPagesCategoryGenerator(5000):
+      #Convert Category into string object
+      page = str(page)
+      beg=page.find(":Catégorie:")
+      end=page.find("]]")
+      page = page[beg+11:end]
+      print("Treating " + page)
+      exist = isCategoryExist(page)
+      if exist:
+        continue
+      createCategory(page,codes)
+  else:
+    languages = getListOfCategories()
+#   createCategory("shall-zwall",codes)
+    for language in languages:
+      print("Treating " + language)
+      exist = isCategoryExist(language)
+      if exist:
+        continue
+      createCategory(language,codes)
+    
 
 if __name__ == '__main__':
 
