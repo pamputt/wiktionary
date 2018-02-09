@@ -82,7 +82,7 @@ def getLanguageCodes():
   with open("liste_langue.dat") as csvfile:
     reader = csv.reader(csvfile, delimiter=';')
     for row in reader:
-      name, code = row
+      name, code, key = row
       language[name] = code
 
   return language
