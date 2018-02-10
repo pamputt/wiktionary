@@ -186,6 +186,7 @@ altaï du Sud;alt;altai du sud
 ’are’are;alu;are are
 langues atlantico-congolaises;alv;atlantico congolaises langues
 amol;alx;amol
+alyawarr;aly;alyawarr
 amharique;am;amharique
 amanayé;ama;amanaye
 ambo;amb;ambo
@@ -206,6 +207,7 @@ amahai;amq;amahai
 amarakaeri;amr;amarakaeri
 amuzgo du Guerrero;amu;amuzgo du Guerrero
 néo-araméen occidental;amw;arameen neo occidental
+anmatyerre;amx;anmatyerre
 ami;amy;ami
 aragonais;an;aragonais
 andaquí;ana;andaqui
@@ -478,6 +480,7 @@ basap;bdb;basap
 emberá-baudó;bdc;emberabaudo
 bunama;bdd;bunama
 bade;bde;bade
+biage;bdf;biage
 bonggi;bdg;bonggi
 baka (Soudan du Sud);bdh;baka soudan du sud
 bai (Soudan du Sud);bdj;bai soudan du sud
@@ -533,6 +536,7 @@ remo;bfw;remo
 bulgare;bg;bulgare
 bobongko;bgb;bobongko
 bangando;bgf;bangando
+bugun;bgg;bugun
 bangolan;bgj;bangolan
 khabit;bgk;khabit
 warkay-bipim;bgv;warkaybipim
@@ -795,6 +799,7 @@ bangala;bxg;bangala
 pirlatapa;bxi;pirlatapa
 bayungu;bxj;bayungu
 bukusu;bxk;bukusu
+jalkunan;bxl;jalkunan
 burduna;bxn;burduna
 beele;bxq;beele
 bouriate de Russie;bxr;bouriate de Russie
@@ -1086,6 +1091,7 @@ tay ya;cuu;tay ya
 cuvok;cuv;cuvok
 cuicatèque de Tepeuxila;cux;cuicateque de tepeuxila
 tchouvache;cv;tchouvache
+chug;cvg;chug
 chinantèque de Valle Nacional;cvn;chinanteque de valle nacional
 cri des bois;cwd;cri des bois
 kwere;cwe;kwere
@@ -1663,6 +1669,7 @@ garo;grt;garo
 kistane;gru;kistane
 guramalum;grz;guramalum
 gserpa;gserpa;gserpa
+langue des signes allemande;gsg;signes allemande
 langue des signes guatémaltèque;gsm;signes guatemalteque
 gbaya du Sud-Ouest;gso;gbaya du sudouest
 alémanique;gsw;alemanique
@@ -1751,6 +1758,7 @@ heiltsuk;hei;heiltsuk
 hemba;hem;hemba
 haiǁom;hgm;haiǁom
 hoia hoia de Ukusi-Koparamio;hhi;hoia hoia de ukusikoparamio
+keerak;hhr;keerak
 hoia hoia de Matakaia;hhy;hoia hoia de Matakaia
 hindi;hi;hindi
 lamang;hia;lamang
@@ -1815,6 +1823,7 @@ hrê;hre;hre
 haruku;hrk;haruku
 haroi;hro;haroi
 hertevin;hrt;hertevin
+hruso;hru;hruso
 hunsrik;hrx;hunsrik
 haut-sorabe;hsb;sorabe haut
 xiang;hsn;xiang
@@ -2035,6 +2044,7 @@ jinuo de Buyuan;jiy;jinuo de Buyuan
 bankal;jjr;bankal
 kaera;jka;kaera
 kubo;jko;kubo
+koro (Inde);jkr;koro inde
 labir;jku;labir
 ngile;jle;ngile
 machame;jmc;machame
@@ -2297,6 +2307,7 @@ kogui;kog;kogui
 koyo;koh;koyo
 komi-permyak;koi;komipermyak
 konkânî;kok;konkani
+konomihu;konomihu;konomihu
 konjo;koo;konjo
 waube;kop;waube
 kota (Gabon);koq;kota gabon
@@ -2311,6 +2322,7 @@ baniwa de l’Içana;kpc;baniwa de licana
 kpellé;kpe;kpelle
 komba;kpf;komba
 kapingamarangi;kpg;kapingamarangi
+kpan;kpk;kpan
 koho;kpm;koho
 kepkiriwát;kpn;kepkiriwat
 akposso;kpo;akposso
@@ -2466,6 +2478,7 @@ lahnda;lah;lahnda
 lambya;lai;lambya
 lango;laj;lango
 laka (Nigeria);lak;laka nigeria
+lala (Afrique du Sud);lala (Afrique du Sud);lala afrique du sud
 lamba;lam;lamba
 laru;lan;laru
 laka;lap;laka
@@ -2656,6 +2669,7 @@ lemerig;lrz;lemerig
 lasguerdi;lsa;lasguerdi
 lishana deni;lsd;lishana deni
 lusengo;lse;lusengo
+lish;lsh;lish
 lashi;lsi;lashi
 langue des signes lettonne;lsl;signes lettonne
 saamia;lsm;saamia
@@ -2861,6 +2875,7 @@ abar;mij;abar
 mikasuki;mik;mikasuki
 hitchiti;mik-hit;hitchiti
 mixtèque de Peñoles;mil;mixteque de penoles
+milang;milang;milang
 mixtèque d’Alacatlatzala;mim;mixteque dalacatlatzala
 minangkabau;min;minangkabau
 mixtèque de Pinotepa Nacional;mio;mixteque de pinotepa nacional
@@ -3176,6 +3191,7 @@ chang naga;nbc;chang naga
 kuri;nbn;kuri
 nnam;nbp;nnam
 numana-nunku-gbantu-numbu;nbr;numananunkugbantunumbu
+nah;nbt;nah
 ngamambo;nbv;ngamambo
 ngbandi du Sud;nbw;ngbandi du Sud
 iyo;nca;iyo
@@ -3307,6 +3323,7 @@ njen;njj;njen
 angami;njm;angami
 ao;njo;ao
 nisa;njs;nisa
+nekgini;nkg;nekgini
 khezha;nkh;khezha
 naga de Thangal;nki;naga de Thangal
 nokuku;nkk;nokuku
@@ -3339,6 +3356,7 @@ nyangumarta;nna;nyangumarta
 kinande;nnb;kinande
 nancere;nnc;nancere
 ngandyera;nne;ngandyera
+ngaing;nnf;ngaing
 ngiemboon;nnh;ngiemboon
 nyangatom;nnj;nyangatom
 namia;nnm;namia
@@ -3464,6 +3482,7 @@ nyanja;ny;nyanja
 chichewa;nya;chichewa
 nyengo;nye;nyengo
 ama (Soudan);nyi;ama soudan
+nyaneka;nyk;nyaneka
 nyamwezi;nym;nyamwezi
 nyankore;nyn;nyankore
 nyoro;nyo;nyoro
@@ -3534,6 +3553,7 @@ oloma;olm;oloma
 olonetsien;olo;olonetsien
 olrat;olr;olrat
 vieux lituanien;olt;vieux lituanien
+kuvale;olu;kuvale
 oromo;om;oromo
 omaha-ponca;oma;omahaponca
 mochica;omc;mochica
@@ -3558,6 +3578,7 @@ one de Kabore;onk;one de Kabore
 onobasulu;onn;onobasulu
 onondaga;ono;onondaga
 onomatopée;onom;*onomatopee
+sartang;onp;sartang
 ono;ons;ono
 ontena;ont;ontena
 unua;onu;unua
@@ -3657,6 +3678,7 @@ pachto du Sud;pbt;pachto du Sud
 pachto du Nord;pbu;pachto du Nord
 pnar;pbv;pnar
 pyu (Papouasie Nouvelle-Guinée);pby;pyu papouasie nouvelleguinee
+popoloca de Santa Inés Ahuatempan;pca;popoloca de santa ines ahuatempan
 pear;pcb;pear
 bouyei;pcc;bouyei
 picard;pcd;picard
@@ -3666,7 +3688,12 @@ paniya;pcg;paniya
 pardhan;pch;pardhan
 duruwa;pci;duruwa
 gorum;pcj;gorum
+paite;pck;paite
+pardhi;pcl;pardhi
+pidgin nigérian;pcm;pidgin nigerian
+piti;pcn;piti
 pacahuara;pcp;pacahuara
+pyapun;pcw;pyapun
 anam;pda;anam
 pennsilfaanisch;pdc;pennsilfaanisch
 fedan;pdn;fedan
@@ -3729,6 +3756,7 @@ baekje;pkc;baekje
 pakanha;pkn;pakanha
 pökot;pko;pokot
 pakupaku;pkp;pakupaku
+kurumba d’Attapady;pkr;kurumba dattapady
 paku;pku;paku
 polonais;pl;polonais
 palawano central;plc;palawano central
@@ -3878,6 +3906,7 @@ proto-slave;proto-slave;slave proto
 proto-sunda-sulawesi;proto-sunda-sulawesi;sunda sulawesi proto
 proto-sémitique;proto-sémitique;semitique proto
 proto-tchadique central;proto-tchadique central;tchadique central proto
+proto-tibéto-birman;proto-tibéto-birman;tibeto birman proto
 proto-tupi-guarani;proto-tupi-guarani;tupi guarani proto
 proto-turc;proto-turc;turc proto
 proto-vanuatu Nord-Central;proto-vanuatu Nord-Central;vanuatu nord central proto
@@ -4150,6 +4179,7 @@ kurde du Sud;sdh;kurde du Sud
 semandang;sdm;semandang
 gallurais;sdn;gallurais
 bukar sadong bidayuh;sdo;bukar sadong bidayuh
+sherdukpen;sdp;sherdukpen
 sened;sds;sened
 langues soudaniques orientales;sdv;soudaniques orientales langues
 sallands;sdz;sallands
@@ -4857,6 +4887,7 @@ umbu-ungu;ubu;umbuungu
 oubykh;uby;oubykh
 uda;uda;uda
 oudégué;ude;oudegue
+muduga;udg;muduga
 oudi;udi;oudi
 ujir;udj;ujir
 wuzlam;udl;wuzlam
@@ -5033,13 +5064,21 @@ woi;wbw;woi
 yanomámi;wca;yanomami
 wadjiginy;wdj;wadjiginy
 wadikali;wdk;wadikali
+wewaw;wea;wewaw
+wé occidental;wec;we occidental
 wedau;wed;wedau
 wergaia;weg;wergaia
+weh;weh;weh
 kiunum;wei;kiunum
+gbe weme;wem;gbe weme
 langues sorabes;wen;sorabes langues
+wemale;weo;wemale
 westphalien;wep;westphalien
 weri;wer;weri
+pidgin camerounais;wes;pidgin camerounais
 perai;wet;perai
+rawngtu;weu;rawngtu
+wejewa;wew;wejewa
 zorop;wfg;zorop
 wagaya;wga;wagaya
 wangganguru;wgg;wangganguru
@@ -5153,6 +5192,7 @@ tibétain classique;xct;tibetain classique
 dace;xdc;dace
 dharug;xdk;dharug
 édomite;xdm;edomite
+kwandu;xdo;kwandu
 malais dayak;xdy;malais dayak
 hdi;xed;hdi
 ǁxegwi;xeg;xegwi
@@ -5186,6 +5226,7 @@ lydien;xld;lydien
 ligure ancien;xlg;ligure ancien
 alain;xln;alain
 loup A;xlo;loup A
+lépontique;xlp;lepontique
 lusitain;xls;lusitain
 louvite;xlu;louvite
 mushungulu;xma;mushungulu
@@ -5474,6 +5515,7 @@ koibale;zkb;koibale
 koguryo;zkg;koguryo
 karankawa;zkk;karankawa
 kott;zko;kott
+zakhring;zkr;zakhring
 kaurna;zku;kaurna
 khazar;zkz;khazar
 langues slaves orientales;zle;slaves orientales langues
