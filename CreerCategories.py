@@ -1068,7 +1068,7 @@ def createCategoryLexiqueSquelette(page,cle):
   if not language:
     return
   
-  wikitext = "[[Catégorie:Lexiques en " + language + " de l’anatomie|squelette]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’anatomie|squelette]]\n"
   wikitext += "[[Catégorie:Squelette|" + cle[language] + "]]"
   return wikitext
 
@@ -1145,7 +1145,7 @@ def createCategoryLexiqueTelephonie(page,cle):
   if not language:
     return
   
-  wikitext = "[[Catégorie:Lexiques en " + language + " des télécommunications|telephonie]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " des télécommunications|telephonie]]\n"
   wikitext += "[[Catégorie:Téléphonie|" + cle[language] + "]]"
   return wikitext
 
