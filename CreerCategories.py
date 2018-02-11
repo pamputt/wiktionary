@@ -2317,25 +2317,7 @@ def guessLanguage(page,myBegin,myEnd,cle):
   #TODO prevoir une fonction qui recupere le nom de la langue quel que soit le nom de la catégorie
   # cela permet de factoriser beaucoup de code provenant de chaque fonction individuelle
   beg=page.find(" " + myBegin + " ")
-
-  tmp = beg
-  est = page.find(" de l’Est ",beg)
-  if(est != -1):
-    tmp = est
-    
-  ouest = page.find(" de l’Ouest ",beg)
-  if(ouest != -1):
-    tmp = ouest
-    
-  sud=page.find(" du Sud ",beg)
-  if(sud != -1):
-    tmp = sud
-    
-  nord=page.find(" du Nord ",beg)
-  if(nord != -1):
-    tmp = nord
-    
-  end=page.find(" " + myEnd,tmp+1)
+  end=page.rfind(" " + myEnd, beg+1)
   
   language = ""
   if len(myEnd)>0:
@@ -2369,7 +2351,11 @@ def main():
   countryList = getCountryList()
 
   if test:
-    createCategory("[[:Catégorie:Lexique en italien de la bande dessinée]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en same du Nord du temps]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en same du Sud du temps]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en mari de l’Est de l’art]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en mari de l’Ouest de l’art]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Lexique en créole du détroit de Torrès du temps]]", cle, codeLangue, countryList)
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
