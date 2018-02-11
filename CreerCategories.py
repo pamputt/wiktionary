@@ -1717,6 +1717,51 @@ def createCategoryLexiqueZoologie(page,cle):
   wikitext += "[[Catégorie:Zoologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryAliments(page,cle):
+  #Catégorie:Aliments en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Aliments|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|aliments]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la cuisine|aliments]]"
+  return wikitext
+
+def createCategoryCouleurs(page,cle):
+  #Catégorie:Couleurs en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Couleurs|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|couleurs]]"
+  return wikitext
+
+def createCategoryExpressions(page,cle):
+  #Catégorie:Expressions en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Expressions|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+  return wikitext
+
+def createCategoryLexiques(page,cle):
+  #Catégorie:Lexiques en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:" + language + "]]\n"
+  wikitext += "[[Catégorie:Lexiques par langue|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLocalitesDeEn(page,cle,countryList):
   #Catégorie:Localités d’Italie en français
   beg=page.find(" en ")
@@ -1914,6 +1959,18 @@ def createCategoryTraductions(page,cle):
   wikitext += "[[Catégorie:Traductions|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:" + language + "]]"
 
+  return wikitext
+
+def createCategoryVerbes(page,cle):
+  #Catégorie:Verbes en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Verbes par langue|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Conjugaison en " + language + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "]]"
 
   return wikitext
 
@@ -1933,6 +1990,14 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryEtymologiesManquantes(page,cle)
   elif (page.find("Catégorie:Wiktionnaire:Prononciations manquantes en ") != -1):
      wikitext = createCategoryPrononciationsManquantes(page,cle)
+  elif (page.find("Catégorie:Aliments en") != -1):
+     wikitext = createCategoryAliments(page,cle)
+  elif (page.find("Catégorie:Couleurs en") != -1):
+     wikitext = createCategoryCouleurs(page,cle)
+  elif (page.find("Catégorie:Expressions en") != -1):
+     wikitext = createCategoryExpressions(page,cle)
+  elif (page.find("Catégorie:Lexiques en") != -1):
+     wikitext = createCategoryLexiques(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
      wikitext = createCategoryNomsCommuns(page,cle)
   elif ((page.find("Catégorie:Noms propres en") != -1) and
@@ -1956,6 +2021,8 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryThematiques(page,cle)
   elif (page.find("Catégorie:Traductions en ") != -1):
     wikitext = createCategoryTraductions(page,cle)
+  elif (page.find("Catégorie:Verbes en ") != -1):
+    wikitext = createCategoryVerbes(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des mathématiques") != -1)):
     wikitext = createCategoryLexiqueMathematiques(page,cle)
