@@ -1839,7 +1839,7 @@ def createCategoryConjugaison(page,cle):
   if (language not in cle):
     return
 
-  wikitext = "Cette catégorie a pour but de réunir les annexes décrivant la [[conjugaison]] des verbes en " + language ".\n\n"
+  wikitext = "Cette catégorie a pour but de réunir les annexes décrivant la [[conjugaison]] des verbes en " + language + ".\n\n"
   wikitext += "[[Catégorie:Conjugaison|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:" + language + "|conjugaison]]"
   return wikitext
