@@ -251,6 +251,16 @@ def createCategoryLexiqueBotanique(page,cle):
   wikitext += "[[Catégorie:Botanique|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueBoxe(page,cle):
+  #Catégorie:Lexique en italien de la boxe
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " des sports de combat|boxe]]\n"
+  wikitext += "[[Catégorie:Boxe|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueCanoeKayak(page,cle):
   #Catégorie:Lexique en français du canoë-kayak
   language = guessLanguage(page,"en","du",cle)
@@ -303,6 +313,16 @@ def createCategoryLexiqueCheminFer(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " du transport|chemin de fer]]\n"
   wikitext += "[[Catégorie:Chemin de fer|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueChirurgie(page,cle):
+  #Catégorie:Lexique en italien de la chirurgie
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la médecine|chirurgie]]\n"
+  wikitext += "[[Catégorie:Chirurgie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueClimatologie(page,cle):
@@ -375,6 +395,16 @@ def createCategoryLexiqueDermatologie(page,cle):
 
   wikitext = "[[Catégorie:Lexique en " + language + " de la médecine|dermatologie]]\n"
   wikitext += "[[Catégorie:Dermatologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueEchecs(page,cle):
+  #Catégorie:Lexique en italien des échecs
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
+    return
+
+  wikitext = "[[Catégorie:Lexique en " + language + " des jeux|echecs]]\n"
+  wikitext += "[[Catégorie:Échecs|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueEcologie(page,cle):
@@ -643,6 +673,16 @@ def createCategoryLexiqueIslam(page,cle):
   wikitext += "[[Catégorie:Islam|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueJardinage(page,cle):
+  #Catégorie:Lexique en italien du jardinage
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " des loisirs|jardinage]]\n"
+  wikitext += "[[Catégorie:Jardinage|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueJeux(page,cle):
   #Catégorie:Lexique en italien des jeux
   language = guessLanguage(page,"en","des",cle)
@@ -681,6 +721,16 @@ def createCategoryLexiqueLivre(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " de l’édition|livre]]\n"
   wikitext += "[[Catégorie:Livre|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueLogique(page,cle):
+  #Catégorie:Lexique en italien de la logique
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " des mathématiques|logique]]\n"
+  wikitext += "[[Catégorie:Logique|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueLoisirs(page,cle):
@@ -753,6 +803,16 @@ def createCategoryLexiqueMetallurgie(page,cle):
   wikitext += "[[Catégorie:Métallurgie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueMercatique(page,cle):
+  #Catégorie:Lexique en anglais de la mercatique
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|mercatique]]\n"
+  wikitext += "[[Catégorie:Mercatique|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueMeteorologie(page,cle,code):
   #Catégorie:Lexique en italien de la météorologie
   language = guessLanguage(page,"en","de la",cle)
@@ -777,6 +837,17 @@ def createCategoryLexiqueMetrologie(page,cle):
   wikitext += "[[Catégorie:Métrologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueMicrobiologie(page,cle):
+  #Catégorie:Lexique en italien de la microbiologie
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+
+  wikitext = "Cette catégorie réunit les mots qui ont trait à la [[microbiologie]] en usage en [[" + language + "]].\n\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la biologie|microbiologie]]\n"
+  wikitext += "[[Catégorie:microbiologie|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueMilitaire(page,cle):
   #Catégorie:Lexique en italien du militaire
   language = guessLanguage(page,"en","du",cle)
@@ -785,6 +856,16 @@ def createCategoryLexiqueMilitaire(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|militaire]]\n"
   wikitext += "[[Catégorie:Militaire|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueMineralogie(page,cle):
+  #Catégorie:Lexique en italien de la minéralogie
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|mineralogie]]\n"
+  wikitext += "[[Catégorie:Minéralogie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueMonarchie(page,cle):
@@ -1031,6 +1112,17 @@ def createCategoryLexiqueReligion(page,cle):
   wikitext += "[[Catégorie:Religion|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueReproduction(page,cle):
+  #Catégorie:Lexique en italien de la reproduction
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la biologie|reproduction]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la sexualité|reproduction]]\n"
+  wikitext += "[[Catégorie:Reproduction|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueRobotique(page,cle):
   #Catégorie:Lexique en italien de la robotique
   language = guessLanguage(page,"en","de la",cle)
@@ -1050,6 +1142,16 @@ def createCategoryLexiqueSciences(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|sciences]]\n"
   wikitext += "[[Catégorie:Sciences|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueSexualite(page,cle):
+  #Catégorie:Lexique en anglais de la sexualité
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|sexualite]]\n"
+  wikitext += "[[Catégorie:Sexualité|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueSerrurerie(page,cle):
@@ -1092,6 +1194,16 @@ def createCategoryLexiqueReseauxInformatiques(page,cle):
   wikitext += "[[Catégorie:Réseaux informatiques|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueRhetorique(page,cle):
+  #Catégorie:Lexique en italien de la rhétorique
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’art|rhetorique]]\n"
+  wikitext += "[[Catégorie:Rhétorique|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueScienceFiction(page,cle,code):
   #Catégorie:Lexique en italien de la science-fiction
   language = guessLanguage(page,"en","de la",cle)
@@ -1107,6 +1219,16 @@ def createCategoryLexiqueScienceFiction(page,cle,code):
   wikitext += "[[Catégorie:Science-fiction|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueSport(page,cle):
+  #Catégorie:Lexique en italien du sport
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|sport]]\n"
+  wikitext += "[[Catégorie:Sport|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueStatistiques(page,cle):
   #Catégorie:Lexique en italien des statistiques
   language = guessLanguage(page,"en","des",cle)
@@ -1117,6 +1239,26 @@ def createCategoryLexiqueStatistiques(page,cle):
   wikitext += "[[Catégorie:Lexiques en " + language + "|statistiques]]\n"
   wikitext += "[[Catégorie:Lexique en " + language + " des mathématiques|statistiques]]\n"
   wikitext += "[[Catégorie:Statistiques|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueSentiments(page,cle):
+  #Catégorie:Lexique en français des sentiments
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|sentiments]]\n"
+  wikitext += "[[Catégorie:Sentiments|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueSociologie(page,cle):
+  #Catégorie:Lexique en français de la sociologie
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|sociologie]]\n"
+  wikitext += "[[Catégorie:Sociologie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueTechnique(page,cle):
@@ -1139,6 +1281,16 @@ def createCategoryLexiqueTechnologie(page,cle):
   wikitext += "[[Catégorie:Technologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueTelecommunication(page,cle):
+  #Catégorie:Lexique en italien des télécommunications
+  language = guessLanguage(page,"en","des",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexiques en " + language + "|telecommunications]]\n"
+  wikitext += "[[Catégorie:Télécommunications|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueTelephonie(page,cle):
   #Catégorie:Lexique en italien de la téléphonie
   language = guessLanguage(page,"en","de la",cle)
@@ -1147,6 +1299,16 @@ def createCategoryLexiqueTelephonie(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " des télécommunications|telephonie]]\n"
   wikitext += "[[Catégorie:Téléphonie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueTennis(page,cle):
+  #Catégorie:Lexique en italien du tennis
+  language = guessLanguage(page,"en","du",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " du sport|tennis]]\n"
+  wikitext += "[[Catégorie:Tennis|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueTextile(page,cle):
@@ -1807,6 +1969,55 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’archéologie") != -1)):
     wikitext = createCategoryLexiqueArcheologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la boxe") != -1)):
+    wikitext = createCategoryLexiqueBoxe(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la chirurgie") != -1)):
+    wikitext = createCategoryLexiqueChirurgie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des échecs") != -1)):
+    wikitext = createCategoryLexiqueEchecs(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du jardinage") != -1)):
+    wikitext = createCategoryLexiqueJardinage(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la logique") != -1)):
+    wikitext = createCategoryLexiqueLogique(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la mercatique") != -1)):
+    wikitext = createCategoryLexiqueMercatique(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la microbiologie") != -1)):
+    wikitext = createCategoryLexiqueMicrobiologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la mineralogie") != -1)):
+    wikitext = createCategoryLexiqueMineralogie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la reproduction") != -1)):
+    wikitext = createCategoryLexiqueReproduction(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la sexualité") != -1)):
+    wikitext = createCategoryLexiqueSexualite(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la rhétorique") != -1)):
+    wikitext = createCategoryLexiqueRhetorique(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du sport") != -1)):
+    wikitext = createCategoryLexiqueSport(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des sentiments") != -1)):
+    wikitext = createCategoryLexiqueSentiments(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la sociologie") != -1)):
+    wikitext = createCategoryLexiqueSociologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" des télécommunications") != -1)):
+    wikitext = createCategoryLexiqueTelecommunications(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" du tennis") != -1)):
+    wikitext = createCategoryLexiqueTennis(page,cle)
+
   else:
     return
 
