@@ -2440,7 +2440,8 @@ def createCategory(page,cle,code,country):
         (page.find(" de la nutrition") != -1)):
     wikitext = createCategoryLexiqueNutrition(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
-        (page.find(" de la pêche") != -1)):
+        (page.find(" de la pêche") != -1) and
+        (page.find(" à la mouche") == -1)):
     wikitext = createCategoryLexiquePeche(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la photographie") != -1)):
