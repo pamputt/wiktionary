@@ -1281,7 +1281,7 @@ def createCategoryLexiqueTechnologie(page,cle):
   wikitext += "[[Catégorie:Technologie|" + cle[language] + "]]"
   return wikitext
 
-def createCategoryLexiqueTelecommunication(page,cle):
+def createCategoryLexiqueTelecommunications(page,cle):
   #Catégorie:Lexique en italien des télécommunications
   language = guessLanguage(page,"en","des",cle)
   if not language:
@@ -1991,7 +1991,7 @@ def createCategory(page,cle,code,country):
         (page.find(" de la microbiologie") != -1)):
     wikitext = createCategoryLexiqueMicrobiologie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
-        (page.find(" de la mineralogie") != -1)):
+        (page.find(" de la minéralogie") != -1)):
     wikitext = createCategoryLexiqueMineralogie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la reproduction") != -1)):
