@@ -393,8 +393,8 @@ def createCategoryLexiqueConstruction(page,cle):
   if not language:
     return
   
-  wikitext = "[[Catégorie:Lexique en " + language + "de l’architecture|construction]]\n"
-  wikitext += "[[Catégorie:Lexique en " + language + "de l’urbanisme|construction]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’architecture|construction]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de l’urbanisme|construction]]\n"
   wikitext += "[[Catégorie:Construction|" + cle[language] + "]]"
   return wikitext
 
