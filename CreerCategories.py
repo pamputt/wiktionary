@@ -1717,6 +1717,28 @@ def createCategoryLexiqueZoologie(page,cle):
   wikitext += "[[Catégorie:Zoologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryAdjectifs(page,cle):
+  #Catégorie:Adjectifs en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Adjectifs|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "|adverbes]]"
+  return wikitext
+
+def createCategoryAdverbes(page,cle):
+  #Catégorie:Adverbes en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Adverbes|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "|adverbes]]"
+  return wikitext
+
 def createCategoryAliments(page,cle):
   #Catégorie:Aliments en italien
   beg=page.find(" en ")
@@ -1727,6 +1749,99 @@ def createCategoryAliments(page,cle):
   wikitext = "[[Catégorie:Aliments|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Thématiques en " + language + "|aliments]]\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de la cuisine|aliments]]"
+  return wikitext
+
+def createCategoryAnimaux(page,cle):
+  #Catégorie:Animaux en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Animaux|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|animaux]]"
+  return wikitext
+
+def createCategoryArmes(page,cle):
+  #Catégorie:Armes en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Armes|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|armes]]"
+  wikitext += "[[Catégorie:Lexique en " + language + " de l’armement|armes]]"
+  return wikitext
+
+def createCategoryBateaux(page,cle):
+  #Catégorie:Bateaux en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Bateaux|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|bateaux]]"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la navigation|bateaux]]"
+  return wikitext
+
+def createCategoryBoissons(page,cle):
+  #Catégorie:Boissons en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Boissons|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|boissons]]"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la cuisine|boissons]]"
+  return wikitext
+
+def createCategoryCardinaux(page,cle):
+  #Catégorie:Cardinaux en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Cardinaux|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Adjectifs numéraux en " + language + "|cardinaux]]"
+  wikitext += "[[Catégorie:Lexique en " + language + " des mathématiques|cardinaux]]"
+  return wikitext
+
+def createCategoryCereales(page,cle):
+  #Catégorie:Céréales en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Céréales|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Plantes en " + language + "|cereales]]"
+  return wikitext
+
+def createCategoryConjonctions(page,cle):
+  #Catégorie:Conjonctions en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Conjonctions|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "|conjonctions]]"
+  return wikitext
+
+def createCategoryConjugaison(page,cle):
+  #Catégorie:Conjugaison en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "Cette catégorie a pour but de réunir les annexes décrivant la [[conjugaison]] des verbes en " + language ".\n\n"
+  wikitext += "[[Catégorie:Conjugaison|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "|conjugaison]]"
   return wikitext
 
 def createCategoryCouleurs(page,cle):
@@ -1740,6 +1855,28 @@ def createCategoryCouleurs(page,cle):
   wikitext += "[[Catégorie:Thématiques en " + language + "|couleurs]]"
   return wikitext
 
+def createCategoryCuriositesLinguistiques(page,cle):
+  #Catégorie:Curiosités linguistiques en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Curiosités linguistiques par langue|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + "]]"
+  return wikitext
+
+def createCategoryDesserts(page,cle):
+  #Catégorie:Desserts en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Desserts|" + cle[language] + "]]\n"
+  wikitext = "[[Catégorie:Préparations culinaires en " + language + "|desserts]]"
+  return wikitext
+
 def createCategoryExpressions(page,cle):
   #Catégorie:Expressions en italien
   beg=page.find(" en ")
@@ -1749,6 +1886,31 @@ def createCategoryExpressions(page,cle):
   
   wikitext = "[[Catégorie:Expressions|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:" + language + "]]"
+  return wikitext
+
+def createCategoryFruits(page,cle):
+  #Catégorie:Fruits en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Fruits|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Aliments en " + language + "|fruits]]\n"
+  wikitext += "[[Catégorie:Plantes en " + language + "|fruits]]"
+  return wikitext
+
+def createCategoryInsectes(page,cle):
+  #Catégorie:Insectes en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Insectes|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Animaux en " + language + "|insectes]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|insectes]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de l’entomologie|insectes]]"
   return wikitext
 
 def createCategoryLexiques(page,cle):
@@ -1990,12 +2152,38 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryEtymologiesManquantes(page,cle)
   elif (page.find("Catégorie:Wiktionnaire:Prononciations manquantes en ") != -1):
      wikitext = createCategoryPrononciationsManquantes(page,cle)
+  elif (page.find("Catégorie:Adjectifs en") != -1):
+     wikitext = createCategoryAdjectifs(page,cle)
+  elif (page.find("Catégorie:Adverbes en") != -1):
+     wikitext = createCategoryAdverbes(page,cle)
   elif (page.find("Catégorie:Aliments en") != -1):
      wikitext = createCategoryAliments(page,cle)
+  elif (page.find("Catégorie:Animaux en") != -1):
+     wikitext = createCategoryAnimaux(page,cle)
+  elif (page.find("Catégorie:Armes en") != -1):
+     wikitext = createCategoryArmes(page,cle)
+  elif (page.find("Catégorie:Bateaux en") != -1):
+     wikitext = createCategoryBateaux(page,cle)
+  elif (page.find("Catégorie:Boissons en") != -1):
+     wikitext = createCategoryBoissons(page,cle)
+  elif (page.find("Catégorie:Cardinaux en") != -1):
+     wikitext = createCategoryCardinaux(page,cle)
+  elif (page.find("Catégorie:Céréales en") != -1):
+     wikitext = createCategoryCereales(page,cle)
+  elif (page.find("Catégorie:Conjonctions en") != -1):
+     wikitext = createCategoryConjonctions(page,cle)
+  elif (page.find("Catégorie:Conjugaison en") != -1):
+     wikitext = createCategoryConjugaison(page,cle)
   elif (page.find("Catégorie:Couleurs en") != -1):
      wikitext = createCategoryCouleurs(page,cle)
+  elif (page.find("Catégorie:Curiosités linguistiques en") != -1):
+     wikitext = createCategoryCuriositesLinguistiques(page,cle)
   elif (page.find("Catégorie:Expressions en") != -1):
      wikitext = createCategoryExpressions(page,cle)
+  elif (page.find("Catégorie:Fruits en") != -1):
+     wikitext = createCategoryFruits(page,cle)
+  elif (page.find("Catégorie:Insectes en") != -1):
+     wikitext = createCategoryInsectes(page,cle)
   elif (page.find("Catégorie:Lexiques en") != -1):
      wikitext = createCategoryLexiques(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
