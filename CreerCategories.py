@@ -1913,6 +1913,41 @@ def createCategoryInsectes(page,cle):
   wikitext += "[[Catégorie:Lexique en " + language + " de l’entomologie|insectes]]"
   return wikitext
 
+def createCategoryInstrumentsDeMusique(page,cle):
+  #Catégorie:Instruments de musique en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Instruments de musique|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|instruments de musique]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la musique|instruments de musique]]"
+  return wikitext
+
+def createCategoryInterrogatifs(page,cle):
+  #Catégorie:Interrogatifs en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Interrogatifs|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "|interrogatifs]]"
+  return wikitext
+
+def createCategoryLangues(page,cle):
+  #Catégorie:Langues en anglais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms de langues|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|langues]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la linguistique|langues]]"
+  return wikitext
+
 def createCategoryLexiques(page,cle):
   #Catégorie:Lexiques en italien
   beg=page.find(" en ")
@@ -2010,15 +2045,48 @@ def createCategoryNombres(page,cle):
 
   return wikitext
 
+def createCategoryLocutions(page,cle):
+  #Catégorie:Locutions en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Locutions|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "|locutions]]"
+  return wikitext
+
+def createCategoryMammiferes(page,cle):
+  #Catégorie:Mammifères en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Mammifères|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Vertébrés en " + language + "|mammiferes]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|mammiferes]]"
+  return wikitext
 
 def createCategoryNomsCommuns(page,cle):
-  #Catégorie:Noms communs en saho‏‎
+  #Catégorie:Noms communs en saho
   beg=page.find(" en ")
   language = page[beg+4:]
   if (not language in cle):
     return
   
   wikitext = "[[Catégorie:Noms communs|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Grammaire en " + language + "]]"
+  return wikitext
+
+def createCategoryNomsPropres(page,cle):
+  #Catégorie:Noms propres en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms propres|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Grammaire en " + language + "]]"
   return wikitext
 
@@ -2184,10 +2252,22 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryFruits(page,cle)
   elif (page.find("Catégorie:Insectes en") != -1):
      wikitext = createCategoryInsectes(page,cle)
+  elif (page.find("Catégorie:Instruments de musique en") != -1):
+     wikitext = createCategoryInstrumentsDeMusique(page,cle)
+  elif (page.find("Catégorie:Interrogatifs en") != -1):
+     wikitext = createCategoryInterrogatifs(page,cle)
+  elif (page.find("Catégorie:Langues en") != -1):
+     wikitext = createCategoryLangues(page,cle)
   elif (page.find("Catégorie:Lexiques en") != -1):
      wikitext = createCategoryLexiques(page,cle)
+  elif (page.find("Catégorie:Locutions en") != -1):
+     wikitext = createCategoryLocutions(page,cle)
+  elif (page.find("Catégorie:Mammifères en") != -1):
+     wikitext = createCategoryMammiferes(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
      wikitext = createCategoryNomsCommuns(page,cle)
+  elif (page.find("Catégorie:Noms propres en") != -1):
+     wikitext = createCategoryNomsPropres(page,cle)
   elif ((page.find("Catégorie:Noms propres en") != -1) and
         (page.find("issus d’un mot en") != -1)):
     wikitext = createCategoryNomsPropresIssus(page,cle)
