@@ -2460,7 +2460,7 @@ def createCategory(page,cle,code,country):
   elif (page.find("Catégorie:Verbes en ") != -1):
     wikitext = createCategoryVerbes(page,cle)
   elif (page.find("Catégorie:Vertébrés en") != -1):
-     wikitext = createCategoryVertébrés(page,cle)
+     wikitext = createCategoryVertebres(page,cle)
   elif (page.find("Catégorie:Vie domestique en") != -1):
      wikitext = createCategoryVieDomestique(page,cle)
   elif (page.find("Catégorie:Vêtements en") != -1):
