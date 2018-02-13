@@ -2372,6 +2372,45 @@ def createCategoryPaysEnLangue(page,cle,continent):
   wikitext += "[[Catégorie:" + continent[pays] + " en " + language + "|" + CleDeTri.CleDeTri(pays) + "]]"
   return wikitext
 
+def createCategoryLangueDePays(page,cle,code,continent):
+  #Catégorie:espagnol du Panama
+  #Catégorie:français d’Inde
+
+  beg=page.find(" d")
+  language=page[10:beg] # 10 pour Catégorie:
+  if (language not in cle):
+    return
+  if (language not in code):
+    return
+  
+  beg2=page.find("’",beg)
+  if(beg2 == -1):
+    beg2 = page.find(" ",beg+1)
+  pays=page[beg2+1:]
+  if (pays not in continent):
+    return
+
+  particle = ""
+  if(page.find(" d’") != -1):
+    particle="d’"
+  elif(page.find(" de") != -1):
+    particle="de "
+  elif(page.find(" du") != -1):
+    particle="du "
+  elif(page.find(" des") != -1):
+    particle="des "
+
+  de2=" d’"
+  if(continent[pays] == "Caraïbes"):
+    de2=" des "
+  
+  wikitext = "__NOTOC__\n"
+  wikitext += "* Merci d’utiliser {{modl|" + pays + "|" + code[language] + "}} pour ajouter des termes dans cette catégorie.\n\n"
+  wikitext += "[[Catégorie:Régionalisme " + particle + pays + "|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + language + de2 + continent[pays] + "|" + CleDeTri.CleDeTri(pays) + "]]\n"
+  wikitext += "[[Catégorie:Langues " + particle + pays + "|" + cle[language] + "]]"
+  return wikitext
+
 def createCategory(page,cle,code,country):  
   #Convert Category into string object
   page = str(page)
@@ -2979,6 +3018,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:") != -1) and
         page.find(" en ") != -1):
     wikitext = createCategoryPaysEnLangue(page,cle,country)
+  elif ((page.find("Catégorie:") != -1) and
+        page.find(" d") != -1):
+    wikitext = createCategoryLangueDePays(page,cle,code,country)
 
   else:
     return
@@ -3055,8 +3097,8 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Kiribati en same du Nord]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Localités d’Italie en français]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:espagnol du Panama]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:français d’Inde]]", cle, codeLangue, continentByCountryDict)
 
   #UserContributionsGenerator
   else:
