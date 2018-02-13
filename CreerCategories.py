@@ -1959,7 +1959,7 @@ def createCategoryLexiques(page,cle):
   wikitext += "[[Catégorie:Lexiques par langue|" + cle[language] + "]]"
   return wikitext
 
-def createCategoryLocalitesDeEn(page,cle,countryList):
+def createCategoryLocalitesDeEn(page,cle,continentByCountryDict):
   #Catégorie:Localités d’Italie en français
   beg=page.find(" en ")
   language=page[beg+4:]
@@ -1996,7 +1996,7 @@ def createCategoryLocalitesDeEn(page,cle,countryList):
     country = page[beg+5:end]
 
   # If the country in not in the list, then one does not process it
-  if (country not in countryList):
+  if (country not in continentByCountryDict):
     print(country + " :/")
     return
 
@@ -2352,6 +2352,24 @@ def createCategoryVetements(page,cle):
   
   wikitext ="[[Catégorie:Vêtements|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Thématiques en " + language + "|vetements]]\n"
+  return wikitext
+
+def createCategoryPaysEnLangue(page,cle,continent):
+  #Catégorie:Kiribati en same du Nord
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  end=beg
+  beg=page.find(":")
+  pays=page[beg+1:end]
+  if (pays not in continent):
+    return
+  
+  wikitext = "[[Catégorie:" + pays + "|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Pays en " + language + "]]\n"
+  wikitext += "[[Catégorie:" + continent[pays] + " en " + language + "|" + CleDeTri.CleDeTri(pays) + "]]"
   return wikitext
 
 def createCategory(page,cle,code,country):  
@@ -2958,6 +2976,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des systèmes électoraux") != -1)):
     wikitext = createCategoryLexiqueSystemesElectoraux(page,cle)
+  elif ((page.find("Catégorie:") != -1) and
+        page.find(" en ") != -1):
+    wikitext = createCategoryPaysEnLangue(page,cle,country)
 
   else:
     return
@@ -2985,17 +3006,16 @@ def getSortingKey():
 
   return cledetri, codeLangue
 
-def getCountryList():
+def getContinentByCountryDict():
 
-  country = []
-  f = open("country.csv",'r')
-  lines  = f.readlines()
-  f.close()
+  output = {}
+  with open("country.csv") as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    for row in reader:
+      myCountry, myContinent = row
+      output[myCountry]=myContinent
 
-  for line in lines:
-    country.append(line[:len(line)-1])
-
-  return country
+  return output
 
 def guessLanguage(page,myBegin,myEnd,cle):
   #TODO prevoir une fonction qui recupere le nom de la langue quel que soit le nom de la catégorie
@@ -3032,18 +3052,16 @@ def WantedPagesCategoryGenerator(total=100, site=None):
 
 def main():
   cle, codeLangue = getSortingKey()
-  countryList = getCountryList()
+  continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Lexique en same du Nord du temps]]", cle, codeLangue, countryList)
-    createCategory("[[:Catégorie:Lexique en same du Sud du temps]]", cle, codeLangue, countryList)
-    createCategory("[[:Catégorie:Lexique en mari de l’Est de l’art]]", cle, codeLangue, countryList)
-    createCategory("[[:Catégorie:Lexique en mari de l’Ouest de l’art]]", cle, codeLangue, countryList)
-    createCategory("[[:Catégorie:Lexique en créole du détroit de Torrès du temps]]", cle, codeLangue, countryList)
+    createCategory("[[:Catégorie:Kiribati en same du Nord]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Localités d’Italie en français]]", cle, codeLangue, continentByCountryDict)
+
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
-      createCategory(page,cle,codeLangue,countryList)
+      createCategory(page,cle,codeLangue,continentByCountryDict)
   
 
 if __name__ == '__main__':
