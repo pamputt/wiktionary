@@ -2410,9 +2410,9 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryLangues(page,cle)
   elif (page.find("Catégorie:Lexiques en") != -1):
      wikitext = createCategoryLexiques(page,cle)
-  elif (page.find("Catégorie:Palindromes en") != -1):
-     wikitext = createCategoryOrdinaux(page,cle)
-    wikitext = createCategoryLocalitesDeEn(page,cle,country)
+  elif (page.find("Catégorie:Localités d") != -1 and
+        (page.find(" en ") != -1)):
+      wikitext = createCategoryLocalitesDeEn(page,cle,country)
   elif (page.find("Catégorie:Locutions en") != -1):
      wikitext = createCategoryLocutions(page,cle)
   elif (page.find("Catégorie:Mammifères en") != -1):
