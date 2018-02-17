@@ -2370,11 +2370,12 @@ def createCategoryFormesEn(page,cle):
   notTreated = ["locutions", "pronoms", "noms scientifiques","articles"]
   
   beg=page.find(" d")
-  beg2=page.find("’",beg)
+  end=page.find(" en ",beg+1)
+  beg2=page[beg:end].find("’") # [beg:end] pour les cas comme Catégorie:Formes de noms communs en me’phaa de Malinaltepec
   if(beg2 == -1):
-    beg2 = page.find(" ",beg+1)
+    beg2 = page[beg:end].find(" ")
   end=page.find(" en ",beg2+1)
-  word=page[beg2+1:end]
+  word=page[beg+beg2+1:end]
   for aWord in notTreated:
     if(word.find(aWord) != -1):
       return
@@ -2383,7 +2384,17 @@ def createCategoryFormesEn(page,cle):
   if (language not in cle):
     return
   
-  wikitext = "[[Catégorie:Formes de " + word + "|" + cle[language] + "]]\n"
+  particle = ""
+  if(page.find(" d’") != -1):
+    particle="d’"
+  elif(page.find(" de") != -1):
+    particle="de "
+  elif(page.find(" du") != -1):
+    particle="du "
+  elif(page.find(" des") != -1):
+    particle="des "
+  
+  wikitext = "[[Catégorie:Formes" + particle + word + "|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:" + word[:1].upper() + word[1:] + " en " + language + "]]"
   return wikitext
 
@@ -3190,7 +3201,7 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Formes d’articles définis en anglo-saxon]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Formes d’adjectifs possessifs en espagnol]]", cle, codeLangue, continentByCountryDict)
 
   #UserContributionsGenerator
   else:
