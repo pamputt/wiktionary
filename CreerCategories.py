@@ -2365,6 +2365,28 @@ def createCategoryVetements(page,cle):
   wikitext += "[[Catégorie:Thématiques en " + language + "|vetements]]\n"
   return wikitext
 
+def createCategoryFormesEn(page,cle):
+  #Catégorie:Formes de noms propres en allemand
+  notTreated = ["locutions", "pronoms", "noms scientifiques","articles"]
+  
+  beg=page.find(" d")
+  beg2=page.find("’",beg)
+  if(beg2 == -1):
+    beg2 = page.find(" ",beg+1)
+  end=page.find(" en ",beg2+1)
+  word=page[beg2+1:end]
+  for aWord in notTreated:
+    if(word.find(aWord) != -1):
+      return
+    
+  language=page[end+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Formes de " + word + "|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:" + word[:1].upper() + word[1:] + " en " + language + "]]"
+  return wikitext
+
 def createCategoryPaysEnLangue(page,cle,continent):
   #Catégorie:Kiribati en same du Nord
   beg=page.find(" en ")
@@ -2521,6 +2543,9 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryCuriositesLinguistiques(page,cle)
   elif (page.find("Catégorie:Expressions en") != -1):
      wikitext = createCategoryExpressions(page,cle)
+  elif (page.find("Catégorie:Formes d") != -1 and
+        page.find(" en ") != -1):
+     wikitext = createCategoryFormesEn(page,cle)
   elif (page.find("Catégorie:Fruits en") != -1):
      wikitext = createCategoryFruits(page,cle)
   elif (page.find("Catégorie:Insectes en") != -1):
@@ -3165,7 +3190,7 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:français d’Asie]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Formes d’articles définis en anglo-saxon]]", cle, codeLangue, continentByCountryDict)
 
   #UserContributionsGenerator
   else:
