@@ -877,7 +877,7 @@ def createCategoryLexiqueJeuxVideo(page,cle):
   
   wikitext = "[[Catégorie:Lexique en " + language + " des jeux|video]]\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de l’informatique|video]]\n"
-  wikitext += "[[Catégorie:Jeux video|" + cle[language] + "]]"
+  wikitext += "[[Catégorie:Jeux vidéo|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueJudo(page,cle):
@@ -1073,7 +1073,7 @@ def createCategoryLexiqueMicrobiologie(page,cle):
 
   wikitext = "Cette catégorie réunit les mots qui ont trait à la [[microbiologie]] en usage en [[" + language + "]].\n\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de la biologie|microbiologie]]\n"
-  wikitext += "[[Catégorie:microbiologie|" + cle[language] + "]]"
+  wikitext += "[[Catégorie:Microbiologie|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueMilitaire(page,cle):
@@ -1770,7 +1770,7 @@ def createCategoryAnimauxMulticellulaires(page,cle):
     return
   
   wikitext = "[[Catégorie:Animaux multicellulaires|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:Animaux multicellulaires en " + language + "|multicellulaires]]"
+  wikitext += "[[Catégorie:Animaux en " + language + "|multicellulaires]]"
   return wikitext
 
 def createCategoryArmes(page,cle):
