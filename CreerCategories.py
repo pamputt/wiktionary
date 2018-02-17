@@ -2463,6 +2463,7 @@ def createCategoryFormesEn(page,cle):
     beg = page.find(" ",beg+1)+1
   # [beg:end] pour les cas comme Catégorie:Formes de noms communs en me’phaa de Malinaltepec
   word=page[beg:end]
+  #print(str(beg) + " " + str(end) + " " + word)
   for aWord in notTreated:
     if(word.find(aWord) != -1):
       return
@@ -2472,13 +2473,13 @@ def createCategoryFormesEn(page,cle):
     return
   
   particle = ""
-  if(page.find(" d’") != -1):
+  if(page[:beg].find(" d’") != -1):
     particle="d’"
-  elif(page.find(" de") != -1):
+  elif(page[:beg].find(" de") != -1):
     particle="de "
-  elif(page.find(" du") != -1):
+  elif(page[:beg].find(" du") != -1):
     particle="du "
-  elif(page.find(" des") != -1):
+  elif(page[:beg].find(" des") != -1):
     particle="des "
   
   wikitext = "[[Catégorie:Formes " + particle + word + "|" + cle[language] + "]]\n"
@@ -2595,6 +2596,74 @@ def createCategoryLanguesDePays(page,cle,continent):
     
   return wikitext
 
+def createCategoryLanguesDePaysEn(page,cle,continent):
+  #Catégorie:Langues de France en français
+  #Catégorie:Langues d’Afrique en français
+
+  isPays = False
+  isContinent = False
+  
+  beg=page.find(" d")  
+  beg2=page.find("’",beg)
+  if(beg2 == -1):
+    beg2=page.find(" ",beg+1)
+  end=page.find(" en ")
+  paysContinent=page[beg2+1:end]
+  if (paysContinent in continent):
+    isPays = True
+  if (paysContinent in continent.values()):
+    isContinent = True
+  if(not isPays and not isContinent):
+    return
+  
+  language=page[end+4:]
+  if (language not in cle):
+    return
+
+  particle = ""
+  if(page.find("Langues d’") != -1):
+    particle="d’"
+  elif(page.find("Langues de") != -1):
+    particle="de "
+  elif(page.find("Langues du") != -1):
+    particle="du "
+  elif(page.find("Langues des") != -1):
+    particle="des "
+      
+  if isPays:
+    de="d’"
+    if(continent[paysContinent] == "Caraïbes"):
+      de="des "
+    wikitext = "[[Catégorie:Langues par pays en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]\n"
+    wikitext += "[[Catégorie:Langues " + de + continent[paysContinent] + " en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]\n"
+    wikitext += "[[Catégorie:Langues " + particle + paysContinent + "|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:" + paysContinent + " en " + language + "]]"
+    
+  if isContinent:
+    liste = []
+    de="d’"
+    le="l’"
+    if(paysContinent == "Caraïbes"):
+      le="les "
+      de="des "
+    wikitext = "Cette catégorie rassemble les catégories de langues par pays en " + language + " pour " + le + paysContinent + ".\n\n"
+    wikitext += "=== Voir aussi ===\n"
+    wikitext += "* {{Catégorie|Régionalismes " + de + paysContinent + "}}\n"
+    for aContinent in continent.values():
+      if aContinent not in liste:
+        liste.append(aContinent)
+      else:
+        continue
+      if (aContinent != paysContinent):
+        if(aContinent=="Caraïbes"):
+          wikitext += "* {{Catégorie|Langues des " + aContinent + " en " + language + "}}\n"
+        else:
+          wikitext += "* {{Catégorie|Langues d’" + aContinent + " en " + language + "}}\n"
+    wikitext += "\n"
+    wikitext += "[[Catégorie:Langues " + de + paysContinent + "|" + cle[language] + "]]"
+    
+  return wikitext
+
 def createCategory(page,cle,code,country):  
   #Convert Category into string object
   page = str(page)
@@ -2654,8 +2723,12 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryInterrogatifs(page,cle)
   elif (page.find("Catégorie:Langues en") != -1):
      wikitext = createCategoryLangues(page,cle)
-  elif (page.find("Catégorie:Langues d") != -1):
+  elif (page.find("Catégorie:Langues d") != -1 and
+        page.find(" en ") == -1):
      wikitext = createCategoryLanguesDePays(page,cle,country)
+  elif (page.find("Catégorie:Langues d") != -1 and
+        page.find(" en ") != -1):
+     wikitext = createCategoryLanguesDePaysEn(page,cle,country)
   elif (page.find("Catégorie:Lexiques en") != -1):
      wikitext = createCategoryLexiques(page,cle)
   elif (page.find("Catégorie:Localités d") != -1 and
@@ -3309,9 +3382,8 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Formes d’adjectifs possessifs en espagnol]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Formes de noms de famille en français]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Formes de fautes d’orthographe en français]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Langues du Liechtenstein en français]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Langues d’Afrique en chaoui]]", cle, codeLangue, continentByCountryDict)
 
   #UserContributionsGenerator
   else:
