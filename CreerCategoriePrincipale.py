@@ -40,21 +40,29 @@ def isCategoryExist(language):
 
   return True
 
-def createCategory(language,code):  
+def createCategory(language,code,cle):  
   if (language not in code):
     return
-  
-  wikitext = "Cette catégorie réunit les mots et locutions en [[" + language + "]] (code <code>" + code[language] + "</code>). "
-  wikitext += "La [[:Catégorie:Grammaire en " + language + "|section grammaire]] contient tous les types de mots comme les [[:Catégorie:Noms communs en " + language + "|noms communs]] ou les [[:Catégorie:Acronymes en " + language + "|acronymes]]. Elle contient en outre des sous-catégories thématiques : [[:Catégorie:Animaux en " + language + "|noms d’animaux]] ou [[:Catégorie:Lexique en " + language + " de la musique|lexique de la musique]], ou encore des catégories d’[[:Catégorie:Expressions en " + language + "|expressions]], ou enfin des registres de langue.\n"
-  wikitext += "* '''[[:Catégorie:Grammaire en " + language + "|Grammaire]]'''\n"
-  wikitext += "* '''[[:Catégorie:Thématiques en " + language + "|Thématiques]]'''\n"
-  wikitext += "* '''[[:Catégorie:Lexiques en " + language + "|Lexiques]]'''\n\n"
-#  wikitext += "{{CatégorieTDM}}\n"
-  wikitext += "<!--- Voir aussi les [[Special:Whatlinkshere/Modèle:" + language + "|mots traduits en " + language + "]]. --->Voir aussi les [[:catégorie:Traductions en " + language + "|mots traduits en " + language + "]].\n\n"
-  wikitext += "[[Catégorie:Langues"
-  if(CleDeTri.CleDeTri(language)!=language):
-    wikitext += "|" + CleDeTri.CleDeTri(language)
-  wikitext += "]]"
+
+  proto = False
+  if (language.find("proto-") != -1):
+    proto = True
+
+  if proto:
+    wikitext = "Cette catégorie contient les annexes traitant de formes reconstruites en [[" + language + "]].\n\n"
+    wikitext += "[[Catégorie:Langues reconstruites|" + cle[language] + "]]"
+  else:
+    wikitext = "Cette catégorie réunit les mots et locutions en [[" + language + "]] (code <code>" + code[language] + "</code>). "
+    wikitext += "La [[:Catégorie:Grammaire en " + language + "|section grammaire]] contient tous les types de mots comme les [[:Catégorie:Noms communs en " + language + "|noms communs]] ou les [[:Catégorie:Acronymes en " + language + "|acronymes]]. Elle contient en outre des sous-catégories thématiques : [[:Catégorie:Animaux en " + language + "|noms d’animaux]] ou [[:Catégorie:Lexique en " + language + " de la musique|lexique de la musique]], ou encore des catégories d’[[:Catégorie:Expressions en " + language + "|expressions]], ou enfin des registres de langue.\n"
+    wikitext += "* '''[[:Catégorie:Grammaire en " + language + "|Grammaire]]'''\n"
+    wikitext += "* '''[[:Catégorie:Thématiques en " + language + "|Thématiques]]'''\n"
+    wikitext += "* '''[[:Catégorie:Lexiques en " + language + "|Lexiques]]'''\n\n"
+    #  wikitext += "{{CatégorieTDM}}\n"
+    wikitext += "<!--- Voir aussi les [[Special:Whatlinkshere/Modèle:" + language + "|mots traduits en " + language + "]]. --->Voir aussi les [[:catégorie:Traductions en " + language + "|mots traduits en " + language + "]].\n\n"
+    wikitext += "[[Catégorie:Langues"
+    if(cle[language]!=language):
+      wikitext += "|" + cle[language]
+    wikitext += "]]"
 
 
   page = pywikibot.Page(pywikibot.getSite(), "Catégorie:"+language)
@@ -82,18 +90,20 @@ def WantedPagesCategoryGenerator(total=100, site=None):
 def getLanguageCodes():
 
   language = {}
+  cle = {}
   with open("liste_langue.dat") as csvfile:
     reader = csv.reader(csvfile, delimiter=';')
     for row in reader:
       name, code, key = row
       language[name] = code
+      cle[name] = key
 
-  return language
+  return language, cle
 
 def main():
   CategoriesDemandees=True
   
-  codes = getLanguageCodes()
+  codes, cle = getLanguageCodes()
   
   if (CategoriesDemandees):
     for page in WantedPagesCategoryGenerator(5000):
@@ -106,16 +116,16 @@ def main():
       exist = isCategoryExist(page)
       if exist:
         continue
-      createCategory(page,codes)
+      createCategory(page,codes,cle)
   else:
     languages = getListOfCategories()
-#   createCategory("shall-zwall",codes)
+#   createCategory("shall-zwall",codes,cle)
     for language in languages:
       print("Treating " + language)
       exist = isCategoryExist(language)
       if exist:
         continue
-      createCategory(language,codes)
+      createCategory(language,codes,cle)
     
 
 if __name__ == '__main__':
