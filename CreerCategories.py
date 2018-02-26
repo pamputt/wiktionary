@@ -9,6 +9,15 @@ import CleDeTri
 
 test = False # to test the script (without saving the result)
 
+def createCategoryCaractereEn(page,cle):
+  #Catégorie:Caractère 吹 en japonais
+  language = guessLanguage(page,"en","",cle)
+  if not language:
+    return
+  
+  wikitext = "{{tableau han/cat}}"
+  return wikitext
+
 def createCategoryEtymologiesManquantes(page,cle):
   #Wiktionnaire:Étymologies manquantes en italien
   language = guessLanguage(page,"en","",cle)
@@ -144,7 +153,7 @@ def createCategoryLexiqueArchitecture(page,cle):
   if not language:
     return
   
-  wikitext = "[[Catégorie:Lexique en " + language + "de l’art|archeologie]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’art|architecture]]\n"
   wikitext += "[[Catégorie:Architecture|" + cle[language] + "]]"
   return wikitext
 
@@ -2463,7 +2472,6 @@ def createCategoryFormesEn(page,cle):
     beg = page.find(" ",beg+1)+1
   # [beg:end] pour les cas comme Catégorie:Formes de noms communs en me’phaa de Malinaltepec
   word=page[beg:end]
-  #print(str(beg) + " " + str(end) + " " + word)
   for aWord in notTreated:
     if(word.find(aWord) != -1):
       return
@@ -2520,7 +2528,7 @@ def createCategoryLangueDePays(page,cle,code,continent):
     return
   
   beg2=page.find("’",beg)
-  if(beg2 == -1):
+  if(beg2 == -1 or beg2!=beg+2):
     beg2 = page.find(" ",beg+1)
   paysContinent=page[beg2+1:]
   if (paysContinent in continent):
@@ -2568,7 +2576,7 @@ def createCategoryLanguesDePays(page,cle,continent):
   
   beg=page.find(" d")  
   beg2=page.find("’",beg)
-  if(beg2 == -1):
+  if(beg2 == -1 or beg2!=beg+2):
     beg2 = page.find(" ",beg+1)
   paysContinent=page[beg2+1:]
   if (paysContinent in continent):
@@ -2599,13 +2607,14 @@ def createCategoryLanguesDePays(page,cle,continent):
 def createCategoryLanguesDePaysEn(page,cle,continent):
   #Catégorie:Langues de France en français
   #Catégorie:Langues d’Afrique en français
+  #Catégorie:Langues de Côte d’Ivoire en bambara
 
   isPays = False
   isContinent = False
-  
-  beg=page.find(" d")  
+
+  beg=page.find(" d")
   beg2=page.find("’",beg)
-  if(beg2 == -1):
+  if(beg2 == -1 or beg2!=beg+2):
     beg2=page.find(" ",beg+1)
   end=page.find(" en ")
   paysContinent=page[beg2+1:end]
@@ -2674,6 +2683,8 @@ def createCategory(page,cle,code,country):
   wikitext = ""
   if (page.find("Catégorie:Prononciations audio en") != -1):
      wikitext = createCategoryPrononciationAudio(page,cle)
+  elif (page.find("Catégorie:Caractère ") != -1):
+     wikitext = createCategoryCaractereEn(page,cle)
   elif (page.find("Catégorie:Grammaire en") != -1):
      wikitext = createCategoryGrammaire(page,cle)
   elif (page.find("Catégorie:Wiktionnaire:Étymologies manquantes en ") != -1):
@@ -3382,8 +3393,9 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Langues du Liechtenstein en français]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Langues d’Afrique en chaoui]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Langues de Côte d’Ivoire en bambara]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Langues de France en français]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Langues d’Afrique en français]]", cle, codeLangue, continentByCountryDict)
 
   #UserContributionsGenerator
   else:
