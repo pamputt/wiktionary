@@ -2496,24 +2496,37 @@ def createCategoryFormesEn(page,cle):
 
 def createCategoryPaysEnLangue(page,cle,continent):
   #Catégorie:Kiribati en same du Nord
+  #Catégorie:Asie en français
   beg=page.find(" en ")
   language=page[beg+4:]
   if (language not in cle):
     return
   
+  isPays = False
+  isContinent = False
+  
   end=beg
   beg=page.find(":")
-  pays=page[beg+1:end]
-  if (pays not in continent):
+  paysContinent=page[beg+1:end]
+  if (paysContinent in continent):
+    isPays = True
+  if (paysContinent in continent.values()):
+    isContinent = True
+  if (not isPays and not isContinent):
     return
-  
-  wikitext = "[[Catégorie:" + pays + "|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:Pays en " + language + "]]\n"
-  wikitext += "[[Catégorie:" + continent[pays] + " en " + language + "|" + CleDeTri.CleDeTri(pays) + "]]"
+
+  if isPays:
+    wikitext = "[[Catégorie:" + pays + "|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:Pays en " + language + "]]\n"
+    wikitext += "[[Catégorie:" + continent[pays] + " en " + language + "|" + CleDeTri.CleDeTri(pays) + "]]"
+  if isContinent:
+    wikitext = "[[Catégorie:" + paysContinent + " par langue|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:Continents en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]"
+    
   return wikitext
 
 def createCategoryLangueDePays(page,cle,code,continent):
-  #Catégorie:espagnol du Panama
+  #Catégorie:espagnol du Chili
   #Catégorie:français d’Inde
   #Catégorie:français d’Asie
 
@@ -3393,10 +3406,8 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Langues de Côte d’Ivoire en bambara]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Langues de France en français]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Langues d’Afrique en français]]", cle, codeLangue, continentByCountryDict)
-
+    createCategory("[[:Catégorie:Localités des Pays-Bas en mari de l’Ouest]]", cle, codeLangue, continentByCountryDict)
+    
   #UserContributionsGenerator
   else:
     for page in WantedPagesCategoryGenerator(5000):
