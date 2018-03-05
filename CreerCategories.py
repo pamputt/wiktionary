@@ -2516,9 +2516,9 @@ def createCategoryPaysEnLangue(page,cle,continent):
     return
 
   if isPays:
-    wikitext = "[[Catégorie:" + pays + "|" + cle[language] + "]]\n"
+    wikitext = "[[Catégorie:" + paysContinent + "|" + cle[language] + "]]\n"
     wikitext += "[[Catégorie:Pays en " + language + "]]\n"
-    wikitext += "[[Catégorie:" + continent[pays] + " en " + language + "|" + CleDeTri.CleDeTri(pays) + "]]"
+    wikitext += "[[Catégorie:" + continent[paysContinent] + " en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]"
   if isContinent:
     wikitext = "[[Catégorie:" + paysContinent + " par langue|" + cle[language] + "]]\n"
     wikitext += "[[Catégorie:Continents en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]"
