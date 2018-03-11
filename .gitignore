@@ -96,3 +96,4 @@ login-data/*
 pywikibot.lwp
 throttle.ctrl
 
+dump/*.out
