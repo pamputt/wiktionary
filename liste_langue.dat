@@ -218,6 +218,7 @@ andoa;anb;andoa
 angas;anc;angas
 ansus;and;ansus
 xârâcùù;ane;xaracuu
+animere;anf;animere
 anglo-saxon;ang;anglosaxon
 angevin;angevin;angevin
 anggreso;anggreso;anggreso
@@ -707,6 +708,7 @@ bru de l’Est;bru;bru de lest
 bru de l’Ouest;brv;bru de louest
 bodo;brx;bodo
 bosniaque;bs;bosniaque
+bassari;bsc;bassari
 bashkardi;bsg;bashkardi
 kati;bsh;kati
 bourouchaski;bsk;bourouchaski
@@ -1273,6 +1275,8 @@ daur;dta;daur
 kadazan de Labuk-Kinabatangan;dtb;kadazan de labukkinabatangan
 ditidaht;dtd;ditidaht
 ana tinga;dti;ana tinga
+tene kan;dtk;tene kan
+tomo kan;dtm;tomo kan
 dusun central;dtp;dusun central
 lotud;dtr;lotud
 dogon toro so;dts;dogon toro so
@@ -1341,6 +1345,7 @@ ekpeye;ekp;ekpeye
 kayah li de l’Est;eky;kayah li de lest
 grec;el;grec
 elepi;ele;elepi
+nding;eli;nding
 elkei;elk;elkei
 eleme;elm;eleme
 elmolo;elo;elmolo
@@ -2015,6 +2020,7 @@ djeoromitxi;jbt;djeoromitxi
 krymchak;jct;krymchak
 juhuri;jdt;juhuri
 jebero;jeb;jebero
+jedek;jedek;jedek
 jeng;jeg;jeng
 jeh;jeh;jeh
 yei;jei;yei
@@ -3711,6 +3717,7 @@ chichimeca-jonaz;pei;chichimecajonaz
 pomo du Nord;pej;pomo du Nord
 pekal;pel;pekal
 penan benalui;penan benalui;penan benalui
+penange;penange;penange
 vieux-perse;peo;perse vieux
 kunja;pep;kunja
 pomo du Sud;peq;pomo du Sud
@@ -4171,6 +4178,7 @@ malais du Sri Lanka;sci;malais du Sri Lanka
 shina;scl;shina
 sicilien;scn;sicilien
 scots;sco;scots
+yolmo;scp;yolmo
 saoch;scq;saoch
 esclave du Nord;scs;esclave du Nord
 sha;scw;sha
@@ -4362,6 +4370,7 @@ langues songhaïes;son;songhaies langues
 sonqor;sonqor;sonqor
 songo;soo;songo
 somrai;sor;somrai
+sorbung;sorbung;sorbung
 sembla;sos;sembla
 thaï du Sud;sou;thai du sud
 sonsorolais;sov;sonsorolais
@@ -4625,6 +4634,7 @@ rana tharu;thr;rana tharu
 thakali;ths;thakali
 tahltan;tht;tahltan
 thuri;thu;thuri
+tamahaq;thv;tamahaq
 thaé;thx;thae
 tha;thy;tha
 tigrigna;ti;tigrigna
@@ -4678,6 +4688,7 @@ kitalinga;tlj;kitalinga
 taloki;tlk;taloki
 tetela;tll;tetela
 tolomako;tlm;tolomako
+talodi;tlo;talodi
 muak sa-aak;tlq;muak saaak
 tulehu;tlu;tulehu
 taliabu;tlv;taliabu
@@ -4748,6 +4759,7 @@ trumai;tpy;trumai
 tembé;tqb;tembe
 lehali;tql;lehali
 toaripi;tqo;toaripi
+torona;tqr;torona
 tonkawa;tqw;tonkawa
 turc;tr;turc
 tirahi;tra;tirahi
@@ -5399,6 +5411,7 @@ yamongeri;ymg;yamongeri
 iamalele;yml;iamalele
 yangum mon;ymo;yangum mon
 karagasse;ymt;karagasse
+yandruwandha;ynd;yandruwandha
 yangulam;ynl;yangulam
 yana;ynn;yana
 yendang;ynq;yendang
@@ -5440,6 +5453,7 @@ talu;yta;talu
 tanglang;ytl;tanglang
 maya yucatèque;yua;maya yucateque
 yuanmen;yuanmen;yuanmen
+yuchi;yuc;yuchi
 cantonais;yue;cantonais
 havasupai;yuf-hav;havasupai
 hualapai;yuf-wal;hualapai
