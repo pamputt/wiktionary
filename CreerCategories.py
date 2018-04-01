@@ -1480,6 +1480,17 @@ def createCategoryLexiquePolitique(page,cle):
   wikitext += "[[Catégorie:Politique|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueReligion(page,cle):
+  #Catégorie:Lexique en italien de la religion
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+
+  wikitext = "Cette page liste les mots [[" + language + "]] en rapport avec la [[religion]].\n\n"
+  wikitext += "[[Catégorie:Lexiques en " + language + "|religion]]\n"
+  wikitext += "[[Catégorie:Religion|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueReproduction(page,cle):
   #Catégorie:Lexique en italien de la reproduction
   language = guessLanguage(page,"en","de la",cle)
@@ -3369,8 +3380,6 @@ def getContinentByCountryDict():
   return output
 
 def guessLanguage(page,myBegin,myEnd,cle):
-  #TODO prevoir une fonction qui recupere le nom de la langue quel que soit le nom de la catégorie
-  # cela permet de factoriser beaucoup de code provenant de chaque fonction individuelle
   beg=page.find(" " + myBegin + " ")
   end=page.rfind(" " + myEnd, beg+1)
   
@@ -3385,6 +3394,13 @@ def guessLanguage(page,myBegin,myEnd,cle):
   if (language not in cle):
     return
   return language
+
+def guessCountryContinent(page,myBegin,myEnd,cle):
+  beg=page.find(" " + myBegin + " ")
+  end=page.rfind(" " + myEnd, beg+1)
+  countryContinent=""
+  
+  
 
 def WantedPagesCategoryGenerator(total=100, site=None):
   """
