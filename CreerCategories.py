@@ -9,6 +9,27 @@ import CleDeTri
 
 test = False # to test the script (without saving the result)
 
+def createCategoryCalquesEnIssusDunMot(page,cle):
+  #Calques en français issus d’un mot en anglais
+  beg=page.find(" en ")
+  end=page.find(" issus")
+  language1=page[beg+4:end]
+  beg=page.find(" en ", end)
+  language2=page[beg+4:]
+  if ((language1 not in cle) or
+      (language2 not in cle)):
+    return
+  
+  listConsonnes = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"]
+  particle = " de l’"
+  if language2[0:1] in listConsonnes:
+    particle = " du "
+
+  wikitext = "[[Catégorie:Calques en " + language1 + "|" + cle[language2] + "]]\n"
+  wikitext += "[[Catégorie:Calques issus" + particle + language2 + "|" + cle[language1] + "]]\n"
+  wikitext += "[[Catégorie:Mots en " + language1 + " issus d’un mot en " + language2 + "]]"
+  return wikitext
+
 def createCategoryCaractereEn(page,cle):
   #Catégorie:Caractère 吹 en japonais
   language = guessLanguage(page,"en","",cle)
@@ -1405,6 +1426,16 @@ def createCategoryLexiquePedologie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|pedologie]]\n"
   wikitext += "[[Catégorie:Pédologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiquePeinture(page,cle):
+  #Catégorie:Lexique en anglais de la peinture
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de l’art|peinture]]\n"
+  wikitext += "[[Catégorie:Peinture|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiquePeloteBasque(page,cle,code):
@@ -2805,6 +2836,9 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryBateaux(page,cle)
   elif (page.find("Catégorie:Boissons en") != -1):
      wikitext = createCategoryBoissons(page,cle)
+  elif ((page.find("Catégorie:Calques en") != -1) and
+        (page.find("issus d’un mot en") != -1)):
+    wikitext = createCategoryCalquesEnIssusDunMot(page,cle)
   elif (page.find("Catégorie:Cardinaux en") != -1):
      wikitext = createCategoryCardinaux(page,cle)
   elif (page.find("Catégorie:Céréales en") != -1):
@@ -3136,6 +3170,9 @@ def createCategory(page,cle,code,country):
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la pédologie") != -1)):
     wikitext = createCategoryLexiquePedologie(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la peinture") != -1)):
+    wikitext = createCategoryLexiquePeinture(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de la robotique") != -1)):
     wikitext = createCategoryLexiqueRobotique(page,cle)
@@ -3520,7 +3557,7 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Localités des Pays-Bas en mari de l’Ouest]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Calques en norvégien issus d’un mot en danois]]", cle, codeLangue, continentByCountryDict)
     
   #UserContributionsGenerator
   else:
