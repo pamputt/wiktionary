@@ -2243,6 +2243,42 @@ def createCategoryMotsEnIssusDunMot(page,cle):
   wikitext += "[[Catégorie:Mots issus d’un mot en " + language2 + "|" + cle[language1] + "]]"
   return wikitext
 
+def createCategoryMotsEnInfixeAvec(page,cle):
+  #Mots en azéri infixés avec
+  beg=page.find(" en ")
+  end=page.find(" infixés avec")
+  language1=page[beg+4:end]
+  if language1 not in cle:
+    return
+
+  wikitext = "{{cat mots affixés}}\n"
+  wikitext += "{{CatégorieTDM}}"
+  return wikitext
+
+def createCategoryMotsEnPrefixeAvec(page,cle):
+  #Mots en français préfixés avec
+  beg=page.find(" en ")
+  end=page.find(" préfixés avec")
+  language1=page[beg+4:end]
+  if language1 not in cle:
+    return
+
+  wikitext = "{{cat mots affixés}}\n"
+  wikitext += "{{CatégorieTDM}}"
+  return wikitext
+
+def createCategoryMotsEnSuffixeAvec(page,cle):
+  #Mots en français suffixés avec -isme
+  beg=page.find(" en ")
+  end=page.find(" suffixés avec")
+  language1=page[beg+4:end]
+  if language1 not in cle:
+    return
+
+  wikitext = "{{cat mots affixés}}\n"
+  wikitext += "{{CatégorieTDM}}"
+  return wikitext
+
 def createCategoryMotsIssusDunMot(page,cle):
   #Mots issus d’un mot en abouré‏‎
   beg=page.find(" en ")
@@ -2886,6 +2922,15 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryMotsEnIssusDunMot(page,cle)
   elif (page.find("Catégorie:Mots issus d’un mot en ") != -1):
     wikitext = createCategoryMotsIssusDunMot(page,cle)
+  elif ((page.find("Catégorie:Mots en ") != -1) and
+        (page.find("infixés avec") != -1)):
+    wikitext = createCategoryMotsEnInfixeAvec(page,cle)
+  elif ((page.find("Catégorie:Mots en ") != -1) and
+        (page.find("préfixés avec") != -1)):
+    wikitext = createCategoryMotsEnPrefixeAvec(page,cle)
+  elif ((page.find("Catégorie:Mots en ") != -1) and
+        (page.find("suffixés avec") != -1)):
+    wikitext = createCategoryMotsEnSuffixeAvec(page,cle)
   elif (page.find("Catégorie:Nombres en ") != -1):
     wikitext = createCategoryNombres(page,cle)
   elif (page.find("Catégorie:Noms communs en") != -1):
