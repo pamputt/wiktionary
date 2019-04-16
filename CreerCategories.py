@@ -2326,6 +2326,50 @@ def createCategoryMammiferes(page,cle):
   wikitext += "[[Catégorie:Thématiques en " + language + "|mammiferes]]"
   return wikitext
 
+def createCategoryNomsAnimes(page,cle):
+  #Catégorie:Noms animés en atikamekw
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms animés|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Noms communs en " + language + "]]"
+  return wikitext
+
+def createCategoryNomsDenombrables(page,cle):
+  #Catégorie:Noms dénombrables en néerlandais
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms dénombrables|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Noms communs en " + language + "]]"
+  return wikitext
+
+def createCategoryNomsInanimes(page,cle):
+  #Catégorie:Noms inanimés en micmac
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms inanimés|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Noms communs en " + language + "]]"
+  return wikitext
+
+def createCategoryNomsIndenombrables(page,cle):
+  #Catégorie:Noms indénombrables en occitan
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Noms indénombrables|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Noms communs en " + language + "]]"
+  return wikitext
+
 def createCategoryNomsCommuns(page,cle):
   #Catégorie:Noms communs en saho
   beg=page.find(" en ")
@@ -2355,6 +2399,7 @@ def createCategoryNomsPropresIssus(page,cle):
   language1=page[beg+4:end]
   beg=page.find(" en ", end)
   language2=page[beg+4:]
+
   if ((language1 not in cle) or
       (language2 not in cle)):
     return
@@ -2933,11 +2978,20 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryMotsEnSuffixeAvec(page,cle)
   elif (page.find("Catégorie:Nombres en ") != -1):
     wikitext = createCategoryNombres(page,cle)
-  elif (page.find("Catégorie:Noms communs en") != -1):
+  elif (page.find("Catégorie:Noms communs en ") != -1):
      wikitext = createCategoryNomsCommuns(page,cle)
-  elif (page.find("Catégorie:Noms propres en") != -1):
+  elif (page.find("Catégorie:Noms animés en ") != -1):
+     wikitext = createCategoryNomsAnimes(page,cle)
+  elif (page.find("Catégorie:Noms dénombrables en ") != -1):
+     wikitext = createCategoryNomsDenombrables(page,cle)
+  elif (page.find("Catégorie:Noms inanimés en ") != -1):
+     wikitext = createCategoryNomsInanimes(page,cle)
+  elif (page.find("Catégorie:Noms indénombrables en ") != -1):
+     wikitext = createCategoryNomsIndenombrables(page,cle)
+  elif ((page.find("Catégorie:Noms propres en ") != -1) and
+        (page.find("issus d’un mot en") == -1)):
      wikitext = createCategoryNomsPropres(page,cle)
-  elif ((page.find("Catégorie:Noms propres en") != -1) and
+  elif ((page.find("Catégorie:Noms propres en ") != -1) and
         (page.find("issus d’un mot en") != -1)):
     wikitext = createCategoryNomsPropresIssus(page,cle)
   elif (page.find("Catégorie:Numéraux en") != -1):
@@ -3602,7 +3656,7 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Calques en norvégien issus d’un mot en danois]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Noms propres en võro issus d’un mot en latin]]", cle, codeLangue, continentByCountryDict)
     
   #UserContributionsGenerator
   else:
