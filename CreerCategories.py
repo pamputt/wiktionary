@@ -1993,6 +1993,17 @@ def createCategoryAnimauxMulticellulaires(page,cle):
   wikitext += "[[Catégorie:Animaux en " + language + "|multicellulaires]]"
   return wikitext
 
+def createCategoryArbres(page,cle):
+  #Catégorie:Arbres en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Arbres|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Plantes en " + language + "|arbres]]"
+  return wikitext
+
 def createCategoryArmes(page,cle):
   #Catégorie:Armes en italien
   beg=page.find(" en ")
@@ -2001,7 +2012,7 @@ def createCategoryArmes(page,cle):
     return
   
   wikitext = "[[Catégorie:Armes|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:Thématiques en " + language + "|armes]]"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|armes]]\n"
   wikitext += "[[Catégorie:Lexique en " + language + " de l’armement|armes]]"
   return wikitext
 
@@ -2062,6 +2073,17 @@ def createCategoryCirconfixes(page,cle,code):
   wikitext = "{{catégorie d’affixe|" + code[language] + "}}\n\n"
   wikitext += "[[Catégorie:Circonfixes|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Grammaire en " + language + "]]"
+  return wikitext
+
+def createCategoryCocktails(page,cle):
+  #Catégorie:Cocktails en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Cocktails|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Boissons alcoolisées en " + language + "|cocktails]]"
   return wikitext
 
 def createCategoryConjonctions(page,cle):
@@ -2141,6 +2163,18 @@ def createCategoryFruits(page,cle):
   wikitext = "[[Catégorie:Fruits|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Aliments en " + language + "|fruits]]\n"
   wikitext += "[[Catégorie:Plantes en " + language + "|fruits]]"
+  return wikitext
+
+def createCategoryGateaux(page,cle):
+  #Catégorie:Gâteaux en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Gâteaux|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Pâtisseries en " + language + "| Gateaux]]\n"
+  wikitext += "[[Catégorie:Desserts en " + language + "|gateaux]]"
   return wikitext
 
 def createCategoryInfixes(page,cle,code):
@@ -2386,6 +2420,29 @@ def createCategoryMammiferes(page,cle):
   wikitext += "[[Catégorie:Thématiques en " + language + "|mammiferes]]"
   return wikitext
 
+def createCategoryMarsupiaux(page,cle):
+  #Catégorie:Marsupiaux en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Marsupiaux|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Mammifères en " + language + "|mammiferes]]"
+  return wikitext
+
+def createCategoryMetiersSante(page,cle):
+  #Catégorie:Métiers de la santé en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Métiers de la santé|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Métiers du secteur tertiaire en " + language + "|Sante]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la médecine|Metiers sante]]"
+  return wikitext
+
 def createCategoryNomsAnimes(page,cle):
   #Catégorie:Noms animés en atikamekw
   beg=page.find(" en ")
@@ -2555,6 +2612,19 @@ def createCategoryPalindromes(page,cle):
   wikitext += "[[Catégorie:" + language + "]]"
   return wikitext
 
+def createCategoryPays(page,cle):
+  #Catégorie:Pays en italien
+  beg=page.find(" en ")
+  language = page[beg+4:]
+  if (not language in cle):
+    return
+  
+  wikitext = "[[Catégorie:Thématiques en " + language + "]]\n"
+  wikitext += "[[Catégorie:Pays par langue|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Noms propres en " + language + "]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la géographie]]"
+  return wikitext
+
 def createCategoryPlantes(page,cle):
   #Catégorie:Plantes en swahili
   beg=page.find(" en ")
@@ -2654,6 +2724,19 @@ def createCategorySaisons(page,cle):
   wikitext += "[[Catégorie:Calendrier en " + language + "]]"
   return wikitext
 
+def createCategorySoldats(page,cle):
+  #Catégorie:Soldats en same du Nord
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext ="[[Catégorie:Soldats|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|Soldats]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " du militaire]]\n"
+  wikitext += "[[Catégorie:Métiers du secteur tertiaire en " + language + "]]"
+  return wikitext
+
 def createCategorySports(page,cle):
   #Catégorie:Sports en anglais
   beg=page.find(" en ")
@@ -2704,6 +2787,18 @@ def createCategoryTraductions(page,cle):
   wikitext += "[[Catégorie:Traductions|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:" + language + "]]"
 
+  return wikitext
+
+def createCategoryVehicules(page,cle):
+  #Catégorie:Véhicules en italien
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Véhicules|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Machines en " + language + "]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "]]"
   return wikitext
 
 def createCategoryVerbes(page,cle):
@@ -3006,6 +3101,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryAnimaux(page,cle)
   elif (page.find("Catégorie:Animaux multicellulaires en") != -1):
      wikitext = createCategoryAnimauxMulticellulaires(page,cle)
+  elif (page.find("Catégorie:Arbres en") != -1):
+     wikitext = createCategoryArbres(page,cle)
   elif (page.find("Catégorie:Armes en") != -1):
      wikitext = createCategoryArmes(page,cle)
   elif (page.find("Catégorie:Bateaux en") != -1):
@@ -3026,6 +3123,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryCereales(page,cle)
   elif (page.find("Catégorie:Circonfixes en") != -1):
      wikitext = createCategoryCirconfixes(page,cle,code)
+  elif (page.find("Catégorie:Cocktails en") != -1):
+     wikitext = createCategoryCocktails(page,cle)
   elif (page.find("Catégorie:Conjonctions en") != -1):
      wikitext = createCategoryConjonctions(page,cle)
   elif (page.find("Catégorie:Conjugaison en") != -1):
@@ -3041,6 +3140,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryFormesEn(page,cle)
   elif (page.find("Catégorie:Fruits en") != -1):
      wikitext = createCategoryFruits(page,cle)
+  elif (page.find("Catégorie:Gâteaux en") != -1):
+     wikitext = createCategoryGateaux(page,cle)
   elif (page.find("Catégorie:Infixes en") != -1):
      wikitext = createCategoryInfixes(page,cle,code)
   elif (page.find("Catégorie:Interfixes en") != -1):
@@ -3068,6 +3169,10 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryLocutions(page,cle)
   elif (page.find("Catégorie:Mammifères en") != -1):
      wikitext = createCategoryMammiferes(page,cle)
+  elif (page.find("Catégorie:Marsupiaux en") != -1):
+     wikitext = createCategoryMarsupiaux(page,cle)
+  elif (page.find("Catégorie:Métiers de la santé en") != -1):
+     wikitext = createCategoryMetiersSante(page,cle)
   elif ((page.find("Catégorie:Mots en") != -1) and
         (page.find("issus d’un mot en") != -1)):
     wikitext = createCategoryMotsEnIssusDunMot(page,cle)
@@ -3116,6 +3221,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryPagesLiees(page,cle)
   elif (page.find("Catégorie:Palindromes en") != -1):
      wikitext = createCategoryPalindromes(page,cle)
+  elif (page.find("Catégorie:Pays en") != -1):
+     wikitext = createCategoryPays(page,cle)
   elif (page.find("Catégorie:Plantes en") != -1):
      wikitext = createCategoryPlantes(page,cle)
   elif (page.find("Catégorie:Poissons en") != -1):
@@ -3124,6 +3231,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryPrefixes(page,cle,code)
   elif (page.find("Catégorie:Préparations culinaires en") != -1):
      wikitext = createCategoryPreparationsCulinaires(page,cle)
+  elif (page.find("Catégorie:Soldats en") != -1):
+     wikitext = createCategorySoldats(page,cle)
   elif (page.find("Catégorie:Sports en") != -1):
      wikitext = createCategorySports(page,cle)
   elif (page.find("Catégorie:Suffixes en") != -1):
@@ -3132,6 +3241,8 @@ def createCategory(page,cle,code,country):
     wikitext = createCategoryThematiques(page,cle)
   elif (page.find("Catégorie:Traductions en ") != -1):
     wikitext = createCategoryTraductions(page,cle)
+  elif (page.find("Catégorie:Véhicules en ") != -1):
+    wikitext = createCategoryVehicules(page,cle)
   elif (page.find("Catégorie:Verbes en ") != -1):
     wikitext = createCategoryVerbes(page,cle)
   elif (page.find("Catégorie:Vertébrés en") != -1):
