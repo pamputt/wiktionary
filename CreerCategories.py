@@ -2237,6 +2237,17 @@ def createCategoryInterrogatifs(page,cle):
   wikitext += "[[Catégorie:Grammaire en " + language + "|interrogatifs]]"
   return wikitext
 
+def createCategoryJoursSemaine(page,cle):
+  #Catégorie:Jours de la semaine en mirandais
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "[[Catégorie:Jours de la semaine|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Calendrier en " + language + "]]"
+  return wikitext
+
 def createCategoryLangues(page,cle):
   #Catégorie:Langues en anglais
   beg=page.find(" en ")
@@ -2589,7 +2600,7 @@ def createCategoryOutils(page,cle):
   wikitext += "[[Catégorie:Thématiques en " + language + "|outils]]"
   return wikitext
 
-def createCategoryPagesLiees(page,cle):
+def createCategoryPagesLieesEn(page,cle):
   #Catégorie:Pages liées en grec
   beg=page.find(" en ")
   language = page[beg+4:]
@@ -2598,6 +2609,25 @@ def createCategoryPagesLiees(page,cle):
   
   wikitext = "{{Stats pages liées|" + language + "}}\n\n"
   wikitext += "[[Catégorie:Pages liées par langue|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryPagesLieesAEn(page,cle):
+  #Catégorie:Pages liées à Wikiquote en italien
+  beg=page.find(" à ")
+  end=page.rfind(" en ", beg+1)
+  site=page[beg+3:end]
+  listSite = ["Wikilivres","Wikipédia","Wikiquote","Wikisource","Wikispecies","Wikiversité","Wikivoyage"]
+  print(site)
+  if (not site in listSite):
+    return
+  
+  language = page[end+4:]
+  if (not language in cle):
+    return
+
+  wikitext = "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Pages liées à " + site + "|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Pages liées en " + language + "|" + site + "]]"
   return wikitext
 
 def createCategoryPalindromes(page,cle):
@@ -3152,6 +3182,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryInstrumentsDeMusique(page,cle)
   elif (page.find("Catégorie:Interrogatifs en") != -1):
      wikitext = createCategoryInterrogatifs(page,cle)
+  elif (page.find("Catégorie:Jours de la semaine en") != -1):
+     wikitext = createCategoryJoursSemaine(page,cle)
   elif (page.find("Catégorie:Langues en") != -1):
      wikitext = createCategoryLangues(page,cle)
   elif (page.find("Catégorie:Langues d") != -1 and
@@ -3218,7 +3250,9 @@ def createCategory(page,cle,code,country):
   elif (page.find("Catégorie:Outils en") != -1):
      wikitext = createCategoryOutils(page,cle)
   elif (page.find("Catégorie:Pages liées en") != -1):
-     wikitext = createCategoryPagesLiees(page,cle)
+     wikitext = createCategoryPagesLieesEn(page,cle)
+  elif (page.find("Catégorie:Pages liées à") != -1):
+     wikitext = createCategoryPagesLieesAEn(page,cle)
   elif (page.find("Catégorie:Palindromes en") != -1):
      wikitext = createCategoryPalindromes(page,cle)
   elif (page.find("Catégorie:Pays en") != -1):
@@ -3879,8 +3913,7 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Calques issus du français]]", cle, codeLangue, continentByCountryDict)
-    createCategory("[[:Catégorie:Calques issus de l’éwé]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Pages liées à Wikispecies en français]]", cle, codeLangue, continentByCountryDict)
     
   #UserContributionsGenerator
   else:
