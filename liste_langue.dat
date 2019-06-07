@@ -1391,6 +1391,7 @@ divehi;dv;divehi
 duau;dva;duau
 dawro;dwr;dawro
 speedwords de Dutton;dws;speedwords de Dutton
+dyan;dya;dyan
 dyugun;dyd;dyugun
 djimini;dyi;djimini
 yanda dom;dym;yanda dom
@@ -1405,6 +1406,7 @@ dazaga;dzg;dazaga
 dzalakha;dzl;dzalakha
 ebughu;ebg;ebughu
 bontok de l’Est;ebk;bontok de lest
+teke-ebo;ebo;tekeebo
 ébrié;ebr;ebrie
 kiembu;ebu;kiembu
 étéocrétois;ecr;eteocretois
@@ -1451,6 +1453,7 @@ emberá darién;emp;embera darien
 alutiiq;ems;alutiiq
 muria de l’Est;emu;muria de lest
 emplawas;emw;emplawas
+erromintxela;emx;erromintxela
 anglais;en;anglais
 apali;ena;apali
 markweta;enb;markweta
@@ -1547,6 +1550,7 @@ foau;flh;foau
 flinders island;fln;flinders island
 fuliiru;flr;fuliiru
 tsotsitaal;fly;tsotsitaal
+fe’fe’;fmp;fefe
 muria occidental lointain;fmu;muria occidental lointain
 féroïen;fo;feroien
 foi;foi;foi
@@ -1562,6 +1566,7 @@ gaumais;fr-lor-gau;gaumais
 jersiais;fra-jer;jersiais
 normand;fra-nor;normand
 francilien;francilien;francilien
+francique central;francique central;francique central
 francique mosellan;francique mosellan;francique mosellan
 francique méridional;francique méridional;francique meridional
 francique rhénan;francique rhénan;francique rhenan
@@ -1626,6 +1631,7 @@ gbaya;gba;gbaya
 kaytetye;gbb;kaytetye
 niksek;gbe;niksek
 gaikundi;gbf;gaikundi
+gbanziri;gbg;gbanziri
 galela;gbi;galela
 gutob;gbj;gutob
 mo’da;gbn;moda
@@ -1760,6 +1766,7 @@ gobasi;goi;gobasi
 gowlan;goj;gowlan
 gokhy;gokhy;gokhy
 gola;gol;gola
+konkani de Goa;gom;konkani de Goa
 gond;gon;gond
 gone dau;goo;gone dau
 yeretuar;gop;yeretuar
@@ -1774,6 +1781,7 @@ pidgin anglais ghanéen;gpe;pidgin anglais ghaneen
 ga’anda;gqa;gaanda
 guiqiong;gqi;guiqiong
 kinikinao;gqn;kinikinao
+gor;gqr;gor
 gao de Wanzi;gqu;gao de Wanzi
 rajput garasia;gra;rajput garasia
 grébo;grb;grebo
@@ -1781,6 +1789,7 @@ grec ancien;grc;grec ancien
 guruntum;grd;guruntum
 madi;grg;madi
 gbiri-niragu;grh;gbiriniragu
+ghari;gri;ghari
 griko;griko;griko
 langues grecques;grk;grecques langues
 groma;gro;groma
@@ -1825,6 +1834,7 @@ mannois;gv;mannois
 guaná;gva;guana
 wanano;gvc;wanano
 duwet;gve;duwet
+golin;gvf;golin
 guaja;gvj;guaja
 gulay;gvl;gulay
 kuku-yalanji;gvn;kukuyalanji
@@ -1849,6 +1859,7 @@ guaymí;gym;guaymi
 gyalsumdo;gyo;gyalsumdo
 guarayo;gyr;guarayo
 gunya;gyy;gunya
+ganza;gza;ganza
 gazi;gzi;gazi
 güenoa;güenoa;guenoa
 haoussa;ha;haoussa
@@ -1901,6 +1912,7 @@ hiw;hiw;hiw
 hixkaryana;hix;hixkaryana
 kahé;hka;kahe
 hunde;hke;hunde
+hunjara-kaina ke;hkk;hunjarakaina ke
 halia;hla;halia
 halbi;hlb;halbi
 louvite hiéroglyphique;hlu;louvite hieroglyphique
@@ -1956,7 +1968,7 @@ hunsrik;hrx;hunsrik
 haut-sorabe;hsb;sorabe haut
 xiang;hsn;xiang
 harsusi;hss;harsusi
-haïtien;ht;haitien
+créole haïtien;ht;creole haitien
 witoto mɨnɨca;hto;witoto mɨnɨca
 hadza;hts;hadza
 hitu;htu;hitu
@@ -2141,9 +2153,11 @@ yaqay;jaq;yaqay
 javanais de Nouvelle-Calédonie;jas;javanais de nouvellecaledonie
 yaur;jau;yaur
 jawe;jaz;jawe
+barikewa;jbk;barikewa
 nafusi;jbn;nafusi
 lojban;jbo;lojban
 djeoromitxi;jbt;djeoromitxi
+mouwase;jbw;mouwase
 krymchak;jct;krymchak
 juhuri;jdt;juhuri
 jebero;jeb;jebero
@@ -2392,6 +2406,7 @@ kwerisa;kkb;kwerisa
 odoodee;kkc;odoodee
 kinuku;kkd;kinuku
 kakabe;kke;kakabe
+monpa de Kalaktang;kkf;monpa de Kalaktang
 kagulu;kki;kagulu
 kokota;kkk;kokota
 kosarek yale;kkl;kosarek yale
@@ -3401,6 +3416,7 @@ nama (khoe);naq;nama khoe
 iguta;nar;iguta
 naasioi;nas;naasioi
 hungworo;nat;hungworo
+navarro-aragonais;navarro-aragonais;navarroaragonais
 ngarrindjeri;nay;ngarrindjeri
 nahuatl du Coatepec;naz;nahuatl du Coatepec
 norvégien (bokmål);nb;norvegien bokmal
@@ -4144,14 +4160,15 @@ proto-keresan;proto-keresan;keresan proto
 proto-kiowa-tanoan;proto-kiowa-tanoan;kiowa tanoan proto
 proto-lolo;proto-lolo;lolo proto
 proto-lower cross;proto-lower cross;lower cross proto
-proto-malaique;proto-malaique;malaique proto
 proto-malayo-chamique;proto-malayo-chamique;malayo chamique proto
 proto-malayo-polynésien;proto-malayo-polynésien;malayo polynesien proto
 proto-malayo-sumbawien;proto-malayo-sumbawien;malayo sumbawien proto
+proto-malaïque;proto-malaïque;malaique proto
 proto-masa;proto-masa;masa proto
 proto-maya;proto-maya;maya proto
 proto-micronésien;proto-micronésien;micronesien proto
 proto-miwok;proto-miwok;miwok proto
+proto-mon-khmer;proto-mon-khmer;protomonkhmer
 proto-mongol;proto-mongol;protomongol
 proto-muskogéen;proto-muskogéen;muskogeen proto
 proto-nhanda-kartu;proto-nhanda-kartu;nhanda kartu proto
@@ -4196,6 +4213,7 @@ piscataway;psy;piscataway
 portugais;pt;portugais
 pataxó hã-ha-hãe;pth;pataxo hahahae
 pintiini;pti;pintiini
+pattapu;ptq;pattapu
 piamatsina;ptr;piamatsina
 enrekang;ptt;enrekang
 port vato;ptv;port vato
@@ -4910,6 +4928,7 @@ dena’ina;tfn;denaina
 teribe;tfr;teribe
 ternate;tft;ternate
 tadjik;tg;tadjik
+tobilung;tgb;tobilung
 tigak;tgc;tigak
 chalikha;tgf;chalikha
 sudest;tgo;sudest
@@ -4991,6 +5010,7 @@ taloki;tlk;taloki
 tetela;tll;tetela
 tolomako;tlm;tolomako
 talodi;tlo;talodi
+tai loi;tlq;tai loi
 tambotalo;tls;tambotalo
 teluti;tlt;teluti
 tulehu;tlu;tulehu
@@ -5025,7 +5045,7 @@ lenakel;tnl;lenakel
 tabla;tnm;tabla
 tanna du Nord;tnn;tanna du Nord
 whitesands;tnp;whitesands
-taino;tnq;taino
+taïno;tnq;taino
 bédik;tnr;bedik
 tontemboan;tnt;tontemboan
 tonsawang;tnw;tonsawang
@@ -5172,7 +5192,7 @@ tsuvadi;tvd;tsuvadi
 te’un;tve;teun
 ambrym du Sud-Est;tvk;ambrym du sudest
 tuvalu;tvl;tuvalu
-tela-masbuar ;tvm;telamasbuar
+tela-masbuar;tvm;telamasbuar
 tidore;tvo;tidore
 tunen;tvu;tunen
 sedoa;tvw;sedoa
