@@ -18,6 +18,7 @@ def createCategoryCalquesEn(page,cle):
   wikitext = "[[Catégorie:Calques par langue|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Origines étymologiques des mots en " + language + "| Calque]]"
   return wikitext
+
 def createCategoryCalquesIssus(page,cle):
   #Calques issus du français
   #Calques issus de l’éwé‏‎
@@ -61,6 +62,38 @@ def createCategoryCaractereEn(page,cle):
     return
   
   wikitext = "{{tableau han/cat}}"
+  return wikitext
+
+def createCategoryConjugaisonsManquantes(page,cle):
+  #Catégorie:Wiktionnaire:Conjugaisons manquantes en breton
+  language = guessLanguage(page,"en","",cle)
+  if not language:
+    return
+
+  wikitext = "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Wiktionnaire:Conjugaisons manquantes|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Conjugaison en " + language + "|!]]"
+  return wikitext
+
+def createCategoryEbauches(page,cle):
+  #Wiktionnaire:Ébauches en italien
+  language = guessLanguage(page,"en","",cle)
+  if not language:
+    return
+  
+  wikitext = "Cette catégorie liste les [[ébauche]]s en [[" + language + "]].\n\n"
+  wikitext += "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Wiktionnaire:Ébauches à compléter|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryExemplesManquants(page,cle):
+  #Wiktionnaire:Exemples manquants en italien
+  language = guessLanguage(page,"en","",cle)
+  if not language:
+    return
+  
+  wikitext = "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Wiktionnaire:Exemples manquants|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryEtymologiesManquantes(page,cle):
@@ -952,6 +985,16 @@ def createCategoryLexiqueHydrologie(page,cle):
   
   wikitext = "[[Catégorie:Lexiques en " + language + "|hydrologie]]\n"
   wikitext += "[[Catégorie:Hydrologie|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryLexiqueHygiene(page,cle):
+  #Catégorie:Lexique en français de l’hygiène
+  language = guessLanguage(page,"en","de l’",cle)
+  if not language:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la santé|hygiene]]\n"
+  wikitext += "[[Catégorie:Hygiène|" + cle[language] + "]]"
   return wikitext
 
 def createCategoryLexiqueIchtyologie(page,cle):
@@ -2131,6 +2174,17 @@ def createCategoryCuriositesLinguistiques(page,cle):
   wikitext += "[[Catégorie:" + language + "]]"
   return wikitext
 
+def createCategoryDateManquante(page,cle):
+  #Catégorie:Date manquante en breton
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+  
+  wikitext = "__HIDDENCAT__\n"
+  wikitext = "[[Catégorie:Date manquante|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryDesserts(page,cle):
   #Catégorie:Desserts en italien
   beg=page.find(" en ")
@@ -2742,6 +2796,45 @@ def createCategoryPrefixes(page,cle,code):
   wikitext += "[[Catégorie:Grammaire en " + language + "]]"
   return wikitext
 
+def createCategoryReferencesNecessaires(page,cle):
+  #Catégorie:Références nécessaires en français
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "__HIDDENCAT__\n"
+  wikitext += "[[Catégorie:Références nécessaires|" + cle[language] + "]]"
+
+  return wikitext
+
+def createCategoryReligieux(page,cle):
+  #Catégorie:Religieux en tchèque
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Lexique en " + language + " de la religion]]\n"
+  wikitext += "[[Catégorie:Religieux|" + cle[language] + "]]"
+  return wikitext
+
+def createCategoryRoches(page,cle):
+  #Catégorie:Roches en catalan
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[roche|Roches]] en [[" + language + "]].\n\n"
+  wikitext += "=== Voir aussi ==="
+  wikitext += "* {{Catégorie|Minéraux en " + language + "}}\n\n"
+  wikitext = "[[Catégorie:Roches|" + cle[language] + "]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de la géologie|Roches]]\n"
+  wikitext = "[[Catégorie:Lexique en " + language + " de la pédologie|Roches]]\n"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|Roches]]"
+  return wikitext
+
 def createCategorySaisons(page,cle):
   #Catégorie:Saisons en italien
   beg=page.find(" en ")
@@ -2775,7 +2868,7 @@ def createCategorySports(page,cle):
     return
   
   wikitext ="[[Catégorie:Sports|" + cle[language] + "]]\n"
-  wikitext += "[[Catégorie:Thématiques en " + language + "|Saisons]]"
+  wikitext += "[[Catégorie:Thématiques en " + language + "|Sports]]"
   return wikitext
 
 def createCategorySuffixes(page,cle,code):
@@ -2788,6 +2881,27 @@ def createCategorySuffixes(page,cle,code):
   wikitext = "{{catégorie d’affixe|" + code[language] + "}}\n\n"
   wikitext += "[[Catégorie:Suffixes|" + cle[language] + "]]\n"
   wikitext += "[[Catégorie:Grammaire en " + language + "]]"
+  return wikitext
+
+def createCategoryTermesEnParCaractere(page,cle):
+  #Catégorie:Termes en anglais par caractère
+  language = guessLanguage(page,"en","par",cle)
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Termes par caractère|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Curiosités linguistiques en " + language + "]]"
+  return wikitext
+
+def createCategoryTitresNoblesse(page,cle):
+  #Catégorie:Titres de noblesse en suédois
+  beg=page.find(" en ")
+  language=page[beg+4:]
+  if (language not in cle):
+    return
+
+  wikitext = "[[Catégorie:Titres de noblesse|" + cle[language] + "]]\n"
+  wikitext += "[[Catégorie:Lexique en " + language + " de la noblesse]]"
   return wikitext
 
 def createCategoryThematiques(page,cle):
@@ -3034,6 +3148,55 @@ def createCategoryLanguesDePays(page,cle,continent):
     
   return wikitext
 
+def createCategoryIlesDePaysEn(page,cle,continent):
+  #Catégorie:Îles de Grèce en grec
+
+  isPays = False
+  isContinent = False
+
+  beg=page.find(" d")
+  beg2=page.find("’",beg)
+  if(beg2 == -1 or beg2!=beg+2):
+    beg2=page.find(" ",beg+1)
+  end=page.find(" en ")
+  paysContinent=page[beg2+1:end]
+  if (paysContinent in continent):
+    isPays = True
+  if (paysContinent in continent.values()):
+    isContinent = True
+  if(not isPays and not isContinent):
+    return
+  
+  language=page[end+4:]
+  if (language not in cle):
+    return
+
+  particle = ""
+  if(page.find("Îles d’") != -1):
+    particle="d’"
+  elif(page.find("Îles de") != -1):
+    particle="de "
+  elif(page.find("Îles du") != -1):
+    particle="du "
+  elif(page.find("Îles des") != -1):
+    particle="des "
+      
+  if isPays:
+    wikitext = "[[Catégorie:Îles en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]\n"
+    wikitext += "[[Catégorie:Îles " + particle + paysContinent + "|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:" + paysContinent + " en " + language + "|Iles]]"
+    
+  if isContinent:
+    de="d’"
+    if(paysContinent == "Caraïbes"):
+      de="des "
+
+    wikitext = "[[Catégorie:Îles en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]\n"
+    wikitext += "[[Catégorie:Îles " + de + paysContinent + "|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:" + paysContinent + " en " + language +"| Iles]]"
+
+  return wikitext
+
 def createCategoryLanguesDePaysEn(page,cle,continent):
   #Catégorie:Langues de France en français
   #Catégorie:Langues d’Afrique en français
@@ -3103,6 +3266,60 @@ def createCategoryLanguesDePaysEn(page,cle,continent):
     
   return wikitext
 
+def createCategoryRegionsDePaysEn(page,cle,continent):
+  #Catégorie:Régions de France en japonais
+  #Catégorie:Régions d’Europe en coréen
+
+  isPays = False
+  isContinent = False
+
+  beg=page.find(" d")
+  beg2=page.find("’",beg)
+  if(beg2 == -1 or
+     (beg2!=beg+2 and
+     beg2!=beg+5)): # Régions de l’Inde
+    beg2=page.find(" ",beg+1)
+  end=page.find(" en ")
+  paysContinent=page[beg2+1:end]
+  if (paysContinent in continent):
+    isPays = True
+  if (paysContinent in continent.values()):
+    isContinent = True
+  if(not isPays and not isContinent):
+    return
+  
+  language=page[end+4:]
+  if (language not in cle):
+    return
+
+  particle = ""
+  if(page.find("Régions d’") != -1):
+    particle="d’"
+  elif(page.find("Régions de") != -1):
+    particle="de "
+  if(page.find("Régions de l’") != -1):
+    particle="de l’"
+  elif(page.find("Régions du") != -1):
+    particle="du "
+  elif(page.find("Régions des") != -1):
+    particle="des "
+      
+  if isPays:
+    de="d’"
+    if(continent[paysContinent] == "Caraïbes"):
+      de="des "
+    wikitext = "[[Catégorie:Lexique en " + language + " de la géographie]]\n"
+    wikitext += "[[Catégorie:Régions " + de + continent[paysContinent] + " en " + language + "|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:Régions en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]\n"
+    wikitext += "[[Catégorie:" + paysContinent + " en " + language + "|regions]]"
+
+  if isContinent:
+    wikitext = "[[Catégorie:Régions " + particle + paysContinent + "|" + cle[language] + "]]\n"
+    wikitext += "[[Catégorie:Régions en " + language + "|" + CleDeTri.CleDeTri(paysContinent) + "]]\n"
+    wikitext += "[[Catégorie:" + paysContinent + " en " + language + "|Regions]]"    
+    
+  return wikitext
+
 def createCategory(page,cle,code,country):  
   #Convert Category into string object
   page = str(page)
@@ -3117,8 +3334,14 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryCaractereEn(page,cle)
   elif (page.find("Catégorie:Grammaire en") != -1):
      wikitext = createCategoryGrammaire(page,cle)
+  elif (page.find("Catégorie:Wiktionnaire:Conjugaisons manquantes en ") != -1):
+     wikitext = createCategoryConjugaisonsManquantes(page,cle)
+  elif (page.find("Catégorie:Wiktionnaire:Ébauches en ") != -1):
+     wikitext = createCategoryEbauches(page,cle)
   elif (page.find("Catégorie:Wiktionnaire:Étymologies manquantes en ") != -1):
      wikitext = createCategoryEtymologiesManquantes(page,cle)
+  elif (page.find("Catégorie:Wiktionnaire:Exemples manquants en ") != -1):
+     wikitext = createCategoryExemplesManquants(page,cle)
   elif (page.find("Catégorie:Wiktionnaire:Prononciations manquantes en ") != -1):
      wikitext = createCategoryPrononciationsManquantes(page,cle)
   elif (page.find("Catégorie:Adjectifs en") != -1):
@@ -3163,6 +3386,8 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryCouleurs(page,cle)
   elif (page.find("Catégorie:Curiosités linguistiques en") != -1):
      wikitext = createCategoryCuriositesLinguistiques(page,cle)
+  elif (page.find("Catégorie:Date manquante en") != -1):
+     wikitext = createCategoryDateManquante(page,cle)
   elif (page.find("Catégorie:Expressions en") != -1):
      wikitext = createCategoryExpressions(page,cle)
   elif (page.find("Catégorie:Formes d") != -1 and
@@ -3172,6 +3397,9 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryFruits(page,cle)
   elif (page.find("Catégorie:Gâteaux en") != -1):
      wikitext = createCategoryGateaux(page,cle)
+  elif (page.find("Catégorie:Îles d") != -1 and
+        page.find(" en ") != -1):
+     wikitext = createCategoryIlesDePaysEn(page,cle,country)
   elif (page.find("Catégorie:Infixes en") != -1):
      wikitext = createCategoryInfixes(page,cle,code)
   elif (page.find("Catégorie:Interfixes en") != -1):
@@ -3192,6 +3420,9 @@ def createCategory(page,cle,code,country):
   elif (page.find("Catégorie:Langues d") != -1 and
         page.find(" en ") != -1):
      wikitext = createCategoryLanguesDePaysEn(page,cle,country)
+  elif (page.find("Catégorie:Régions d") != -1 and
+        page.find(" en ") != -1):
+     wikitext = createCategoryRegionsDePaysEn(page,cle,country)
   elif (page.find("Catégorie:Lexiques en") != -1):
      wikitext = createCategoryLexiques(page,cle)
   elif (page.find("Catégorie:Localités d") != -1 and
@@ -3265,12 +3496,25 @@ def createCategory(page,cle,code,country):
      wikitext = createCategoryPrefixes(page,cle,code)
   elif (page.find("Catégorie:Préparations culinaires en") != -1):
      wikitext = createCategoryPreparationsCulinaires(page,cle)
+  elif (page.find("Catégorie:Saisons en") != -1):
+     wikitext = createCategorySaisons(page,cle)
   elif (page.find("Catégorie:Soldats en") != -1):
      wikitext = createCategorySoldats(page,cle)
   elif (page.find("Catégorie:Sports en") != -1):
      wikitext = createCategorySports(page,cle)
   elif (page.find("Catégorie:Suffixes en") != -1):
      wikitext = createCategorySuffixes(page,cle,code)
+  elif (page.find("Catégorie:Références nécessaires en") != -1):
+     wikitext = createCategoryReferencesNecessaires(page,cle)
+  elif (page.find("Catégorie:Religieux en") != -1):
+     wikitext = createCategoryReligieux(page,cle)
+  elif (page.find("Catégorie:Roches en") != -1):
+     wikitext = createCategoryRoches(page,cle)
+  elif ((page.find("Catégorie:Termes en ") != -1) and
+        (page.find("par caractère") != -1)):
+    wikitext = createCategoryTermesEnParCaractere(page,cle)
+  elif (page.find("Catégorie:Titres de noblesse en ") != -1):
+    wikitext = createCategoryTitresNoblesse(page,cle)
   elif (page.find("Catégorie:Thématiques en ") != -1):
     wikitext = createCategoryThematiques(page,cle)
   elif (page.find("Catégorie:Traductions en ") != -1):
@@ -3604,6 +3848,9 @@ def createCategory(page,cle,code,country):
         (page.find(" de l’hydrologie") != -1)):
     wikitext = createCategoryLexiqueHydrologie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de l’hygiène") != -1)):
+    wikitext = createCategoryLexiqueHygiene(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" de l’informatique") != -1)):
     wikitext = createCategoryLexiqueInformatique(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
@@ -3913,7 +4160,9 @@ def main():
   continentByCountryDict = getContinentByCountryDict()
 
   if test:
-    createCategory("[[:Catégorie:Pages liées à Wikispecies en français]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Régions de l’Inde en anglais]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Régions de France en japonais]]", cle, codeLangue, continentByCountryDict)
+    createCategory("[[:Catégorie:Régions d’Europe en coréen]]", cle, codeLangue, continentByCountryDict)
     
   #UserContributionsGenerator
   else:
