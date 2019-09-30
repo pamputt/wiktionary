@@ -1367,6 +1367,37 @@ def createCategoryLexiqueMythologie(page,cle):
   wikitext += "[[Catégorie:Mythologie|" + cle[language] + "]]"
   return wikitext
 
+def createCategoryLexiqueMythologie2(page,cle):
+  #Catégorie:Lexique en italien de la mythologie grecque
+  language = guessLanguage(page,"en","de la",cle)
+  if not language:
+    return
+
+  pos=page.find(" mythologie ");
+  
+  subdomain = ""
+  subdomain=page[pos+12:]
+    
+  myList = ['basque',
+          'biblique',
+          'celtique',
+          'étrusque',
+          'gauloise',
+          'grecque',
+          'gréco-romaine',
+          'hindoue',
+          'japonaise',
+          'mésopotamienne',
+          'nordique',
+          'romaine']
+
+  if subdomain not in myList:
+    return
+  
+  wikitext = "[[Catégorie:Lexique en " + language + " de la mythologie|" + CleDeTri.CleDeTri(subdomain) + "]]\n"
+  wikitext += "[[Catégorie:Mythologie " + subdomain + "|" + cle[language] + "]]"
+  return wikitext
+
 def createCategoryLexiqueNavigation(page,cle):
   #Catégorie:Lexique en italien de la navigation
   language = guessLanguage(page,"en","de la",cle)
@@ -3813,7 +3844,11 @@ def createCategory(page,cle,code,country):
         (page.find(" de la technique") != -1)):
     wikitext = createCategoryLexiqueTechnique(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
-        (page.find(" de la mythologie") != -1)):
+        (page.find(" de la mythologie ") != -1)):
+    wikitext = createCategoryLexiqueMythologie2(page,cle)
+  elif ((page.find("Catégorie:Lexique en ") != -1) and
+        (page.find(" de la mythologie") != -1) and
+        (page.find("la mythologie ") == -1)):
     wikitext = createCategoryLexiqueMythologie(page,cle)
   elif ((page.find("Catégorie:Lexique en ") != -1) and
         (page.find(" des loisirs") != -1)):
