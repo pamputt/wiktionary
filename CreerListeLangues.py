@@ -82,7 +82,7 @@ def parseData(wikitext):
 def main():
 # l['dum'] = { nom = 'moyen néerlandais', tri = 'neerlandais moyen' }
 
-  page = pywikibot.Page(pywikibot.getSite(), "Module:langues/data")
+  page = pywikibot.Page(pywikibot.Site(), "Module:langues/data")
   wikitext = page.get()
 
   data, cledetri = parseData(wikitext)
