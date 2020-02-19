@@ -244,6 +244,7 @@ anyua;anu;anyua
 denya;anv;denya
 anang;anw;anang
 agni;any;agni
+ao mongsen;ao mongsen;ao mongsen
 angolar;aoa;angolar
 abom;aob;abom
 pemon;aoc;pemon
@@ -688,7 +689,7 @@ bora;boa;bora
 aweer;bob;aweer
 mundabli;boe;mundabli
 bolon;bof;bolon
-langue des signes malienne;bog;langue des signes malienne
+langue des signes malienne;bog;signes malienne
 boma;boh;boma
 barbareño;boi;barbareno
 anjam;boj;anjam
@@ -862,7 +863,7 @@ bargu;bxu-bar;bargu
 bankagooma;bxw;bankagooma
 benyadu’;byd;benyadu
 pouye;bye;pouye
-bété;byf;bete
+bété (Nigeria);byf;bete nigeria
 bilen;byn;bilen
 biyo;byo;biyo
 basay;byq;basay
@@ -891,6 +892,7 @@ bebe;bzv;bebe
 basa;bzw;basa
 bozo-kelengaxo;bzx;bozokelengaxo
 evant;bzz;evant
+bété (Côte d’Ivoire);bété;bete cote divoire
 catalan;ca;catalan
 valencien;ca-valencia;valencien
 ch’orti’;caa;chorti
@@ -1488,7 +1490,7 @@ ese ejja;ese;ese ejja
 eshtehardi;esh;eshtehardi
 inupiaq d’Alaska du Nord;esi;inupiaq dalaska du nord
 inupiaq d’Alaska du Nord-Ouest;esk;inupiaq dalaska du nordouest
-langue des signes égyptienne;esl;langue des signes egyptienne
+langue des signes égyptienne;esl;signes egyptienne
 esmeraldeño;esmeraldeño;esmeraldeno
 langue des signes estonienne;eso;signes estonienne
 esselen;esq;esselen
@@ -1576,7 +1578,7 @@ francique méridional;francique méridional;francique meridional
 francique rhénan;francique rhénan;francique rhenan
 français cadien;frc;francais cadien
 fordata;frd;fordata
-vieux-francique;frk;vieuxfrancique
+vieux-francique;frk;francique vieux
 moyen français;frm;francais moyen
 ancien français;fro;francais ancien
 francoprovençal;frp;francoprovencal
@@ -1960,6 +1962,7 @@ holoholo;hoo;holoholo
 hopi;hop;hopi
 horo;hor;horo
 hote;hot;hote
+houma;houma;houma
 hovongan;hov;hovongan
 honi;how;honi
 holiya;hoy;holiya
@@ -2222,6 +2225,7 @@ hupda;jup;hupda
 juruna;jur;juruna
 langue des signes de Jumla;jus;signes jumla
 jute;jut;jute
+juray;juy;juray
 javanais;jv;javanais
 javanais des Caraïbes;jvn;javanais des caraibes
 rgyalrong;jya;rgyalrong
@@ -2642,6 +2646,7 @@ kerewo;kxz;kerewo
 kirghiz;ky;kirghiz
 kwaya;kya;kwaya
 kyaka;kyc;kyaka
+sokuya;kyf;sokuya
 karuk;kyh;karuk
 kiput;kyi;kiput
 karao;kyj;karao
@@ -3263,7 +3268,7 @@ mlabri;mra;mlabri
 sungwadia;mrb;sungwadia
 maricopa;mrc;maricopa
 magar de l’Ouest;mrd;magar de louest
-langue des signes de Martha’s Vineyard;mre;langue des signes de marthas vineyard
+langue des signes de Martha’s Vineyard;mre;signes Marthas Vineyard
 elseng;mrf;elseng
 mising;mrg;mising
 mara chin;mrh;mara chin
@@ -3362,6 +3367,7 @@ maewo central;mwo;maewo central
 kala lagaw ya;mwp;kala lagaw ya
 marvari;mwr;marvari
 moken;mwt;moken
+hmong blanc;mww;hmong blanc
 mixtèque de Tezoatlán;mxb;mixteque de tezoatlan
 modang;mxd;modang
 ifira-mele;mxe;ifiramele
@@ -3399,6 +3405,7 @@ mozabite;mzb;mozabite
 malimba;mzd;malimba
 wichí lhamtés güisnay;mzh;wichi lhamtes guisnay
 mazatèque d’Ixcatlán;mzi;mazateque dixcatlan
+manya;mzj;manya
 mambila de l’Ouest;mzk;mambila de louest
 mumuye;mzm;mumuye
 mazandarani;mzn;mazandarani
@@ -3450,7 +3457,7 @@ nicobarais central;ncb;nicobarais central
 nachering;ncd;nachering
 yale;nce;yale
 nisga’a;ncg;nisgaa
-nahuatl du Huasteca central;nch;nahuatl du Huasteca central
+nahuatl de la Huasteca central;nch;nahuatl de la Huasteca central
 nahuatl classique;nci;nahuatl classique
 nahuatl du Puebla du Nord;ncj;nahuatl du Puebla du Nord
 nakara;nck;nakara
@@ -3539,12 +3546,12 @@ nahuatl du Morelos;nhm;nahuatl du Morelos
 nahuatl central;nhn;nahuatl central
 takuu;nho;takuu
 nahuatl de l’isthme de Pajapan;nhp;nahuatl de listhme de pajapan
-nahualt de Huaxcaleca;nhq;nahualt de Huaxcaleca
+nahuatl de Huaxcaleca;nhq;nahuatl de Huaxcaleca
 naro;nhr;naro
 nahuatl de l’Ometepec;nht;nahuatl de lometepec
 noone;nhu;noone
 nahuatl du Temascaltepec;nhv;nahuatl du Temascaltepec
-nahuatl du Huasteca occidental;nhw;nahuatl du Huasteca occidental
+nahuatl de la Huasteca occidental;nhw;nahuatl de la Huasteca occidental
 nahuatl de l’isthme de Mecayapan;nhx;nahuatl de listhme de mecayapan
 nahuatl de l’Oaxaca du Nord;nhy;nahuatl de loaxaca du nord
 nahuatl de Santa María la Alta;nhz;nahuatl de santa maria la alta
@@ -3831,7 +3838,7 @@ olkol;olk;olkol
 oloma;olm;oloma
 olonetsien;olo;olonetsien
 olrat;olr;olrat
-vieux lituanien;olt;vieux lituanien
+vieux lituanien;olt;lituanien vieux
 kuvale;olu;kuvale
 oromo;om;oromo
 omaha-ponca;oma;omahaponca
@@ -4172,7 +4179,7 @@ proto-iranien;proto-iranien;iranien proto
 proto-italique;proto-italique;italique proto
 proto-katuique;proto-katuique;katuique proto
 proto-keresan;proto-keresan;keresan proto
-proto-khmer;proto-khmer;protokhmer
+proto-khmer;proto-khmer;khmer proto
 proto-kiowa-tanoan;proto-kiowa-tanoan;kiowa tanoan proto
 proto-lolo;proto-lolo;lolo proto
 proto-lower cross;proto-lower cross;lower cross proto
@@ -4184,9 +4191,9 @@ proto-masa;proto-masa;masa proto
 proto-maya;proto-maya;maya proto
 proto-micronésien;proto-micronésien;micronesien proto
 proto-miwok;proto-miwok;miwok proto
-proto-mongol;proto-mongol;protomongol
+proto-mongol;proto-mongol;mongol proto
 proto-muskogéen;proto-muskogéen;muskogeen proto
-proto-môn-khmer;proto-môn-khmer;protomonkhmer
+proto-môn-khmer;proto-môn-khmer;mon khmer proto
 proto-nhanda-kartu;proto-nhanda-kartu;nhanda kartu proto
 proto-norrois;proto-norrois;norrois proto
 proto-numique;proto-numique;numique proto
@@ -4204,7 +4211,7 @@ proto-slave;proto-slave;slave proto
 proto-sunda-sulawesi;proto-sunda-sulawesi;sunda sulawesi proto
 proto-sémitique;proto-sémitique;semitique proto
 proto-tchadique central;proto-tchadique central;tchadique central proto
-proto-thaï;proto-thaï;protothai
+proto-thaï;proto-thaï;thai proto
 proto-tibéto-birman;proto-tibéto-birman;tibeto birman proto
 proto-tupi-guarani;proto-tupi-guarani;tupi guarani proto
 proto-turc;proto-turc;turc proto
@@ -4267,7 +4274,7 @@ mucuchí;qcx;mucuchi
 chapakura;qdh;chapakura
 maypure;qij;maypure
 masacara;qlz;masacara
-vieux khmer;qok;vieux khmer
+vieux khmer;qok;khmer vieux
 timote;qpj;timote
 pamigua;qpl;pamigua
 quechua;qu;quechua
@@ -4586,6 +4593,7 @@ sikiana;sik;sikiana
 sisaala des Tumulung;sil;sisaala des Tumulung
 mende (Papouasie-Nouvelle-Guinée);sim;mende papouasienouvelleguinee
 langues siouanes;sio;siouanes langues
+sikkimais;sip;sikkimais
 sonia;siq;sonia
 siri;sir;siri
 siuslaw;sis;siuslaw
@@ -4617,7 +4625,7 @@ seke (Vanuatu);ske;seke vanuatu
 mekens;skf;mekens
 sika;ski;sika
 seke (Népal);skj;seke nepal
-seraiki;skr;seraiki
+saraiki;skr;saraiki
 maia;sks;maia
 sakao;sku;sakao
 skou;skv;skou
@@ -5379,7 +5387,7 @@ créole des Îles Vierges;vic;creole vierges
 vidunda;vid;vidunda
 vieux brittonique;vieux brittonique;brittonique vieux
 vieux danois;vieux danois;danois vieux
-vieux khmer pré-angkorien;vieux khmer pré-angkorien;vieux khmer preangkorien
+vieux khmer pré-angkorien;vieux khmer pré-angkorien;khmer vieux pre angkorien
 vieux novgorodien;vieux novgorodien;novgorodien vieux
 vieux suédois;vieux suédois;suedois vieux
 vili;vif;vili
@@ -5724,6 +5732,7 @@ alu kurumba;xua;alu kurumba
 bettu kurumba;xub;bettu kurumba
 umiida;xud;umiida
 jennu kurumba;xuj;jennu kurumba
+ngunawal;xul;ngunawal
 ombrien;xum;ombrien
 unggarranggu;xun;unggarranggu
 haut umpqua;xup;umpqua haut
