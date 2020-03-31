@@ -10,7 +10,7 @@ import CleDeTri
 test = False # to test the script (without saving the result)
 
 def getListOfCategories():
-  page = pywikibot.Page(pywikibot.getSite(), "Wiktionnaire:Statistiquesb")
+  page = pywikibot.Page(pywikibot.Site(), "Wiktionnaire:Statistiquesb")
   wikitext = page.get()
 
   lines = wikitext.split(u'\n')
@@ -29,7 +29,7 @@ def getListOfCategories():
 
 def isCategoryExist(language):
 
-  page = pywikibot.Page(pywikibot.getSite(), u'Catégorie:'+language)
+  page = pywikibot.Page(pywikibot.Site(), u'Catégorie:'+language)
 
   try:
     text = page.get()
@@ -65,7 +65,7 @@ def createCategory(language,code,cle):
     wikitext += "]]"
 
 
-  page = pywikibot.Page(pywikibot.getSite(), "Catégorie:"+language)
+  page = pywikibot.Page(pywikibot.Site(), "Catégorie:"+language)
   if not test:
     page.put(wikitext)
   else:
